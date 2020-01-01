@@ -18,6 +18,33 @@ from distutils.file_util import copy_file
 
 copy_file("a", "b")
 
+# copying Files and Folders
+import shutil, os
+
+os.chdir('C:\\')
+shutil.copy('C:\\spam.txt', 'C:\\del')
+## 'C:\\del\\spam.txt'
+
+shutil.copy('eg.txt', 'C:\\del\\eg2.txt')
+## 'C:\\del\\eg2.txt'
+
+# copying all files tree
+import shutil, os
+
+os.chdir('C:\\')
+
+shutil.copytree('C:\\bac', 'C:\\bac_up')
+## 'C:\\bac_up'
+
+# moving and renaming files or dirs
+import shutil
+
+shutil.move('C:\\bac.txt', 'C:\\eg')
+## 'C:\\eg\\bac.txt'
+# or
+shutil.move('C:\\bac.txt', 'C:\\eg\\new_bac.txt')
+# or
+shutil.move('C:\\bac.txt', 'C:\\eg')
 
 #  move a file
 from distutils.file_util import move_file
