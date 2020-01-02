@@ -56,3 +56,14 @@ move_file("./a", "./b")
 with open("file_name") as f:
     for line in f:
         print(line, end='')
+
+        
+# working with path
+from pathlib import Path
+ 
+root = Path('make_sub_folder')
+print(root)
+ 
+path = root / 'happy_user'  # make path as absolute !
+ 
+print(path.resolve())
