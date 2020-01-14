@@ -67,3 +67,17 @@ print(root)
 path = root / 'happy_user'  # make path as absolute !
  
 print(path.resolve())
+
+
+#  make a loop for directory with a many files ( CSV )
+import os
+
+from os.path import join
+my_csv=[]
+for root, dirs, files in os.walk('data2test'):
+    my_csv.extend([join(root, file) for file in files if file.endswith('csv')]) 
+    dirs.clear()
+ 
+
+for file in my_csv:
+    pass
