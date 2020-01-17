@@ -43,3 +43,26 @@ try:
                         print('File  ' + fname + ' is loaded ')
 except:
     print('No response from server !')
+
+    
+"""
+import ftplib
+
+
+def ftp_upload(ftpObj, pathToSend, pathToRecv, fileType='TXT'):
+    with open(pathToSend, 'rb') as fobj:
+        ftpObj.storlines('STOR ' + pathToRecv, fobj)
+
+
+if __name__ == '__main__':
+    ftp = ftplib.FTP('')
+    ftp.login('', '')
+    print('Logged !')
+
+    pathToSend = '/home/file_name.txt'
+    pathToRecv = '/home/file_name.txt'
+    ftp_upload(ftp, pathToSend, pathToRecv)
+
+    ftp.quit()
+
+"""
