@@ -21,3 +21,17 @@ print(words)
 str = 'If this is not possible, for example on a remote CI server !'
 print(re.findall(r'\w+', str)) 
 """
+
+"""
+with open('file_name.txt',  encoding='utf-8') as file:
+    lst = []
+    for line in file:
+        new_lst = line.split()
+
+        words = []
+        for word in new_lst:
+            p = morph.parse(word)[0]
+            words.append(p.normal_form)
+        ls.append(words)
+# print(lst)
+"""
