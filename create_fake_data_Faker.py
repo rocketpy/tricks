@@ -28,3 +28,19 @@ for _ in range(5):
 # 'Noemy Vandervort V'
 # 'Lexi O'Conner'
 # 'Gracie Weber'
+
+#  Localization
+fake = Faker(['it_IT', 'en_US', 'ja_JP'])
+for _ in range(10):
+    print(fake.name())
+
+# 鈴木 陽一
+# Leslie Moreno
+# Emma Williams
+# 渡辺 裕美子
+# Marcantonio Galuppi
+# Martha Davis
+# Kristen Turner
+# 中津川 春香
+# Ashley Castillo
+# 山田 桃子
