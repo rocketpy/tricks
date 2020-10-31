@@ -19,3 +19,12 @@ fake.text()
 #  Aut molestias et maxime. Fugit autem facilis quos vero. Eius quibusdam possimus est.
 #  Ea quaerat et quisquam. Deleniti sunt quam. Adipisci consequatur id in occaecati.
 #  Et sint et. Ut ducimus quod nemo ab voluptatum.'
+
+for _ in range(5):
+    print(fake.name())
+
+# 'Adaline Reichel'
+# 'Dr. Santa Prosacco DVM'
+# 'Noemy Vandervort V'
+# 'Lexi O'Conner'
+# 'Gracie Weber'
