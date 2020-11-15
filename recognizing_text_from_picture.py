@@ -2,8 +2,16 @@ import pytesseract
 from PIL import Image
 
 
+# pip install pytesseract
+# pip install Pillow
+
+#  Download (64 bit) version for Windows: https://github.com/UB-Mannheim/tesseract/wiki
 #  Download tesseract on Windows:  https://tesseract-ocr.github.io/tessdoc/4.0-with-LSTM
+
 #  DOCS: https://pypi.org/project/pytesseract/
+#  DOCS Pillow: https://pillow.readthedocs.io/en/latest/handbook/index.html
+#  Pillow:  https://pypi.org/project/Pillow/
+
 #  Config options:  https://help.ubuntu.ru/wiki/tesseract
 #  Dictionaries: https://github.com/tesseract-ocr/tessdata
 
