@@ -1,3 +1,24 @@
+Building a robots.txt file
+
+robots.txt is a text file that contains site indexing parameters for search robots.
+Using this file and special instructions (directives) in it, you can index the site.
+Roughly speaking, with robots.txt we can tell the search engine robot which pages can be indexed and which cannot.
+
+Two directives for this file are required: User-agent and Allow or Disallow. An optional but common directive is the sitemap.
+
+The user agent specifies the search robot to which the cool command from the file.
+Examples: User-agent: Yandex, User-agent: Googlebot, User-agent: * (includes all bots).
+Prohibits indexing of pages or entire sections written in it. Examples: Disallow: / catalog /, Disallow: /catalog/page.html.
+Allow, on the other hand, allows indexing of sections and pages of the site. Works for the entire site by default, unless otherwise indicated by the Disallow directive. Most often, Allow is used in conjunction with Disallow, when one part of the section needs to be closed from indexing, and the other must be opened.
+The sitemap contains a link to the sitemap, where its entire structure is spelled out. Example: Sitemap: sitemap.xml.
+An example of a compiled robots.txt file for all search engines with all open pages and a sitemap:
+
+User-agent: *
+Allow: /
+Sitemap: sitemap.xml
+
+
+#  Russian language
 Составляем файл robots.txt
 
 robots.txt — это текстовый файл, который содержит параметры индексирования сайта для поисковых роботов.
