@@ -1,4 +1,4 @@
-#  need add imports !!!
+import socket
 
 
 def check_open_port(host, port):
@@ -31,3 +31,33 @@ def get_open_ports(host, max_port=65535):
     pool.shutdown(wait=True)
 
     return open_ports
+
+"""
+def portscan(port):
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    try:
+        con = s.connect((target, port))
+        with print_lock:
+            print("Port", port, "is open!")
+        con.close()
+    except:
+        pass
+
+def threader():
+    while True:
+        worker = q.get()
+        portscan(worker)
+        q.task_done()
+
+q = Queue()
+
+for x in range(threadNo):
+    t = threading.Thread(target=threader)
+    t.daemon = True
+    t.start()
+
+for worker in range (minPort, maxPort):
+     q.put(worker)
+
+q.join()
+"""
