@@ -1,4 +1,5 @@
 import socket
+import concurrent.futures
 
 
 def check_open_port(host, port):
@@ -33,6 +34,17 @@ def get_open_ports(host, max_port=65535):
     return open_ports
 
 """
+import socket
+import threading
+from queue import *
+
+
+print_lock = threading.Lock()
+target = input("Enter websit or IP Adress to scan: ")
+minPort = int(input("Enter minimum Port to scan (1 is the smallest): "))
+maxPort = int(input("Enter maximum Port to scan: "))
+threadNo = int(input("Enter No. of threads to use(500 is a good all around number): "))
+
 def portscan(port):
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     try:
