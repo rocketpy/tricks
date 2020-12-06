@@ -37,7 +37,7 @@ from htmldom import htmldom
 # Creating HTML DOM Object
 dom = htmldom.HtmlDom()
 #or
-dom = htmldom.HtmlDom( "http://www.example.com" )
+dom = htmldom.HtmlDom("http://www.example.com")
                         
 # The above code creates a HtmlDom object.The HtmlDom takes a default parameter,
 # the url of the page. If not provided you can create elements dynamically.
@@ -53,11 +53,19 @@ dom = dom.createDom()
 #  create a dom instance
 from htmldom import htmldom
                     
-dom = htmldom.HtmlDom().createDom( """<html>
+dom = htmldom.HtmlDom().createDom("""<html>
                                   <div id='one'><p>This is paragraph<strong>strong Element</strong></p></div>
                                   <div id='two'><p>This is paragraph<strong>strong Element</strong></p></div>
                                   <p id='three'><p>This is paragraph<strong>strong Element</strong></p></p> 
-                                  <h4 id='four'><p>This is paragraph<strong>strong Element</strong></p></h4></html>""")
-                                 " )
+                                  <h4 id='four'><p>This is paragraph<strong>strong Element</strong></p></h4>
+                                  </html>""")
+                                 
+#  getting p element from html data
+p = dom.find("p") 
                     
-                    
+# print html content using "html" method of HtmlNodeList object
+print(p.html())
+
+# getting all elements
+all = dom.find("*")         
+ 
