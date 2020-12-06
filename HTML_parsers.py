@@ -46,6 +46,18 @@ dom = dom.createDom("<html></html>')
 # or, if you have provided the url then just createDom() call will suffice
 dom = dom.createDom()
                     
-#  Searching HTML Elements from parse tree:
-
+#  Searching HTML Elements from parse tree
+#  You can query the elements using the "find" method of HtmlDom object.
+#  This function takes "css selector" as a parameter and returs a HtmlNodeList object containing matched nodes.
+                    
+#  create a dom instance
+from htmldom import htmldom
+                    
+dom = htmldom.HtmlDom().createDom( """<html>
+                                  <div id='one'><p>This is paragraph<strong>strong Element</strong></p></div>
+                                  <div id='two'><p>This is paragraph<strong>strong Element</strong></p></div>
+                                  <p id='three'><p>This is paragraph<strong>strong Element</strong></p></p> 
+                                  <h4 id='four'><p>This is paragraph<strong>strong Element</strong></p></h4></html>""")
+                                 " )
+                    
                     
