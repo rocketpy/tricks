@@ -78,6 +78,18 @@ desc = dom.find("div p strong")
 # getting child element using '>'
 child = dom.find("div > p > strong")
 
-# Selecting elements through attributes
+# electing elements through attributes
 elem = dom.find("div[id=one]")
+                    
+# or
+elem = dom.find("[id]")
+
+# or
+elem = dom.find("div[id] p")
+
+# or
+elem = dom.find("div#one")
+
+# if 'one' were a class then,
+elem = dom.find("div.one")
                     
