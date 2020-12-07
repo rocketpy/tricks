@@ -93,3 +93,19 @@ elem = dom.find("div#one")
 # if 'one' were a class then,
 elem = dom.find("div.one")
                     
+                    
+#  searching through HtmlDom and HtmlNodeList objects methods
+                    
+# HtmlDom_instance.find( selector = 'css selector expression' )
+# This function takes a css selector expression and returns a HtmlNodeList object containing selected nodes.
+                    
+from htmldom import htmldom
+                    
+                    
+dom = htmldom.HtmlDom("http://www.example.com").createDom()
+# Find all the links present on a page and prints its "href" value
+a = dom.find("a")
+for link in a:
+    print(link.attr("href"))
+
+                    
