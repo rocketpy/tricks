@@ -67,5 +67,17 @@ p = dom.find("p")
 print(p.html())
 
 # getting all elements
-all = dom.find("*")         
- 
+all = dom.find("*")      
+                    
+# getting sibling elements using '+'
+sibling = dom.find("div + div")
+
+# getting Descendant element
+desc = dom.find("div p strong")
+
+# getting child element using '>'
+child = dom.find("div > p > strong")
+
+# Selecting elements through attributes
+elem = dom.find("div[id=one]")
+                    
