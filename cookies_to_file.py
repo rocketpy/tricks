@@ -12,15 +12,26 @@ def load_cookie(driver, path):
            
         
 # Using JSON
-from selenium import webdriver
 import json
+from selenium import webdriver
 
 
 #  get cookies
 driver = webdriver.Chrome()
-driver.get("https://")
+driver.get("https://www...")
 cookies = driver.get_cookies()
-with open('cookietest.json', 'w', newline='') as outputdata:
+with open('cookies.json', 'w', newline='') as outputdata:
     json.dump(cookies, outputdata)
             
-            
+        
+#  to send cookies
+import json
+from selenium import webdriver
+
+
+with open('cookies.json', 'r', newline='') as inputdata:
+    cookies = json.load(inputdata)
+curcookie = cookies[0]
+driver = webdriver.Chrome()
+driver.get("https://www...")
+driver.add_cookie(curcookie)
