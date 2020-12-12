@@ -9,3 +9,18 @@ def load_cookie(driver, path):
          cookies = pickle.load(cookiesfile)
          for cookie in cookies:
              driver.add_cookie(cookie)
+           
+        
+# Using JSON
+from selenium import webdriver
+import json
+
+
+#  get cookies
+driver = webdriver.Chrome()
+driver.get("https://")
+cookies = driver.get_cookies()
+with open('cookietest.json', 'w', newline='') as outputdata:
+    json.dump(cookies, outputdata)
+            
+            
