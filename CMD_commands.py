@@ -18,6 +18,8 @@
 
 #  pip install flake8
 
+#  pip install -U flake8  - install and update
+
 #  pip install django == 2.1.1  -  install some version
 
 #  pip install --upgrade module_name  -  update some module
