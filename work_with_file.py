@@ -1,3 +1,13 @@
+#  checking for exist a file
+import os
+
+
+filename = input("Path to file: ")
+if os.path.exists(filename):
+    print("File is exist !") 
+else:
+    print("File is not exist !") 
+
 #  read a file
 with open("file_name", encoding="utf-8") as f:  # use file_name or path to file !!!
     cont = f.read()
