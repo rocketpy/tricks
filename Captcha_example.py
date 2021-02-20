@@ -4,9 +4,8 @@ from PIL import Image
 from pdf2image import convert_from_path, convert_from_bytes
 
 
-# imgage = Image.open('captcha.jpg')
-
-image = cv2.imread('captcha.jpg')
+# image = Image.open('captcha.jpg')  # using PIL
+image = cv2.imread('captcha.jpg')  # using cv2
 
 """
 path = ("https://captcha_url")
@@ -15,7 +14,7 @@ file.write(urllib.urlopen(path).read())
 file.close()
 """
 
-# image = convert_from_path('/home/belval/example.pdf')
+# image = convert_from_path('/home/belval/example.pdf')  # using pdf2image
 # image = convert_from_bytes(open('/home/belval/example.pdf', 'rb').read())
 
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
