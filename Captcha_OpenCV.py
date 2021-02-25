@@ -69,4 +69,8 @@ deskewed = [list(map(deskew,row)) for row in test_cells]
 hogdata = [list(map(hog,row)) for row in deskewed]
 testData = np.float32(hogdata).reshape(-1,bin_n*4)
 result = svm.predict(testData)[1]
+
+mask = result==responses
+correct = np.count_nonzero(mask)
+print(correct*100.0/result.size)
 """
