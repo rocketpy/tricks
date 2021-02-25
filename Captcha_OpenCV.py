@@ -64,4 +64,9 @@ svm.setGamma(5.383)
 
 svm.train(trainData, cv.ml.ROW_SAMPLE, responses)
 svm.save('svm_data.dat')
+
+deskewed = [list(map(deskew,row)) for row in test_cells]
+hogdata = [list(map(hog,row)) for row in deskewed]
+testData = np.float32(hogdata).reshape(-1,bin_n*4)
+result = svm.predict(testData)[1]
 """
