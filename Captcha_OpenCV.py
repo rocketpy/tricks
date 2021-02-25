@@ -40,4 +40,14 @@ def hog(img):
     hists = [np.bincount(b.ravel(), m.ravel(), bin_n) for b, m in zip(bin_cells, mag_cells)]
     hist = np.hstack(hists)     # hist is a 64 bit vector
     return hist    
+    
+img = cv.imread('digits.png',0)
+if img is None:
+    raise Exception("we need the digits.png image from samples/data here !")
+
+cells = [np.hsplit(row,100) for row in np.vsplit(img,50)]
+
+# First half is trainData, remaining is testData
+train_cells = [ i[:50] for i in cells ]
+test_cells = [ i[50:] for i in cells]    
 """
