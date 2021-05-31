@@ -17,6 +17,24 @@ yt.streams
 # .download()
 
 
+# Example 2
+from pytube import YouTube
+from moviepy.editor import *
+ 
+    
+# download a file from youtube
+youtube_link = 'https://www.youtube.com/watch?v=yourtubevideos'
+w = YouTube(youtube_link).streams.first()
+w.download(output_path="/your/target/directory")
+ 
+# download a file with only audio, to save space
+# if the final goal is to convert to mp3
+youtube_link = 'https://www.youtube.com/watch?v=targetyoutubevideos'
+y = YouTube(youtube_link)
+t = y.streams.filter(only_audio=True).all()
+t[0].download(output_path="/your/target/directory")
+
+
 # Example, download all the videos from a playlist and saving them with the title from youtube in mp4 and mp4 audio formats.
 """
 import os
