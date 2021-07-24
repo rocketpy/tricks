@@ -22,3 +22,12 @@ result = pd.merge(data_1, data_2,
                    how='left')
   
 print(result)
+
+
+# # to merge RIGHT Join
+# using merge function by setting how='right'
+result = pd.merge(data1, data2,
+                   on='LOAN_NO',
+                   how='right')
+  
+print(result)
