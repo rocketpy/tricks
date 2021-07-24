@@ -8,7 +8,6 @@ data_2 = pd.read_csv('file_2.csv')  # or path
 result = pd.merge(data_1, data_2, 
                    on='LOAN_NO', 
                    how='inner')
-  
 print(result)
 
 
@@ -20,14 +19,21 @@ data_2 = pd.read_csv('file_2.csv')
 result = pd.merge(data_1, data_2, 
                    on='LOAN_NO', 
                    how='left')
-  
 print(result)
 
 
-# # to merge RIGHT Join
+# to merge RIGHT Join
 # using merge function by setting how='right'
-result = pd.merge(data1, data2,
+result = pd.merge(data_1, data_2,
                    on='LOAN_NO',
                    how='right')
-  
 print(result)
+
+
+# to merge OUTER Join
+# using merge function by setting how='outer'
+result = pd.merge(data_1, data_2, 
+                   on='LOAN_NO', 
+                   how='outer')
+print(result)
+
