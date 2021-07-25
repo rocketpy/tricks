@@ -1,14 +1,13 @@
 import pandas as pd
 import pandas_profiling
    
-# read the file
-df = pd.read_csv('Geeks.csv')
+
+df = pd.read_csv('file_name.csv')
+profile = df.profile_report(title='Profiling Report')
    
-# run the profile report
-profile = df.profile_report(title='Pandas Profiling Report')
+# save to file 
+profile.to_file(output_file="file_name.html")
    
-# save the report as html file
-profile.to_file(output_file="pandas_profiling1.html")
-   
-# save the report as json file
-profile.to_file(output_file="pandas_profiling2.json")
+# save result as json file
+profile.to_file(output_file="file_name.json")
+
