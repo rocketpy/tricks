@@ -16,4 +16,15 @@ server.login(MY_EMAIL, MY_PASSWORD)
 
 message = MIMEMultipart()
 
+message['From'] = MY_EMAIL
+message['To'] = RECIPIENT_ADDRESS
+message['Subject'] = "Automated Email"
 
+textPart = MIMEText("Here is a some text", 'Topic')
+
+message.attach(textPart)
+
+# to send
+server.send_message(message)
+server.quit()
+ 
