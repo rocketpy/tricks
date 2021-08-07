@@ -42,4 +42,29 @@ for prime in prime_list:
 
 """
 
+# in CMD
+# python -m timeit -c "$(cat file_name.py)"
+
+# from the docs
+"""
+The following example shows how the Command-Line Interface can be used to compare three different expressions:
+
+$ python3 -m timeit '"-".join(str(n) for n in range(100))'
+10000 loops, best of 5: 30.2 usec per loop
+$ python3 -m timeit '"-".join([str(n) for n in range(100)])'
+10000 loops, best of 5: 27.5 usec per loop
+$ python3 -m timeit '"-".join(map(str, range(100)))'
+10000 loops, best of 5: 23.2 usec per loop
+
+This can be achieved from the Python Interface with:
+>>>
+
+>>> import timeit
+>>> timeit.timeit('"-".join(str(n) for n in range(100))', number=10000)
+0.3018611848820001
+>>> timeit.timeit('"-".join([str(n) for n in range(100)])', number=10000)
+0.2727368790656328
+>>> timeit.timeit('"-".join(map(str, range(100)))', number=10000)
+0.23702679807320237
+"""
 
