@@ -23,3 +23,23 @@ gen_prime(1000)
 print(timeit.default_timer() - start_time)
 
 
+# or
+"""
+import timeit
+
+
+print(timeit.timeit(
+
+limit = 1000
+prime_list = [i for i in range(2, limit+1)]
+
+for prime in prime_list:
+    for elem in range(prime*2, max(prime_list)+1, prime):
+        if elem in prime_list:
+            prime_list.remove(elem)
+
+, number=10))
+
+"""
+
+
