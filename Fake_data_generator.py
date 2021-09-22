@@ -31,3 +31,24 @@ person.email(domains=['mimesis.name'], unique=True)
 person.telephone(mask='1-4##-8##-5##3')
 # '1-436-896-5213'
 
+
+# Locales
+
+# Mimesis currently includes support for 34 different locales. You can specify a locale when creating providers and
+# they will return data that is appropriate for the language or country associated with that locale.
+
+from mimesis import Person
+from mimesis.enums import Gender
+
+
+de = Person('de')
+en = Person('en')
+
+de.full_name(gender=Gender.FEMALE)
+# 'Sabrina Gutermuth'
+
+en.full_name(gender=Gender.MALE)
+# 'Layne Gallagher'
+
+
+
