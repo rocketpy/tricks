@@ -51,4 +51,41 @@ en.full_name(gender=Gender.MALE)
 # 'Layne Gallagher'
 
 
+"""
+# Generating structured data
+
+# You can generate dictionaries which can be easily converted to any the format you want (JSON/XML/YAML etc.) with any structure you want.
+
+from flask import Flask, jsonify, request
+from mimesis.schema import Field, Schema
+from mimesis.enums import Gender
+
+
+app = Flask(__name__)
+
+
+@app.route('/apps', methods=('GET',))
+def apps_view():
+    locale = request.args.get('locale', default='en', type=str)
+    count = request.args.get('count', default=1, type=int)
+
+    _ = Field(locale)
+
+    schema = Schema(schema=lambda: {
+        'id': _('uuid'),
+        'name': _('text.word'),
+        'version': _('version', pre_release=True),
+        'timestamp': _('timestamp', posix=False),
+        'owner': {
+            'email': _('person.email', domains=['test.com'], key=str.lower),
+            'token': _('token_hex'),
+            'creator': _('full_name', gender=Gender.FEMALE)},
+    })
+    data = schema.create(iterations=count)
+    return jsonify(data)
+
+
+"""
+
+
 
