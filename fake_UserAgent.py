@@ -53,3 +53,28 @@ ua.safari
 
 # and the best one, random via real world browser usage statistic
 ua.random
+
+
+# fake-useragent store collected data at your os temp dir, like /tmp
+# to update saved database just:
+
+from fake_useragent import UserAgent
+
+ua = UserAgent()
+ua.update()
+
+# don't cache database
+from fake_useragent import UserAgent
+
+ua = UserAgent(cache=False)
+
+
+# If You will try to get unknown browser: (version 0.1.3 changed)
+from fake_useragent import UserAgent
+
+ua = UserAgent()
+ua.best_browser
+# Traceback (most recent call last):
+#   ...
+# fake_useragent.errors.FakeUserAgentError
+
