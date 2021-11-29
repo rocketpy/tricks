@@ -1,4 +1,5 @@
 # function for creating a data
+import timeit
 import random as rnd
 
 
@@ -38,3 +39,21 @@ def test_match(data):
                 pass
             case _:
                 pass
+            
+
+
+test_data = create_data()
+
+repeats = 100
+
+time_repeat_if = timeit.timeit("test_if(test_data)",
+                               setup="from __main__ import test_if, test_data",
+                               number=repeats)
+
+time_repeat_match = timeit.timeit("test_match(test_data)",
+                                  setup="from __main__ import test_match, test_data",
+                                  number=repeats)
+
+print("Result: IF/ELSE: ", time_repeat_if/repeats)
+print("Result MATCH/CASE: ", time_repeat_match/repeats)
+
