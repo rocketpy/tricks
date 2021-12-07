@@ -11,3 +11,24 @@
 
 # for update
 # poetry update
+
+
+# by pip:  pip freeze
+
+# in the file poetry.lock 
+# by poetry: poetry show --tree
+
+
+# in venv by pip: ./venv/Scripts/activate.bat
+
+# in poetry: no need
+
+
+# main file in poetry:  pyproject.toml
+
+# tool.poetry - contain main info about the project
+
+# tool.poetry.dependencies - including all dependencies of the project
+
+
+
