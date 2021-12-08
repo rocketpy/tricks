@@ -31,4 +31,28 @@
 # tool.poetry.dependencies - including all dependencies of the project
 
 
+# Set dependencies
+# poetry install --extras "mysql pgsql"
+# poetry install -E mysql -E pgsql
+
+# New poetry project
+# poetry new new_project
+
+# Set poetry like pip manager in the project
+# poetry init
+"""
+    --name: project name
+
+    --description: 
+
+    --author: 
+
+    --python: 
+
+    --dependency: 
+
+    --dev-dependency: 
+"""
+
+
 
