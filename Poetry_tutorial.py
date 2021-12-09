@@ -53,6 +53,24 @@
 
     --dev-dependency: 
 """
+# Updates
 
+# update modules and poetry.lock file:
+# poetry update
 
+# update some special modules:
+# poetry update icecream pygame
 
+# add some module:
+# poetry add pygame
+
+# special versions:
+# poetry add "pygame>=2"
+# poetry add pygame@^2
+
+# Params:
+--dev (-D)
+
+--path
+
+--lock 
