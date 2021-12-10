@@ -74,3 +74,23 @@
 --path
 
 --lock 
+
+# remove
+# poetry remove pygame
+
+# --dev :remove from dev dependencies
+
+# show project dependencies
+# poetry show
+
+# poetry show pygame - for some module
+
+# Show dependencies tree
+# poetry show --tree
+
+--tree: tree dependencies
+
+--latest (-l): latest versions
+
+--outdated (-o): oldest versions
+    
