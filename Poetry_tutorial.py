@@ -94,3 +94,11 @@
 
 --outdated (-o): oldest versions
     
+    
+# To run project:
+
+poetry run python file_name.py
+poetry run python main.py 
+poetry run <script_name from [tool.poetry.scripts]>
+poetry run main-run
+    
