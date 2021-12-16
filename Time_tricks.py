@@ -8,3 +8,16 @@ data.strftime("%I:%M %p")
 data = datetime.strptime("22:30", "%H:%M")
 data.strftime("%I:%M %p")
 # '10:30 PM'
+
+# Converting string to datetime
+from datetime import datetime
+
+date_time = datetime.strptime('Jul 5 2015  1:22PM', '%b %d %Y %I:%M%p')
+
+# or
+from datetime import datetime
+
+date_string = "2012-12-12 10:10:10"
+print (datetime.fromisoformat(date_string))
+# 2012-12-12 10:10:10
+
