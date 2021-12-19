@@ -55,3 +55,15 @@ s = datetime_object.strftime("%d/%m/%y")
 %h - same as %b %H - hour, using a 24-hour clock (00 to 23)
 """
 
+#  strftime() and strptime() Behavior
+#  https://docs.python.org/3.6/library/datetime.html#strftime-and-strptime-behavior
+
+datetime.strptime('1 jul 2009','%d %b %Y')
+datetime.datetime(2009, 7, 1, 0, 0)
+
+datetime.strptime('1 Jul 2009','%d %b %Y')
+datetime.datetime(2009, 7, 1, 0, 0)
+
+datetime.strptime('jul 21 1996','%b %d %Y')
+datetime.datetime(1996, 7, 21, 0, 0)
+
