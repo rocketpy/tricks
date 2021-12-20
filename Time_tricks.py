@@ -67,3 +67,21 @@ datetime.datetime(2009, 7, 1, 0, 0)
 datetime.strptime('jul 21 1996','%b %d %Y')
 datetime.datetime(1996, 7, 21, 0, 0)
 
+
+datetime.strptime('1 July 2009','%d %B %Y')
+datetime.datetime(2009, 7, 1, 0, 0)
+
+result = datetime.strptime('1 July 2009','%d %B %Y')
+result.strftime('%d/%m/%Y')
+# 01/07/2009
+
+
+from datetime import datetime
+
+datetime_object = datetime.strptime('1 June 2005','%d %B %Y')
+print(datetime_object)
+# 2005-06-01 00:00:00
+
+print(datetime_object.strftime("%d/%m/%Y"))
+# 01/06/2005
+
