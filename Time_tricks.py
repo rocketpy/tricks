@@ -85,3 +85,9 @@ print(datetime_object)
 print(datetime_object.strftime("%d/%m/%Y"))
 # 01/06/2005
 
+
+# from datetime import datetime
+
+print(datetime.strptime('5 June 2021', '%d %B %Y').strftime('%d/%m/%Y'))
+print(datetime.strptime('25 July 1999', '%d %B %Y').strftime('%d/%m/%Y'))
+
