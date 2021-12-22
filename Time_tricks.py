@@ -91,3 +91,13 @@ print(datetime_object.strftime("%d/%m/%Y"))
 print(datetime.strptime('5 June 2021', '%d %B %Y').strftime('%d/%m/%Y'))
 print(datetime.strptime('25 July 1999', '%d %B %Y').strftime('%d/%m/%Y'))
 
+
+from datetime import datetime, timezone
+
+s = '22:33:55'
+
+today = datetime.today() # 2021-11-11
+date_time_data = datetime.combine(today, datetime.strptime(s, '%H:%M:%S').time())
+date_time = date_time_data.replace(tzinfo=timezone.utc)
+time_stamp = date_time.timestamp()
+
