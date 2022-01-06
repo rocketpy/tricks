@@ -1,3 +1,8 @@
+# Setup
+
+run pip install -U pywinauto (dependencies will be installed automatically)
+
+
 from pywinauto.application import Application
 
 
