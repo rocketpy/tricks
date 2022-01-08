@@ -7,7 +7,20 @@
 3. Don’t name your script as email.py to avoid conflict with the built-in Python module.
 """
 
-# Example 1
+import smtplib
+
+
+sender_Email = "...@gmail.com"
+reciever_Email = "...@gmail.com"
+password = input('Enter your email account password: ')
+
+subject = "Test Email from ..."
+body = "Bla bla bla"
+message = f'Subject: {Subject}\n\n{Body}'
+
+# or
+
+# Example 
 import smtplib
 from email import encoders
 from email.mime.multipart import MIMEMultipart
