@@ -41,6 +41,12 @@ msg.attach(MIMEText(body, 'plain'))
 file_name = "image.png"
 attachment = open("Path of the file", "rb")
 
+p = MIMEBase('application', 'octet-stream')
+p.set_payload((attachment).read())
+encoders.encode_base64(p)
+p.add_header('Content-Disposition', "attachment; filename= %s" % filename)
+msg.attach(p)
+
 
 # or
 
