@@ -18,6 +18,24 @@ subject = "Test Email from ..."
 body = "Bla bla bla"
 message = f'Subject: {Subject}\n\n{Body}'
 
+
+# or
+import smtplib
+from email import encoders
+from email.mime.text import MIMEText
+from email.mime.base import MIMEBase
+from email.mime.multipart import MIMEMultipart
+
+   
+from_addr_email = "...@gmail.com"
+from_addr_email= "...@gmail.com"
+
+msg = MIMEMultipart()
+msg['From'] = from_addr_email
+msg['To'] = from_addr_email
+msg['Subject'] = "Subject of the email"
+
+
 # or
 
 # Example 
