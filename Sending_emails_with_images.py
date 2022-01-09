@@ -35,6 +35,12 @@ msg['From'] = from_addr_email
 msg['To'] = from_addr_email
 msg['Subject'] = "Subject of the email"
 
+body = "Bla bla bla"
+msg.attach(MIMEText(body, 'plain'))
+
+file_name = "image.png"
+attachment = open("Path of the file", "rb")
+
 
 # or
 
