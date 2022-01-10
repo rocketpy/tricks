@@ -28,11 +28,11 @@ from email.mime.multipart import MIMEMultipart
 
    
 from_addr_email = "...@gmail.com"
-from_addr_email= "...@gmail.com"
+to_addr_email= "...@gmail.com"
 
 msg = MIMEMultipart()
 msg['From'] = from_addr_email
-msg['To'] = from_addr_email
+msg['To'] = to_addr_email
 msg['Subject'] = "Subject of the email"
 
 body = "Bla bla bla"
@@ -46,6 +46,12 @@ p.set_payload((attachment).read())
 encoders.encode_base64(p)
 p.add_header('Content-Disposition', "attachment; filename= %s" % filename)
 msg.attach(p)
+s = smtplib.SMTP('smtp.gmail.com', 587)
+s.starttls()
+s.login(fromaddr, "Sender password")
+text = msg.as_string()
+s.sendmail(from_addr_email, to_addr_email, text)
+s.quit()
 
 
 # or
