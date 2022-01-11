@@ -101,3 +101,14 @@ smtp.login('exampleuser', 'examplepass') #Username and Password of Account
 smtp.sendmail(strFrom, strTo, msgRoot.as_string())
 smtp.quit()
 
+
+# To send multiple images as attachments
+files_list = ['image.png', 'img.gif']
+
+for file in files_list:
+    with open(file, 'rb') as f:
+        image_data = f.read()
+        image_type = imghdr.what(f.name)
+        image_name = f.name
+    new_message.add_attachment(image_data, maintype='image', subtype=image_type, filename=image_name)
+
