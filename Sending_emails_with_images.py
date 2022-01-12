@@ -112,6 +112,12 @@ sender_email = "...@gmail.com"
 reciever_email = "...@gmail.com"
 password = input('Your email password: ')
 
+new_message = EmailMessage()                         
+new_message['Subject'] = "Bla bla bla" 
+new_message['From'] = sender_email                   
+new_message['To'] = reciever_email                   
+newMessage.set_content('Image attached') 
+
 
 
 # To send multiple images as attachments
