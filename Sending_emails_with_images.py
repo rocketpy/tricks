@@ -102,6 +102,18 @@ smtp.sendmail(strFrom, strTo, msgRoot.as_string())
 smtp.quit()
 
 
+# or
+import imghdr
+import smtplib
+from email.message import EmailMessage
+
+
+sender_email = "...@gmail.com"
+reciever_email = "...@gmail.com"
+password = input('Your email password: ')
+
+
+
 # To send multiple images as attachments
 files_list = ['image.png', 'img.gif']
 
