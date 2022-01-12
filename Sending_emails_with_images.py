@@ -116,7 +116,19 @@ new_message = EmailMessage()
 new_message['Subject'] = "Bla bla bla" 
 new_message['From'] = sender_email                   
 new_message['To'] = reciever_email                   
-newMessage.set_content('Image attached') 
+newMessage.set_content('Image attached')
+
+with open('file_name.png', 'rb') as f:
+    image_data = f.read()
+    image_type = imghdr.what(f.name)
+    image_name = f.name
+      
+new_message.add_attachment(image_data, maintype='image',
+                           subtype=image_type, filename=image_name)
+
+with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
+    smtp.loginsSender_email, password)              
+    smtp.send_message(new_message)
 
 
 
