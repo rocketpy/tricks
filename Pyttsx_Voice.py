@@ -6,9 +6,7 @@
 #  pip install pyttsx3
 
 
-
 # Usage :
-
 import pyttsx3
 
 
@@ -47,6 +45,23 @@ engine.stop()
 # On linux make sure that 'espeak' and 'ffmpeg' are installed
 engine.save_to_file('Hello World', 'test.mp3')
 engine.runAndWait()
+
+
+# This code to iterate through the voices to find the female voice 
+# On Windows 10 the female voice was HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-US_ZIRA_11.0
+import pyttsx
+
+engine = pyttsx.init()
+voices = engine.getProperty('voices')
+
+for voice in voices:
+    engine.setProperty('voice', voice.id)
+    print voice.id
+    engine.say('Bla bla bla')  # Some text
+    
+engine.runAndWait()
+
+
 
 
 
