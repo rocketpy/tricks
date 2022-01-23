@@ -61,7 +61,16 @@ for voice in voices:
     
 engine.runAndWait()
 
+# Update
+import pyttsx
 
+engine = pyttsx.init()
+engine.setProperty('voice', 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-US_ZIRA_11.0')
+engine.say('The quick brown fox jumped over the lazy dog.')
+engine.runAndWait() 
 
-
+# or
+engine = pyttsx.init()
+voices = engine.getProperty('voices')
+engine.setProperty('voice', voices[1].id)
 
