@@ -1,5 +1,12 @@
 #  XPath used for navigate through elements and attributes in an XML document.
 
+# Xpath Nodes:
+# https://www.w3schools.com/xml/xpath_nodes.asp
+
+# XPath Syntax:
+# https://www.w3schools.com/xml/xpath_syntax.asp
+
+
 //*  - Select All
 //   - Anywhere in selected scope
 /    - Select the next level item
