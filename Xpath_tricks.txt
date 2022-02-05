@@ -1,1 +1,10 @@
+#  XPath used for navigate through elements and attributes in an XML document.
+
+//*  - Select All
+//   - Anywhere in selected scope
+/    - Select the next level item
+/..  - Parent of ..
+::   - In the scope of ..
+
+
 
