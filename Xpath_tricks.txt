@@ -14,4 +14,17 @@
 ::   - In the scope of ..
 
 
+# some examples:
+
+//tag_name[@attribute='value']
+
+//*[contains(text(),'value')]
+
+//*[@class='class_name']/div
+# or
+//*[@class='class_name']//div  # here is first and last 
+
+//tag_name[contains(text(),'value')]
+
+//tag_name[contains(@attribute,'value')]
 
