@@ -26,5 +26,14 @@
 
 //tag_name[contains(text(),'value')]
 
-//tag_name[contains(@attribute,'value')]
+//tag_name[contains(//tag_name[@attribute='value' and @attribute='value'])]
+
+# using: and , or
+//tag_name[@attribute='value' and @attribute='value']
+//tag_name[@attribute='value' or @attribute='value']
+
+# starts with
+//tag_name[starts-with(@attribute, 'value')]
+
+
 
