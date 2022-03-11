@@ -18,6 +18,12 @@ def get_data(ip='127.0.0.1'):
             '[Lat]': response.get('lat'),
             '[Lon]': response.get('lon')
         }
+        
+        # for k, v in data.items():
+        #    print(f'{k} : {v}')
+        
+        area = folium.Map(location=[response.get('lat'), response.get('lon')])
+        area.save(f'{response.get("query")}_{response.get("city")}.html')
 
 
 # requirements
