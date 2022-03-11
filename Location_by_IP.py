@@ -24,6 +24,9 @@ def get_data(ip='127.0.0.1'):
         
         area = folium.Map(location=[response.get('lat'), response.get('lon')])
         area.save(f'{response.get("query")}_{response.get("city")}.html')
+        
+    except requests.exceptions.ConnectionError:
+        print('Check internet connection!')
 
 
 # requirements
