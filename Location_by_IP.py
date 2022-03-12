@@ -29,6 +29,18 @@ def get_data(ip='127.0.0.1'):
         print('Check internet connection!')
 
 
+def main():
+    preview_text = Figlet(font='slant')
+    # print(preview_text.renderText('IP INFO'))
+    ip = input('Please, enter IP address: ')
+    
+    get_info_by_ip(ip=ip)
+    
+    
+if __name__ == '__main__':
+    main()
+    
+
 # requirements
 """
 folium==0.12.1.post1
