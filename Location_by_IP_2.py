@@ -6,3 +6,10 @@ print(socket.gethostbyname(socket.gethostname()))
 response = urllib.urlopen('http://api.hostip.info/get_html.php?   ip=xxx&position=true').read()
 print(response)
 
+# update
+ip = socket.gethostbyname(socket.gethostname())
+url = "http://api.hostip.info/get_html.php?ip=" + ip + "&position=true"
+url = "http://api.hostip.info/get_html.php?ip=%s&position=true" % ip
+url = "http://api.hostip.info/get_html.php?ip=xxx&position=true".replace("xxx", ip)
+url = "http://api.hostip.info/get_html.php?ip={}&position=true".format(ip)
+
