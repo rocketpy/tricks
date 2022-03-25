@@ -15,3 +15,13 @@ def main():
     
 if __name__ == '__main__':
     main()
+  
+
+# get an IP address
+"""
+import socket   
+
+hostname = socket.gethostname()    
+addr = socket.gethostbyname(hostname)    
+print("Your IP address is:" + addr)  
+"""
