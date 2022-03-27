@@ -11,11 +11,19 @@ try:
         print(IP)
 except:
     print('Some error !')
-    
+   
+
 # get public ip address
 from requests import get
 
 
 ip = get('https://api.ipify.org').text
 print(f'My public IP address is: {ip}')
+
+
+# or
+from requests import get
+
+ip = get('https://api.ipify.org').content.decode('utf8')
+print('My IP address is: {}'.format(ip))
 
