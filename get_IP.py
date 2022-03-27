@@ -27,3 +27,11 @@ from requests import get
 ip = get('https://api.ipify.org').content.decode('utf8')
 print('My IP address is: {}'.format(ip))
 
+
+# get external ip address
+import urllib.request
+
+external_ip = urllib.request.urlopen('https://ident.me').read().decode('utf8')
+print(external_ip)
+
+
