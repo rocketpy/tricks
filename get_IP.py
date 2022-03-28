@@ -35,3 +35,14 @@ external_ip = urllib.request.urlopen('https://ident.me').read().decode('utf8')
 print(external_ip)
 
 
+# get external ip address
+# pip install miniupnpc
+import miniupnpc
+
+
+ip = miniupnpc.UPnP()
+ip.discoverdelay = 200
+ip.discover()
+ip.selectigd()
+print('External ip address: {}'.format(ip.externalipaddress()))
+
