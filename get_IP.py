@@ -46,3 +46,9 @@ ip.discover()
 ip.selectigd()
 print('External ip address: {}'.format(ip.externalipaddress()))
 
+
+# Get IP  by Amazon AWS endpoint
+import requests
+
+ip = requests.get('https://checkip.amazonaws.com').text.strip()
+print(ip)
