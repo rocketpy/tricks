@@ -52,3 +52,14 @@ import requests
 
 ip = requests.get('https://checkip.amazonaws.com').text.strip()
 print(ip)
+
+
+# or
+import requests
+
+ip = requests.request('GET', 'http://myip.dnsomatic.com')
+print(ip.text)
+# or
+ip = requests.get('http://ipinfo.io/json').json()['ip']
+print(ip)
+
