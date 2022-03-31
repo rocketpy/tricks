@@ -53,6 +53,12 @@ import requests
 ip = requests.get('https://checkip.amazonaws.com').text.strip()
 print(ip)
 
+# or
+import requests
+
+ip = requests.get('https://www.wikipedia.org').headers['X-Client-IP']
+print("\n[+] Public IP: "+ ip)
+
 
 # or
 import requests
