@@ -69,3 +69,10 @@ print(ip.text)
 ip = requests.get('http://ipinfo.io/json').json()['ip']
 print(ip)
 
+
+# get an external IP 
+import os
+
+external_IP  = os.popen('curl -s ifconfig.me').readline()
+print(external_IP)
+
