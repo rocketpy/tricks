@@ -14,4 +14,17 @@ URL = ""
 ydl_opts = {}
 with youtube_dl.YoutubeDL(ydl_opts) as ydl:
     ydl.download([URL])
+    
+    
+# Download video
+# pip install pytube
+
+from pytube import YouTube
+
+
+URL = ""
+yt = YouTube(URL)
+yt = yt.get('mp4', '720p')
+yt.download('/path/to/download/directory')
+
 
