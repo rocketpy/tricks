@@ -29,10 +29,23 @@ yt.download('/path/to/download/directory')
 
 
 # Download video to a certain directory
+# Need to use
+"""
 ydl_opts = {
     'outtmpl': os.path.join(download_path, '%(title)s-%(id)s.%(ext)s'),
 }
+"""
 
+# or
+import os
+import youtube_dl
+from __future__ import unicode_literals
+
+
+ydl_opts = {}
+os.chdir('C:/Users/Desktop')
+with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+    ydl.download(['https://www.youtube.com/...'])
 
 # or
 import os
