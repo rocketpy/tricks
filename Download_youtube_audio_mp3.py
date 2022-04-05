@@ -28,6 +28,12 @@ yt = yt.get('mp4', '720p')
 yt.download('/path/to/download/directory')
 
 
+# Download video to a certain directory
+ydl_opts = {
+    'outtmpl': os.path.join(download_path, '%(title)s-%(id)s.%(ext)s'),
+}
+
+
 # or
 import os
 from pytube import YouTube
