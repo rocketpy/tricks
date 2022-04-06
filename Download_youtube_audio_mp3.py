@@ -35,6 +35,8 @@ ydl_opts = {
     'outtmpl': os.path.join(download_path, '%(title)s-%(id)s.%(ext)s'),
 }
 """
+# download_path should be 'C:/Users/Desktop'.
+# need use %(title)s.%(ext)s instead of %(title)s-%(id)s.%(ext)s if a file name without video ID.
 
 # or
 import os
