@@ -63,4 +63,16 @@ def YouTubeVideo(videourl, path):
 
 YouTubeVideo('https://www.youtube.com/...', './videos/...')
 
+# or
+"""
+URL = ""
+loc = '%s \%(extractor)s-%(id)s-%(title)s.%(ext)s'.replace("%s ", URL)
+ytdl_format_options = {
+'outtmpl': loc
+}
+
+with youtube_dl.YoutubeDL(ytdl_format_options) as ydl:
+     ydl.download(['https://www.youtube.com/...'])
+"""
+
 
