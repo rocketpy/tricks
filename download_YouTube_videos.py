@@ -35,6 +35,22 @@ t = y.streams.filter(only_audio=True).all()
 t[0].download(output_path="/your/target/directory")
 
 
+# or how to download video from youtube
+import os
+from pytube import YouTube
+
+
+def YouTube(videourl, path):
+
+    yt = YouTube(videourl)
+    yt = yt.streams.filter(progressive=True, file_extension='mp4').order_by('resolution').desc().first()
+    if not os.path.exists(path):
+        os.makedirs(path)
+    yt.download(path)
+
+YouTube('https://www.youtube.com/...', './videos/...')
+
+
 # Example, download all the videos from a playlist and saving them with the title from youtube in mp4 and mp4 audio formats.
 """
 import os
