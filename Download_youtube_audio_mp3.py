@@ -75,4 +75,12 @@ with youtube_dl.YoutubeDL(ytdl_format_options) as ydl:
      ydl.download(['https://www.youtube.com/...'])
 """
 
+# or
+import youtube_dl
+from __future__ import unicode_literals
+
+
+ydl_opts = {'outtmpl': 'yourPathToDirectory/%(title)s.%(ext)s',}
+with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+    ydl.download(['https://www.youtube.com/...'])
 
