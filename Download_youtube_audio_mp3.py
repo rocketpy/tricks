@@ -83,4 +83,17 @@ from __future__ import unicode_literals
 ydl_opts = {'outtmpl': 'yourPathToDirectory/%(title)s.%(ext)s',}
 with youtube_dl.YoutubeDL(ydl_opts) as ydl:
     ydl.download(['https://www.youtube.com/...'])
+    
+    
+#  Some example to download
+# pip install pytube
+# python download.py
+
+from pytube import YouTube
+
+
+yt = YouTube("https://www.youtube.com/watch...", 
+             use_oauth=False,
+             allow_oauth_cache=True)
+yt.streams.filter(file_extension='mp4', res="720p").first().download()
 
