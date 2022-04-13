@@ -15,6 +15,23 @@ ydl_opts = {}
 with youtube_dl.YoutubeDL(ydl_opts) as ydl:
     ydl.download([URL])
     
+
+# or, download an audio file if it possible
+import youtube_dl
+from __future__ import unicode_literals
+
+
+ydl_opts = {
+    'format': 'bestaudio/best',
+    'postprocessors': [{
+        'key': 'FFmpegExtractAudio',
+        'preferredcodec': 'mp3',
+        'preferredquality': '192',
+    }],
+}
+with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+    ydl.download(['http://www.youtube.com/...'])
+    
     
 # Download video
 # pip install pytube
