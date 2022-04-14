@@ -51,6 +51,8 @@ ydl_opts = {
     'prefer_ffmpeg': True,
     'keepvideo': True
 }
+with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+    ydl.download(['http://www.youtube.com/...'])
     
     
 # Download video
