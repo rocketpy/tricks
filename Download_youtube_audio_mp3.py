@@ -55,6 +55,19 @@ with youtube_dl.YoutubeDL(ydl_opts) as ydl:
     ydl.download(['http://www.youtube.com/...'])
     
     
+#  using pytube
+import os
+from pytube import YouTube
+
+
+URL = YouTube('')
+video = URL.streams.filter(only_audio=True).first()
+out_file = video.download(output_path=".")
+base, ext = os.path.splitext(out_file)
+new_file = base + '.mp3'
+os.rename(out_file, new_file)
+    
+    
 # Download video
 # pip install pytube
 
