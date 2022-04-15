@@ -66,6 +66,15 @@ out_file = video.download(output_path=".")
 base, ext = os.path.splitext(out_file)
 new_file = base + '.mp3'
 os.rename(out_file, new_file)
+
+
+# use tube_dl
+# pip install tube_dl
+
+# get only audio.
+from tube_dl import Youtube
+youtube('URL').formats.filter(only_audio=True)[0]**.download(convert='mp3')
+
     
     
 # Download video
