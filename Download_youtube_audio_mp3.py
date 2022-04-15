@@ -75,6 +75,12 @@ os.rename(out_file, new_file)
 from tube_dl import Youtube
 youtube('URL').formats.filter(only_audio=True)[0]**.download(convert='mp3')
 
+# Instead of 0, to use favourite quality.
+# To print all the audios supported. Then specify index of your choice and download
+print(youtube('Your URL').formats.filter(only_audio=True))
+
+# IMPORTANT !!! - filter is deprecated, use filter_by instead
+
     
     
 # Download video
