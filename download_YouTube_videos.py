@@ -81,17 +81,23 @@ print('Download complete !')
 """
 
 
-# 
+# Download video to a certain directory
 import os
 import sys
 from pytube import YouTube
 
 
 
-def downloadYoutube(vid_url, path):
+def download_video(vid_url, path):
     yt = YouTube(vid_url)
     yt = yt.streams.filter(progressive=True, file_extension='mp4').order_by('resolution').desc().first()
     if not os.path.exists(path):
         os.makedirs(path)
-
     yt.download(path)
+
+url = sys.argv[1]
+# path to save
+path = sys.argv[2]
+download_video(url, path)
+# exit()
+
