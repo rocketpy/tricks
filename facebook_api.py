@@ -17,5 +17,12 @@ from pyfacebook import GraphAPI
 api = GraphAPI(access_token="token")
 
 
+# use app credentials to generate app token:
+from pyfacebook import GraphAPI
+
+api = GraphAPI(app_id="id", app_secret="secret", application_only_auth=True)
+
+
+
 
 
