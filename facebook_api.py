@@ -38,4 +38,10 @@ api.exchange_user_access_token(response="url redirected")
 # Now the api will get the user access token.
 
 
+# Get object data:
+api.get_object(object_id="20531316728")
+# {'name': 'Facebook App', 'id': '20531316728'}
+
+
+
 
