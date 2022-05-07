@@ -1,9 +1,9 @@
 # python-facebook-api - A simple Python wrapper around the Facebook Graph API
 # Now we can use base class GraphApi to get data.
 
-# pip install python-facebook-api
+# Github: https://github.com/sns-sdks/python-facebook
 
-# Giyhub: https://github.com/sns-sdks/python-facebook
+# pip install python-facebook-api
 
 #  Usage:
 
@@ -42,6 +42,15 @@ api.exchange_user_access_token(response="url redirected")
 api.get_object(object_id="20531316728")
 # {'name': 'Facebook App', 'id': '20531316728'}
 
+
+# Initial methods same with GraphAPI.
+# Get user data:
+fb.user.get_info(user_id="413140042878187")
+# User(id='413140042878187', name='Kun Liu')
+
+# Get page data:
+fb.page.get_info(page_id="20531316728")
+Page(id='20531316728', name='Facebook App')
 
 
 
