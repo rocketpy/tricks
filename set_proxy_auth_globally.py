@@ -17,3 +17,10 @@ s.auth = auth
 ext_ip = s.get('http://checkip.dyndns.org')
 
 # print(ext_ip.text)
+
+
+#  Apply proxy with auth using http.client for API
+
+# If use urlib2 or requests
+HTTPS_PROXY = https://user:pass@host:port
+
