@@ -22,5 +22,20 @@ ext_ip = s.get('http://checkip.dyndns.org')
 #  Apply proxy with auth using http.client for API
 
 # If use urlib2 or requests
-HTTPS_PROXY = https://user:pass@host:port
+# HTTPS_PROXY = https://user:pass@host:port
+
+
+# or
+import requests
+
+
+proxies = {'http':  f"http://username:pwd@webproxy.subdomain.website.com:8080", 
+           'https': f"https://username:pwd@webproxy.subdomain.website.com:8080"}
+
+url = 'https://api...'
+params = 'mkt=' + 'en-US' + '&q=' + urllib.parse.quote (query)
+headers = {'Key': subscriptionKey}
+session = requests.Session()
+session.proxies = proxies
+req = session.get(url, params=params, headers=headers)
 
