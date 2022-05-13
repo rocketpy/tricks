@@ -17,5 +17,15 @@ win32api.mouse_event(win32con.MOUSEEVENTF_MOVE | win32con.MOUSEEVENTF_ABSOLUTE, 
 import mouse
 
 mouse.move(9,45)
+# mouse.move(x, y, absolute=True, duration=0, steps_per_second=120.0)
+
 # mouse.drag(start_x, start_y, end_x, end_y, absolute=True, duration=0)
+
+# mouse.click(button='left')
+
+# mouse.double_click(button='left')
+
+# mouse.on_button(callback, args=(), buttons=('left', 'middle', 'right', 'x', 'x2'), types=('up', 'down', 'double'))
+
+
 
