@@ -33,8 +33,22 @@ print(mouse.get_position())
 # from (0,120) to (1000, 250) absolute screen in 1 sec
 mouse.drag(0,120 , 1000, 250 , absolute=False, duration=1)
 
+# Move the mouse cursor
+# move to 1000px right and 500px down
+mouse.move(1000,500, absolute=False, duration=1)
+
 mouse.move(9,45)
 # mouse.move(x, y, absolute=True, duration=0, steps_per_second=120.0)
+
+# Check the mouse click, is_pressed() function
+# click right button?
+print(mouse.is_pressed("right"))
+
+# click left button?
+print(mouse.is_pressed("left"))
+
+# click center button?
+print(mouse.is_pressed("center"))
 
 # mouse.drag(start_x, start_y, end_x, end_y, absolute=True, duration=0)
 
