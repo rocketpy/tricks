@@ -25,6 +25,14 @@ mouse.click('right')
 # click middle mouse button
 mouse.click('middle')
 
+# get position
+print(mouse.get_position())
+# width height
+
+# Drag the mouse cursor 
+# from (0,120) to (1000, 250) absolute screen in 1 sec
+mouse.drag(0,120 , 1000, 250 , absolute=False, duration=1)
+
 mouse.move(9,45)
 # mouse.move(x, y, absolute=True, duration=0, steps_per_second=120.0)
 
