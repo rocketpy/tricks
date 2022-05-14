@@ -16,6 +16,15 @@ win32api.mouse_event(win32con.MOUSEEVENTF_MOVE | win32con.MOUSEEVENTF_ABSOLUTE, 
 # pip install mouse
 import mouse
 
+# click left mouse  button
+mouse.click('left')
+
+# click right mouse button
+mouse.click('right')
+
+# click middle mouse button
+mouse.click('middle')
+
 mouse.move(9,45)
 # mouse.move(x, y, absolute=True, duration=0, steps_per_second=120.0)
 
