@@ -51,12 +51,22 @@ print(mouse.is_pressed("left"))
 print(mouse.is_pressed("center"))
 
 # mouse.drag(start_x, start_y, end_x, end_y, absolute=True, duration=0)
-
 # mouse.click(button='left')
-
 # mouse.double_click(button='left')
-
 # mouse.on_button(callback, args=(), buttons=('left', 'middle', 'right', 'x', 'x2'), types=('up', 'down', 'double'))
 
 
+# use on_click() and on_right_click() functions
+import keyboard #pip install keyboard
 
+#when left button click
+mouse.on_click(lambda : print("Left button was clicked"))
+
+#when right  button click
+mouse.on_right_click(lambda : print("Right button was clicked"))
+
+#press Esc to kill the event
+if not keyboard.wait("Esc"):
+    mouse.unhook_all()
+
+# unhook_all() function will remove all the event listeners
