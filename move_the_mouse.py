@@ -70,3 +70,11 @@ if not keyboard.wait("Esc"):
     mouse.unhook_all()
 
 # unhook_all() function will remove all the event listeners
+
+
+# use wheel of the Mouse
+# scroll wheel up
+mouse.wheel(1)
+
+# scroll wheel down
+mouse.wheel(-1)
