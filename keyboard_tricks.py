@@ -31,3 +31,15 @@ keyboard.add_abbreviation('@@', 'my.long.email@example.com')
 # Block forever, like `while True`.
 keyboard.wait()
 
+
+# Use as standalone module:
+# Save JSON events to a file until interrupted:
+# python -m keyboard > events.txt
+
+# cat events.txt
+# {"event_type": "down", "scan_code": 25, "name": "p", "time": 1622447562.2994788, "is_keypad": false}
+# {"event_type": "up", "scan_code": 25, "name": "p", "time": 1622447562.431007, "is_keypad": false}
+
+# Replay events
+# python -m keyboard < events.txt
+
