@@ -43,3 +43,23 @@ keyboard.wait()
 # Replay events
 # python -m keyboard < events.txt
 
+
+# Common patterns and mistakes for Preventing the program from closing
+import keyboard
+
+keyboard.add_hotkey('space', lambda: print('space was pressed!'))
+# If the program finishes, the hotkey is not in effect anymore.
+
+# VERY IMPORTANT !!!
+# Don't do this! This will use 100% of your CPU.
+# while True: pass
+
+# Use this instead
+keyboard.wait()
+
+# or this
+import time
+
+while True:
+    time.sleep(1000000)
+
