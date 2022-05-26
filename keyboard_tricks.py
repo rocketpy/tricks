@@ -63,3 +63,16 @@ import time
 while True:
     time.sleep(1000000)
 
+
+# Waiting for a key press one time
+import keyboard
+
+# VERY IMPORTANT !!!
+# Don't do this! This will use 100% of your CPU until you press the key.
+# while not keyboard.is_pressed('space'):
+#     continue
+# print('space was pressed, continuing...')
+
+# Do this instead
+keyboard.wait('space')
+print('space was pressed, continuing...')
