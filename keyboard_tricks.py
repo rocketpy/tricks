@@ -76,3 +76,26 @@ import keyboard
 # Do this instead
 keyboard.wait('space')
 print('space was pressed, continuing...')
+
+
+# Repeatedly waiting for a key press
+import keyboard
+
+# VERY IMPORTANT !!!
+# Don't do this!
+# This will use 100% of your CPU and print the message many times.
+
+#while True:
+#    if keyboard.is_pressed('space'):
+#        print('space was pressed!')
+
+
+# Do this instead
+while True:
+    keyboard.wait('space')
+    print('space was pressed! Waiting on it again...')
+
+# or this
+keyboard.add_hotkey('space', lambda: print('space was pressed!'))
+keyboard.wait()
+
