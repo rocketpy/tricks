@@ -99,3 +99,20 @@ while True:
 keyboard.add_hotkey('space', lambda: print('space was pressed!'))
 keyboard.wait()
 
+
+# Invoking code when an event happens
+
+import keyboard
+
+# VERY IMPORTANT !!!
+# Don't do this! This will call `print('space')` immediately then fail when the key is actually pressed.
+#keyboard.add_hotkey('space', print('space was pressed'))
+
+# Do this instead !!!
+keyboard.add_hotkey('space', lambda: print('space was pressed'))
+
+# or this
+def on_space():
+    print('space was pressed')
+keyboard.add_hotkey('space', on_space)
+
