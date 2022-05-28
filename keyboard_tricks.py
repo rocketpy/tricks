@@ -101,7 +101,6 @@ keyboard.wait()
 
 
 # Invoking code when an event happens
-
 import keyboard
 
 # VERY IMPORTANT !!!
@@ -122,5 +121,20 @@ while True:
     event = keyboard.read_event()
     if event.event_type == keyboard.KEY_DOWN and event.name == 'space':
         print('space was pressed')
+
+        
+# 'Press any key to continue'
+
+# VERY IMPORTANT !!!
+# Don't do this! The `keyboard` module is meant for global events, even when your program is not in focus.
+#import keyboard
+#print('Press any key to continue...')
+#keyboard.get_event()
+
+# Do this instead
+input('Press enter to continue...')
+
+# Or one of the suggestions from here
+# https://stackoverflow.com/questions/983354/how-to-make-a-script-wait-for-a-pressed-key
 
 
