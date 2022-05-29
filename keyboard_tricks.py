@@ -32,6 +32,25 @@ keyboard.add_abbreviation('@@', 'my.long.email@example.com')
 keyboard.wait()
 
 
+# To Do
+"""
+# to lock Windows desktop
+keyboard.send('win+l')
+
+import ctypes,time,keyboard
+
+dll = ctypes.WinDLL('user32.dll')
+dll.LockWorkStation()
+
+time.sleep(2)
+
+keyboard.send('Enter')
+keyboard.send('My password')
+keyboard.send('Enter')
+
+"""
+
+
 # Use as standalone module:
 # Save JSON events to a file until interrupted:
 # python -m keyboard > events.txt
