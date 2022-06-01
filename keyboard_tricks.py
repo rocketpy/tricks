@@ -157,3 +157,53 @@ input('Press enter to continue...')
 # https://stackoverflow.com/questions/983354/how-to-make-a-script-wait-for-a-pressed-key
 
 
+# API methods:
+"""
+    keyboard.KEY_DOWN
+    keyboard.KEY_UP
+    keyboard.KeyboardEvent
+    keyboard.all_modifiers
+    keyboard.sided_modifiers
+    keyboard.version
+    keyboard.is_modifier
+    keyboard.key_to_scan_codes
+    keyboard.parse_hotkey
+    keyboard.send (aliases: press_and_release)
+    keyboard.press
+    keyboard.release
+    keyboard.is_pressed
+    keyboard.call_later
+    keyboard.hook
+    keyboard.on_press
+    keyboard.on_release
+    keyboard.hook_key
+    keyboard.on_press_key
+    keyboard.on_release_key
+    keyboard.unhook (aliases: unblock_key, unhook_key, unremap_key)
+    keyboard.unhook_all
+    keyboard.block_key
+    keyboard.remap_key
+    keyboard.parse_hotkey_combinations
+    keyboard.add_hotkey (aliases: register_hotkey)
+    keyboard.remove_hotkey (aliases: clear_hotkey, unregister_hotkey, unremap_hotkey)
+    keyboard.unhook_all_hotkeys (aliases: clear_all_hotkeys, remove_all_hotkeys, unregister_all_hotkeys)
+    keyboard.remap_hotkey
+    keyboard.stash_state
+    keyboard.restore_state
+    keyboard.restore_modifiers
+    keyboard.write
+    keyboard.wait
+    keyboard.get_hotkey_name
+    keyboard.read_event
+    keyboard.read_key
+    keyboard.read_hotkey
+    keyboard.get_typed_strings
+    keyboard.start_recording
+    keyboard.stop_recording
+    keyboard.record
+    keyboard.play (aliases: replay)
+    keyboard.add_word_listener (aliases: register_word_listener)
+    keyboard.remove_word_listener (aliases: remove_abbreviation)
+    keyboard.add_abbreviation (aliases: register_abbreviation)
+    keyboard.normalize_name
+"""
