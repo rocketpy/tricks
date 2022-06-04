@@ -36,3 +36,12 @@ print(resp.data)
 print(resp.headers)
 # HTTPHeaderDict({"Content-Length": "32", ...})
 
+
+# JSON Content
+# JSON content can be loaded by json() method of the response:
+
+resp = urllib3.request("GET", "https://httpbin.org/ip")
+
+print(resp.json())
+# {"origin": "127.0.0.1"}
+
