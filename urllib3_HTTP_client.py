@@ -58,3 +58,14 @@ print(orjson.loads(resp.data)["json"])
 # {'attribute': 'value'}
 
 
+# Binary Content
+# The data attribute of the response is always set to a byte string representing the response content:
+import urllib3
+
+resp = urllib3.request("GET", "https://httpbin.org/bytes/8")
+
+print(resp.data)
+# b"\xaa\xa5H?\x95\xe9\x9b\x11"
+
+
+
