@@ -68,4 +68,15 @@ print(resp.data)
 # b"\xaa\xa5H?\x95\xe9\x9b\x11"
 
 
+# Using io Wrappers with Response Content
+import io
+import urllib3
+
+resp = urllib3.request("GET", "https://example.com", preload_content=False)
+resp.auto_close = False
+
+for line in io.TextIOWrapper(resp):
+    print(line)
+
+
 
