@@ -45,3 +45,16 @@ resp = urllib3.request("GET", "https://httpbin.org/ip")
 print(resp.json())
 # {"origin": "127.0.0.1"}
 
+
+# Alternatively, Custom JSON libraries such as orjson can be used to encode data,
+# retrieve data by decoding and deserializing the data attribute of the request:
+import orjson
+import urllib3
+
+encoded_data = orjson.dumps({"attribute": "value"})
+resp = urllib3.request(method="POST", url="http://httpbin.org/post", body=encoded_data)
+
+print(orjson.loads(resp.data)["json"])
+# {'attribute': 'value'}
+
+
