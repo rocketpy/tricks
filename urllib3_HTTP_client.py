@@ -79,4 +79,20 @@ for line in io.TextIOWrapper(resp):
     print(line)
 
 
+# Request Data
+# Headers
+
+import urllib3
+
+resp = urllib3.request(
+    "GET",
+    "https://httpbin.org/headers",
+    headers={
+        "X-Something": "value"
+    }
+)
+
+print(resp.json()["headers"])
+# {"X-Something": "value", ...}
+
 
