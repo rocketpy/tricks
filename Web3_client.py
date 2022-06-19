@@ -30,3 +30,28 @@ rpc_api = Web3Client("https://matic-mainnet.chainstacklabs.com")
 res_hex = rpc_api.call(amm_pair_contract, token0Call)
 print(f"Token 0 Address : 0x{res_hex[-40:]}")
 
+
+#  Example
+
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, version 3 of the License.
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# You should have receive a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>
+
+"""Web3 RPC client demonstration script"""
+
+from sys import argv
+from logging import DEBUG, basicConfig
+from pyweb3 import Web3Client
+
+
+# Polygon blockchain API
+rpc_host = "https://matic-mainnet.chainstacklabs.com"
+# Uncomment below line to enable WebSocket
+# rpc_host = "wss://ws-matic-mainnet.chainstacklabs.com"
+
