@@ -55,3 +55,18 @@ rpc_host = "https://matic-mainnet.chainstacklabs.com"
 # Uncomment below line to enable WebSocket
 # rpc_host = "wss://ws-matic-mainnet.chainstacklabs.com"
 
+# fmt: off
+# flake8: noqa: E221
+token0Call   = "0dfe1681"
+token1Call   = "d21220a7"
+decimalsCall = "313ce567"
+getReserves  = "0902f1ac"
+symbolCall   = "95d89b41"
+# fmt: on
+
+# Helpers for string decoding in result
+
+def read_uint256(data, offset):
+    """Extract and decode utint256 at the given offset bytes"""
+    return int.from_bytes(data[offset : offset + 32], "big")
+
