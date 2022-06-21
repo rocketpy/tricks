@@ -65,8 +65,19 @@ symbolCall   = "95d89b41"
 # fmt: on
 
 # Helpers for string decoding in result
-
 def read_uint256(data, offset):
     """Extract and decode utint256 at the given offset bytes"""
     return int.from_bytes(data[offset : offset + 32], "big")
 
+
+def read_string(data_ans):
+    """ABI String decoding"""
+    data_bin = bytes.fromhex(data_ans[2:])
+    str_offset = read_uint256(data_bin, 0)
+    str_len = read_uint256(data_bin, str_offset)
+    str_offset += 32
+    return data_bin[str_offset : str_offset + str_len].decode("utf8")
+
+
+# SushiSwap ETH USDT
+amm_pair = "0xc2755915a85c6f6c1c0f3a86ac8c058f11caa9c9"
