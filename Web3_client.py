@@ -81,3 +81,22 @@ def read_string(data_ans):
 
 # SushiSwap ETH USDT
 amm_pair = "0xc2755915a85c6f6c1c0f3a86ac8c058f11caa9c9"
+
+
+def read_pair_info(amm_pair_addr):
+
+    rpc_api = Web3Client(rpc_host)
+
+    # Get token0 of the pair : it is WETH 0x7ceb23fd6bc0add59e62ac25578270cff1b9f619
+    res_hex = rpc_api.call(amm_pair_addr, token0Call)
+    token0_addr = f"0x{res_hex[-40:]}"
+
+    # Get token 0 symbol
+    res_hex = rpc_api.call(token0_addr, symbolCall)
+    token0_symbol = read_string(res_hex)
+
+    # get decimals of the token 0
+    res_hex = rpc_api.call(token0_addr, decimalsCall)
+    token0_decimals = int(res_hex[2:66], 16)
+    
+
