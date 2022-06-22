@@ -99,4 +99,15 @@ def read_pair_info(amm_pair_addr):
     res_hex = rpc_api.call(token0_addr, decimalsCall)
     token0_decimals = int(res_hex[2:66], 16)
     
+    # Get token1 of the pair : it is USDT 0xc2132d05d31c914a87c6611c10748aeb04b58e8f
+    res_hex = rpc_api.call(amm_pair_addr, token1Call)
+    token1_addr = f"0x{res_hex[-40:]}"
+
+    # Get token 1 symbol
+    res_hex = rpc_api.call(token1_addr, symbolCall)
+    token1_symbol = read_string(res_hex)
+
+    # get decimals of the token 1
+    res_hex = rpc_api.call(token1_addr, decimalsCall)
+    token1_decimals = int(res_hex[2:66], 16)
 
