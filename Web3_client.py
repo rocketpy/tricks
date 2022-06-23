@@ -110,4 +110,15 @@ def read_pair_info(amm_pair_addr):
     # get decimals of the token 1
     res_hex = rpc_api.call(token1_addr, decimalsCall)
     token1_decimals = int(res_hex[2:66], 16)
+    
+    
+    # get the liquidity in the pair
+    res_hex = rpc_api.call(amm_pair_addr, getReserves)
+    liquidity = [int(res_hex[2:66], 16), int(res_hex[66:130], 16)]
+
+    # Price of WETH in USDT = token1/token0
+    liquidity0 = liquidity[0] / pow(10, token0_decimals)
+    liquidity1 = liquidity[1] / pow(10, token1_decimals)
+    price = liquidity1 / liquidity0
+
 
