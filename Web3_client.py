@@ -120,5 +120,29 @@ def read_pair_info(amm_pair_addr):
     liquidity0 = liquidity[0] / pow(10, token0_decimals)
     liquidity1 = liquidity[1] / pow(10, token1_decimals)
     price = liquidity1 / liquidity0
+    
+    print(
+        f"\n\n----  Uniswap v2 Pair on Polygon : SushiSwap AMM ----\n\n"
+        f" Pair :   {token0_symbol} - {token1_symbol} \n\n"
+        f"Token 0 : {token0_symbol}\n"
+        f" - Address  : {token0_addr}\n"
+        # f" - Decimals : {self.token0.decimals}\n"
+        f" - Reserve  : {liquidity0} {token0_symbol}\n\n"
+        f"Token 1 : {token1_symbol}\n"
+        f" - Address  : {token1_addr}\n"
+        # f" - Decimals : {self.token1.decimals}\n"
+        f" - Reserve  : {liquidity1} {token1_symbol}\n\n"
+        f" Price : {token0_symbol} = {price} {token1_symbol} \n\n"
+    )
 
+
+if __name__ == "__main__":
+
+    if "-v" in argv[1:]:
+        basicConfig(level=DEBUG)
+
+    if "-vv" in argv[1:]:
+        basicConfig(level=5)
+
+    read_pair_info(amm_pair)
 
