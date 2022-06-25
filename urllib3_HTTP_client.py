@@ -96,3 +96,23 @@ print(resp.json()["headers"])
 # {"X-Something": "value", ...}
 
 
+# Or you can use the HTTPHeaderDict class to create multi-valued HTTP headers:
+import urllib3
+
+# Create an HTTPHeaderDict and add headers
+headers = urllib3.HTTPHeaderDict()
+headers.add("Accept", "application/json")
+headers.add("Accept", "text/plain")
+
+# Make the request using the headers
+resp = urllib3.request(
+    "GET",
+    "https://httpbin.org/headers",
+    headers=headers
+)
+
+print(resp.json()["headers"])
+# {"Accept": "application/json, text/plain", ...}
+
+
+
