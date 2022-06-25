@@ -115,4 +115,18 @@ print(resp.json()["headers"])
 # {"Accept": "application/json, text/plain", ...}
 
 
+# Cookies:
+# Cookies are specified using the Cookie header with a string containing the ; delimited key-value pairs:
+import urllib3
+
+resp = urllib3.request(
+    "GET",
+    "https://httpbin.org/cookies",
+    headers={
+        "Cookie": "session=f3efe9db; id=30"
+    }
+)
+
+print(resp.json())
+# {"cookies": {"id": "30", "session": "f3efe9db"}}
 
