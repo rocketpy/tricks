@@ -130,3 +130,16 @@ resp = urllib3.request(
 print(resp.json())
 # {"cookies": {"id": "30", "session": "f3efe9db"}}
 
+
+# Query Parameters:
+# For GET, HEAD, and DELETE requests, you can simply pass the arguments as a dictionary in the fields argument to request():
+import urllib3
+
+resp = urllib3.request("GET",
+                       "https://httpbin.org/get",
+                       fields={"arg": "value"})
+
+print(resp.json()["args"])
+# {"arg": "value"}
+
+
