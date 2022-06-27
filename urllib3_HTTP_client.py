@@ -158,4 +158,17 @@ print(resp.json()["args"])
 # {"arg": "value"}
 
 
+# Form Data
+# For PUT and POST requests, urllib3 will automatically form-encode the dictionary in the fields argument provided to request():
+import urllib3
+
+resp = urllib3.request(
+    "POST",
+    "https://httpbin.org/post",
+    fields={"field": "value"}
+)
+
+print(resp.json()["form"])
+# {"field": "value"}
+
 
