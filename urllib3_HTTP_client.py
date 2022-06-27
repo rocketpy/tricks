@@ -143,3 +143,19 @@ print(resp.json()["args"])
 # {"arg": "value"}
 
 
+# For POST and PUT requests, you need to manually encode query parameters in the URL:
+from urllib.parse import urlencode
+import urllib3
+
+# Encode the args into url grammar.
+encoded_args = urlencode({"arg": "value"})
+
+# Create a URL with args encoded.
+url = "https://httpbin.org/post?" + encoded_args
+resp = urllib3.request("POST", url)
+
+print(resp.json()["args"])
+# {"arg": "value"}
+
+
+
