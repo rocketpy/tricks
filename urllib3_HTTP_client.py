@@ -172,3 +172,23 @@ print(resp.json()["form"])
 # {"field": "value"}
 
 
+# JSON
+"""
+You can send a JSON request by specifying the data as json argument,
+urllib3 automatically encodes data using json module with UTF-8 encoding.
+Also by default "Content-Type" in headers is set to "application/json" if not specified when calling request():
+"""
+import urllib3
+
+data = {"attribute": "value"}
+
+resp = urllib3.request(
+    "POST",
+    "https://httpbin.org/post",
+    body=data,
+    headers={"Content-Type": "application/json"}
+)
+
+print(resp.json())
+# {"attribute": "value"}
+
