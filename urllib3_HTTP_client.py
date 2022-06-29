@@ -181,7 +181,6 @@ Also by default "Content-Type" in headers is set to "application/json" if not sp
 import urllib3
 
 data = {"attribute": "value"}
-
 resp = urllib3.request(
     "POST",
     "https://httpbin.org/post",
@@ -191,4 +190,29 @@ resp = urllib3.request(
 
 print(resp.json())
 # {"attribute": "value"}
+
+
+# Files & Binary Data
+"""
+For uploading files using multipart/form-data encoding you can use the same approach as Form Data and
+specify the file field as a tuple of (file_name, file_data):
+"""
+import urllib3
+
+# Reading the text file from local storage.
+with open("example.txt") as fp:
+    file_data = fp.read()
+
+# Sending the request.
+resp = urllib3.request(
+    "POST",
+    "https://httpbin.org/post",
+    fields={
+       "filefield": ("example.txt", file_data),
+    }
+)
+
+print(resp.json()["files"])
+# {"filefield": "..."}
+
 
