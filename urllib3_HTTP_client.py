@@ -215,4 +215,15 @@ resp = urllib3.request(
 print(resp.json()["files"])
 # {"filefield": "..."}
 
+"""
+While specifying the filename is not strictly required, it’s recommended in order to match browser behavior.
+You can also pass a third item in the tuple to specify the file’s MIME type explicitly:
+"""
+resp = urllib3.request(
+    "POST",
+    "https://httpbin.org/post",
+    fields={
+        "filefield": ("example.txt", file_data, "text/plain"),
+    }
+)
 
