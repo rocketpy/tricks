@@ -227,3 +227,19 @@ resp = urllib3.request(
     }
 )
 
+
+# For sending raw binary data simply specify the body argument. It’s also recommended to set the Content-Type header:
+import urllib3
+
+with open("/home/samad/example.jpg", "rb") as fp:
+    binary_data = fp.read()
+
+resp = urllib3.request(
+    "POST",
+    "https://httpbin.org/post",
+    body=binary_data,
+    headers={"Content-Type": "image/jpeg"}
+)
+
+print(resp.json()["data"])
+
