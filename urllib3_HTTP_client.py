@@ -243,3 +243,22 @@ resp = urllib3.request(
 
 print(resp.json()["data"])
 
+
+# Certificate Verification
+
+# python -m pip install certifi
+
+# using the secure extra:
+# python -m pip install urllib3[secure]
+
+# Once you have certificates, you can create a PoolManager that verifies certificates when making requests:
+
+import certifi
+import urllib3
+
+http = urllib3.PoolManager(
+    cert_reqs="CERT_REQUIRED",
+    ca_certs=certifi.where()
+)
+
+
