@@ -262,3 +262,16 @@ http = urllib3.PoolManager(
 )
 
 
+# The PoolManager will automatically handle certificate verification and will raise SSLError if verification fails:
+import certifi
+import urllib3
+
+http = urllib3.PoolManager(
+    cert_reqs="CERT_REQUIRED",
+    ca_certs=certifi.where()
+)
+
+http.request("GET", "https://httpbin.org/")
+# (No exception)
+http.request("GET", "https://expired.badssl.com")
+
