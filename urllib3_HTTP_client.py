@@ -275,3 +275,29 @@ http.request("GET", "https://httpbin.org/")
 # (No exception)
 http.request("GET", "https://expired.badssl.com")
 
+
+# Using Timeouts:
+"""
+Timeouts allow you to control how long (in seconds) requests are allowed to run before being aborted.
+In simple cases, you can specify a timeout as a float to request():
+"""
+import urllib3
+
+resp = urllib3.request(
+    "GET",
+    "https://httpbin.org/delay/3",
+    timeout=4.0
+)
+
+print(type(resp))
+# <class "urllib3.response.HTTPResponse">
+
+# This request will take more time to process than timeout.
+urllib3.request(
+    "GET",
+    "https://httpbin.org/delay/3",
+    timeout=2.5
+)
+# MaxRetryError caused by ReadTimeoutError
+
+
