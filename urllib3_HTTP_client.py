@@ -301,3 +301,22 @@ urllib3.request(
 # MaxRetryError caused by ReadTimeoutError
 
 
+# For more granular control you can use a Timeout instance which lets you specify separate connect and read timeouts:
+import urllib3
+
+resp = urllib3.request(
+    "GET",
+    "https://httpbin.org/delay/3",
+    timeout=urllib3.Timeout(connect=1.0)
+)
+
+print(type(resp))
+# <urllib3.response.HTTPResponse>
+
+urllib3.request(
+    "GET",
+    "https://httpbin.org/delay/3",
+    timeout=urllib3.Timeout(connect=1.0, read=2.0)
+)
+# MaxRetryError caused by ReadTimeoutError
+
