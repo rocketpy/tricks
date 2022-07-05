@@ -331,3 +331,10 @@ http = urllib3.PoolManager(
 )
 
 
+#  Retrying Requests
+
+# To change the number of retries just specify an integer:
+import urllib3
+
+urllib3.request("GET", "https://httpbin.org/ip", retries=10)
+
