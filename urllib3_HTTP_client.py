@@ -320,3 +320,14 @@ urllib3.request(
 )
 # MaxRetryError caused by ReadTimeoutError
 
+
+# If you want all requests to be subject to the same timeout, you can specify the timeout at the PoolManager level:
+import urllib3
+
+http = urllib3.PoolManager(timeout=3.0)
+
+http = urllib3.PoolManager(
+    timeout=urllib3.Timeout(connect=1.0, read=2.0)
+)
+
+
