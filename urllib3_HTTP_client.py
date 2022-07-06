@@ -338,3 +338,23 @@ import urllib3
 
 urllib3.request("GET", "https://httpbin.org/ip", retries=10)
 
+
+# To disable all retry and redirect logic specify retries=False:
+import urllib3
+
+urllib3.request(
+    "GET",
+    "https://nxdomain.example.com",
+    retries=False
+)
+# NewConnectionError
+
+resp = urllib3.request(
+    "GET",
+    "https://httpbin.org/redirect/1",
+    retries=False
+)
+
+print(resp.status)
+# 302
+
