@@ -358,3 +358,15 @@ resp = urllib3.request(
 print(resp.status)
 # 302
 
+
+# To disable redirects but keep the retrying logic, specify redirect=False:
+resp = urllib3.request(
+    "GET",
+    "https://httpbin.org/redirect/1",
+    redirect=False
+)
+
+print(resp.status)
+# 302
+
+
