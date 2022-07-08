@@ -370,3 +370,15 @@ print(resp.status)
 # 302
 
 
+# For more granular control you can use a Retry instance. This class allows you far greater control of how requests are retried.
+# For example, to do a total of 3 retries, but limit to only 2 redirects:
+
+urllib3.request(
+    "GET",
+    "https://httpbin.org/redirect/3",
+    retries=urllib3.Retry(3, redirect=2)
+)
+# MaxRetryError
+
+
+
