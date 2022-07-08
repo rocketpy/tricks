@@ -381,4 +381,15 @@ urllib3.request(
 # MaxRetryError
 
 
+# disable exceptions for too many redirects and just return the 302 response:
+resp = urllib3.request(
+    "GET",
+    "https://httpbin.org/redirect/3",
+    retries=urllib3.Retry(
+        redirect=2,
+        raise_on_redirect=False
+    )
+)
+print(resp.status)
+# 302
 
