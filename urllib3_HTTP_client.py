@@ -393,3 +393,14 @@ resp = urllib3.request(
 print(resp.status)
 # 302
 
+
+# all requests to be subject to the same retry policy, you can specify the retry at the PoolManager level:
+import urllib3
+
+http = urllib3.PoolManager(retries=False)
+
+http = urllib3.PoolManager(
+    retries=urllib3.Retry(5, redirect=2)
+)
+
+
