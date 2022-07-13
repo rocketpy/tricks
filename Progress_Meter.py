@@ -37,3 +37,24 @@ for char in pbar:
     sleep(0.25)
     pbar.set_description("Processing %s" % char)
 
+
+#  Manual
+
+with tqdm(total=100) as pbar:
+    for i in range(10):
+        sleep(0.1)
+        pbar.update(10)
+
+"""
+If the optional variable total (or an iterable with len()) is provided, predictive stats are displayed.
+with is also optional (you can just assign tqdm() to a variable,
+but in this case don’t forget to del or close() at the end:
+"""
+
+pbar = tqdm(total=100)
+
+for i in range(10):
+    sleep(0.1)
+    pbar.update(10)
+pbar.close()
+
