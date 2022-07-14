@@ -58,3 +58,15 @@ for i in range(10):
     pbar.update(10)
 pbar.close()
 
+
+#  Simple tqdm examples and profiling
+
+# Benchmark
+for i in _range(int(1e8)):
+    pass
+
+# Basic demo
+import tqdm
+for i in tqdm.trange(int(1e8)):
+    pass
+
