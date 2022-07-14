@@ -70,3 +70,15 @@ import tqdm
 for i in tqdm.trange(int(1e8)):
     pass
 
+# Some decorations
+import tqdm
+for i in tqdm.trange(int(1e8), miniters=int(1e6), ascii=True,
+                     desc="cool", dynamic_ncols=True):
+    pass
+
+# Nested bars
+from tqdm import trange
+for i in trange(10):
+    for j in trange(int(1e7), leave=False, unit_scale=True):
+        pass
+
