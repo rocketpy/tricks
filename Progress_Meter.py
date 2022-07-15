@@ -82,3 +82,16 @@ for i in trange(10):
     for j in trange(int(1e7), leave=False, unit_scale=True):
         pass
 
+# Experimental GUI demo
+import tqdm
+for i in tqdm.tgrange(int(1e8)):
+    pass
+
+# Comparison to https://code.google.com/p/python-progressbar/
+try:
+    from progressbar.progressbar import ProgressBar
+except ImportError:
+    pass
+else:
+    for i in ProgressBar()(_range(int(1e8))):
+        pass
