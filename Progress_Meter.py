@@ -82,10 +82,12 @@ for i in trange(10):
     for j in trange(int(1e7), leave=False, unit_scale=True):
         pass
 
+
 # Experimental GUI demo
 import tqdm
 for i in tqdm.tgrange(int(1e8)):
     pass
+
 
 # Comparison to https://code.google.com/p/python-progressbar/
 try:
@@ -95,3 +97,16 @@ except ImportError:
 else:
     for i in ProgressBar()(_range(int(1e8))):
         pass
+
+
+# Dynamic miniters benchmark
+from tqdm import trange
+for i in trange(int(1e8), miniters=None, mininterval=0.1, smoothing=0):
+    pass
+
+
+# Fixed miniters benchmark
+from tqdm import trange
+for i in trange(int(1e8), miniters=4500000, mininterval=0.1, smoothing=0):
+    pass
+
