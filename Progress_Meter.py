@@ -77,6 +77,7 @@ for i in tqdm.trange(int(1e8), miniters=int(1e6), ascii=True,
     pass
 
 # Nested bars
+
 from tqdm import trange
 for i in trange(10):
     for j in trange(int(1e7), leave=False, unit_scale=True):
@@ -84,6 +85,7 @@ for i in trange(10):
 
 
 # Experimental GUI demo
+
 import tqdm
 for i in tqdm.tgrange(int(1e8)):
     pass
