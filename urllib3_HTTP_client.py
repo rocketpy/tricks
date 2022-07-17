@@ -404,3 +404,16 @@ http = urllib3.PoolManager(
 )
 
 
+# Errors & Exceptions
+
+# urllib3 wraps lower-level exceptions, for example:
+
+import urllib3
+
+try:
+    urllib3.request("GET","https://nx.example.com", retries=False)
+
+except urllib3.exceptions.NewConnectionError:
+    print("Connection failed.")
+# Connection failed.
+
