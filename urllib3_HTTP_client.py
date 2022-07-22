@@ -20,6 +20,11 @@ http = urllib3.PoolManager()
 http = urllib3.PoolManager(maxsize=10)
 # Alternatively
 pool = urllib3.HTTPConnectionPool("google.com", maxsize=10)
+# or
+http = urllib3.PoolManager(maxsize=10, block=True)
+
+# Alternatively
+pool = urllib3.HTTPConnectionPool("google.com", maxsize=10, block=True)
 
 r = http.request('GET', 'http://httpbin.org/robots.txt')
 print(r.status)
