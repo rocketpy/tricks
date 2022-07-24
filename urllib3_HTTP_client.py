@@ -31,6 +31,19 @@ print(r.status)
 print(r.data)
 
 
+# Proxies
+# use ProxyManager to tunnel requests through an HTTP proxy:
+
+import urllib3
+
+proxy = urllib3.ProxyManager("https://localhost:3128/")
+proxy.request("GET", "https://google.com/")
+"""
+The usage of ProxyManager is the same as PoolManager.
+You can connect to a proxy using HTTP, HTTPS or SOCKS.
+urllib3’s behavior will be different depending on the type of proxy you selected and the destination you’re contacting.
+"""
+
 # Response Content
 # The HTTPResponse object provides status, data, and headers attributes:
 import urllib3
