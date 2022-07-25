@@ -449,3 +449,15 @@ except urllib3.exceptions.NewConnectionError:
 
 logging.getLogger("urllib3").setLevel(logging.WARNING)
 
+
+# If you’re receiving the ProxyError and it mentions your proxy only speaks HTTP and not HTTPS here’s what to do to solve your issue:
+# If you’re using urllib3 directly, make sure the URL you’re passing into urllib3.
+# ProxyManager starts with http:// instead of https://:
+
+# Do this:
+http = urllib3.ProxyManager("http://...")
+
+# Not this:
+http = urllib3.ProxyManager("https://...")
+
+
