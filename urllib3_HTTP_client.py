@@ -461,3 +461,39 @@ http = urllib3.ProxyManager("http://...")
 http = urllib3.ProxyManager("https://...")
 
 
+# Ensure that the values for all of these environment variables starts with http:// and not https://:
+# Check your existing environment variables in bash
+
+$ env | grep "_PROXY"
+HTTP_PROXY=http://127.0.0.1:8888
+HTTPS_PROXY=https://127.0.0.1:8888  # <--- This setting is the problem!
+
+# Make the fix in your current session and test your script
+$ export HTTPS_PROXY="http://127.0.0.1:8888"
+$ python test-proxy.py  # This should now pass.
+
+# Persist your change in your shell 'profile' (~/.bashrc, ~/.profile, ~/.bash_profile, etc)
+# You may need to logout and log back in to ensure this works across all programs.
+$ vim ~/.bashrc
+
+
+# If you’re on Windows or macOS your proxy may be getting set at a system level.
+# To check this first ensure that the above environment variables aren’t set then run the following:
+
+$ python -c 'import urllib.request; print(urllib.request.getproxies())'
+
+# If the output of the above command isn’t empty and looks like this:
+
+{
+  "http": "http://127.0.0.1:8888",
+  "https": "https://127.0.0.1:8888"  # <--- This setting is the problem!
+}
+
+# Search how to configure proxies on your operating system and change the https://... URL into http://.
+# After you make the change the return value of urllib.request.getproxies() should be:
+
+{  # Everything is good here! :)
+  "http": "http://127.0.0.1:8888",
+  "https": "http://127.0.0.1:8888"
+}
+
