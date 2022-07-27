@@ -497,3 +497,18 @@ $ python -c 'import urllib.request; print(urllib.request.getproxies())'
   "https": "http://127.0.0.1:8888"
 }
 
+
+# SOCKS Proxies
+
+# For SOCKS, you can use SOCKSProxyManager to connect to SOCKS4 or SOCKS5 proxies.
+# In order to use SOCKS proxies you will need to install PySocks or install urllib3 with the socks extra:
+
+python -m pip install urllib3[socks]
+
+# Once PySocks is installed, you can use SOCKSProxyManager:
+from urllib3.contrib.socks import SOCKSProxyManager
+
+proxy = SOCKSProxyManager("socks5h://localhost:8889/")
+proxy.request("GET", "https://google.com/")
+
+
