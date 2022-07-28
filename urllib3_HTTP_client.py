@@ -512,3 +512,19 @@ proxy = SOCKSProxyManager("socks5h://localhost:8889/")
 proxy.request("GET", "https://google.com/")
 
 
+# Custom TLS Certificates
+
+# Instead of using certifi you can provide your own certificate authority bundle.
+# This is useful for cases where you’ve generated your own certificates or when you’re using a private certificate authority.
+# Just provide the full path to the certificate bundle when creating a PoolManager:
+
+import urllib3
+
+http = urllib3.PoolManager(
+    cert_reqs="CERT_REQUIRED",
+    ca_certs="/path/to/your/certificate_bundle"
+)
+resp = http.request("GET", "https://example.com")
+
+
+
