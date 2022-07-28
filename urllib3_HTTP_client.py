@@ -527,4 +527,19 @@ http = urllib3.PoolManager(
 resp = http.request("GET", "https://example.com")
 
 
+# Custom SNI Hostname
+# If you want to create a connection to a host over HTTPS which uses SNI
+
+import urllib3
+
+pool = urllib3.HTTPSConnectionPool(
+    "104.154.89.105",
+    server_hostname="badssl.com"
+)
+pool.request(
+    "GET",
+    "/",
+    headers={"Host": "badssl.com"},
+    assert_same_host=False
+)
 
