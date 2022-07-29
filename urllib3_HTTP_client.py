@@ -543,3 +543,16 @@ pool.request(
     assert_same_host=False
 )
 
+
+# Custom SSL Contexts
+import ssl
+from urllib3 import PoolManager
+from urllib3.util.ssl_ import create_urllib3_context
+
+ctx = create_urllib3_context()
+ctx.load_default_certs()
+ctx.options |= ssl.OP_ENABLE_MIDDLEBOX_COMPAT
+
+with PoolManager(ssl_context=ctx) as pool:
+    pool.request("GET", "https://www.google.com/")
+
