@@ -82,6 +82,12 @@ print(orjson.loads(resp.data)["json"])
 # {'attribute': 'value'}
 
 
+# API
+# urllib3.request()
+urllib3.request(method, url, *, body=None, fields=None, headers=None, preload_content=True,
+                decode_content=True, redirect=True, retries=None, timeout=3, json=None)
+
+
 # Binary Content
 # The data attribute of the response is always set to a byte string representing the response content:
 import urllib3
