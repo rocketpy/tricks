@@ -87,6 +87,23 @@ print(orjson.loads(resp.data)["json"])
 urllib3.request(method, url, *, body=None, fields=None, headers=None, preload_content=True,
                 decode_content=True, redirect=True, retries=None, timeout=3, json=None)
 
+"""
+Parameters:
+        method (str) –
+        url (str) –
+        body (Optional[Union[bytes, IO[Any], Iterable[bytes], str]]) –
+        fields (Optional[Union[Sequence[Union[Tuple[str, Union[str, bytes, Tuple[str, Union[str, bytes]],
+        Tuple[str, Union[str, bytes], str]]], RequestField]], Mapping[str, Union[str, bytes, Tuple[str,
+        Union[str, bytes]], Tuple[str, Union[str, bytes], str]]]]]) –
+        headers (Optional[Mapping[str, str]]) –
+        preload_content (Optional[bool]) –
+        decode_content (Optional[bool]) –
+        redirect (Optional[bool]) –
+        retries (Optional[Union[Retry, bool, int]]) –
+        timeout (Optional[Union[Timeout, float, int]]) –
+        json (Optional[Any]) –
+"""
+
 
 # Binary Content
 # The data attribute of the response is always set to a byte string representing the response content:
