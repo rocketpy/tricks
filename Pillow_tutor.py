@@ -18,5 +18,11 @@ img_name = "file_name.jpg"
 with Image.open(img_name) as img:
     img.load()
 
+# useful methods:
+
+# img.show()
 # type(img)
+# img.format
+# img.size
+# img.mode
 # isinstance(img, Image.Image)
