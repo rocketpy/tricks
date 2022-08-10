@@ -35,4 +35,11 @@ cropped_img = img.crop((250, 100, 500, 900))
 
 low_res_img = cropped_img.resize((cropped_img.width // 4, cropped_img.height // 4))
 low_res_img.show()
+# or
+# low_res_img = cropped_img.reduce(4)
 
+# method thumbnail() changes the image object but does not return a new object !!!
+
+# method save():
+cropped_img.save("cropped_image.jpg")
+low_res_img.save("low_resolution_cropped_image.png")
