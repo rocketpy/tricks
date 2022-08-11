@@ -43,3 +43,19 @@ low_res_img.show()
 # method save():
 cropped_img.save("cropped_image.jpg")
 low_res_img.save("low_resolution_cropped_image.png")
+
+# Rotate Image
+converted_img = img.transpose(Image.FLIP_TOP_BOTTOM)
+converted_img.show()
+
+# image.FLIP_LEFT_RIGHT
+# image.ROTATE_90
+# image.TRANSPOSE
+# image.TRANSVERSE
+
+rotated_img = img.rotate(45)
+rotated_img.show()
+
+rotated_img = img.rotate(45, expand=True)
+rotated_img.show()
+
