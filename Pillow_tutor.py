@@ -59,3 +59,25 @@ rotated_img.show()
 rotated_img = img.rotate(45, expand=True)
 rotated_img.show()
 
+
+# Gradations and modes
+
+filename = "file_name.jpg"
+with Image.open(filename) as img:
+    img.load()
+
+cmyk_img = img.convert("CMYK")
+gray_img = img.convert("L")  # Grayscale
+
+cmyk_img.show()
+gray_img.show()
+
+img.getbands()
+# ('R', 'G', 'B')
+
+cmyk_img.getbands()
+# ('C', 'M', 'Y', 'K')
+
+gray_img.getbands()
+# ('L',)
+
