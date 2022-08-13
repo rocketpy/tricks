@@ -81,3 +81,20 @@ cmyk_img.getbands()
 gray_img.getbands()
 # ('L',)
 
+
+# To create three new images
+zeroed_band = red.point(lambda _: 0)
+
+red_merge = Image.merge(
+    "RGB", (red, zeroed_band, zeroed_band))
+
+green_merge = Image.merge(
+    "RGB", (zeroed_band, green, zeroed_band))
+
+blue_merge = Image.merge(
+    "RGB", (zeroed_band, zeroed_band, blue))
+
+# red_merge.show()
+# green_merge.show()
+# blue_merge.show()
+
