@@ -98,3 +98,24 @@ blue_merge = Image.merge(
 # green_merge.show()
 # blue_merge.show()
 
+
+# Creating a common image from several
+from PIL import Image
+
+
+def common_image(*images, vertical=False):
+    width, height = images[0].width, images[0].height
+    size = (
+        (width, height * len(images))
+        if vertical
+        else (width * len(images), height))
+    new_img = Image.new(images[0].mode, size)
+    row, col = 0, 0
+    for image in images:
+        new_img.paste(image, (row, col))
+        if vertical:
+            col += height
+        else:
+            row += width
+
+    return new_img
