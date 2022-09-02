@@ -8,6 +8,9 @@
 from pytube import YouTube
 
 YouTube('https://youtu.be/9bZkp7q19f0').streams.first().download()
+# or
+# YouTube('http://youtube.com/watch?v=9bZkp7q19f0').streams[0].download()
+# This example will download the highest quality progressive download stream available.
 
 yt = YouTube('http://youtube.com/watch?v=9bZkp7q19f0')
 yt.streams
@@ -18,3 +21,8 @@ yt.streams
  .first()
  .download()
 """
+
+
+# to show video streams are available:
+yt = YouTube('http://youtube.com/watch?v=9bZkp7q19f0')
+print(yt.streams)
