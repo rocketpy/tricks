@@ -26,3 +26,9 @@ yt.streams
 # to show video streams are available:
 yt = YouTube('http://youtube.com/watch?v=9bZkp7q19f0')
 print(yt.streams)
+
+# To only view these progressive download streams:
+yt.streams.filter(progressive=True)
+
+# only want to see the DASH streams (also referred to as "adaptive") you can do:
+yt.streams.filter(adaptive=True)
