@@ -42,3 +42,9 @@ playlist = Playlist("https://www.youtube.com/playlist?list=PLynhp4cZEpTbRs_PYISQ
 for video in playlist:
     video.streams.get_highest_resolution().download()
 
+
+# Filtering
+yt.streams.filter(only_audio=True)
+
+# To list only mp4 streams
+yt.streams.filter(subtype='mp4')
