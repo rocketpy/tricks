@@ -48,3 +48,11 @@ yt.streams.filter(only_audio=True)
 
 # To list only mp4 streams
 yt.streams.filter(subtype='mp4')
+
+# Multiple filters can also be specified:
+yt.streams.filter(subtype='mp4', progressive=True)
+# this can also be expressed as:
+yt.streams.filter(subtype='mp4').filter(progressive=True)
+
+# select streams by their itag, without needing to filter:
+yt.streams.get_by_itag(22)
