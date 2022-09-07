@@ -56,3 +56,7 @@ yt.streams.filter(subtype='mp4').filter(progressive=True)
 
 # select streams by their itag, without needing to filter:
 yt.streams.get_by_itag(22)
+
+#  to optimize for a specific feature, such as the "highest resolution" or "lowest average bitrate":
+yt.streams.filter(progressive=True).order_by('resolution').desc()
+
