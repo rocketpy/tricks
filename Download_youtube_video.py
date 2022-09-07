@@ -60,3 +60,12 @@ yt.streams.get_by_itag(22)
 #  to optimize for a specific feature, such as the "highest resolution" or "lowest average bitrate":
 yt.streams.filter(progressive=True).order_by('resolution').desc()
 
+
+# Command-line interface
+# pytube3 ships with a simple CLI interface for downloading videos, playlists, and captions.
+
+# downloading:
+$ pytube3 http://youtube.com/watch?v=9bZkp7q19f0 --itag=18
+
+# To view available streams:
+$ pytube3 http://youtube.com/watch?v=9bZkp7q19f0 --list
