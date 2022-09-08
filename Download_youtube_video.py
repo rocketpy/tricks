@@ -69,3 +69,44 @@ $ pytube3 http://youtube.com/watch?v=9bZkp7q19f0 --itag=18
 
 # To view available streams:
 $ pytube3 http://youtube.com/watch?v=9bZkp7q19f0 --list
+
+ 
+# set of flags are:
+"""
+usage: pytube3 [-h] [--version] [--itag ITAG] [-r RESOLUTION] [-l] [-v]
+               [--build-playback-report] [-c [CAPTION_CODE]] [-t TARGET]
+               [-a [AUDIO]] [-f [FFMPEG]]
+               [url]
+
+Command line application to download youtube videos.
+
+positional arguments:
+  url                   The YouTube /watch or /playlist url
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --version             show program's version number and exit
+  --itag ITAG           The itag for the desired stream
+  -r RESOLUTION, --resolution RESOLUTION
+                        The resolution for the desired stream
+  -l, --list            The list option causes pytube cli to return a list of
+                        streams available to download
+  -v, --verbose         Verbosity level, use up to 4 to increase logging -vvvv
+  --build-playback-report
+                        Save the html and js to disk
+  -c [CAPTION_CODE], --caption-code [CAPTION_CODE]
+                        Download srt captions for given language code. Prints
+                        available language codes if no argument given
+  -t TARGET, --target TARGET
+                        The output directory for the downloaded stream.
+                        Default is current working directory
+  -a [AUDIO], --audio [AUDIO]
+                        Download the audio for a given URL at the highest
+                        bitrate availableDefaults to mp4 format if none is
+                        specified
+  -f [FFMPEG], --ffmpeg [FFMPEG]
+                        Downloads the audio and video stream for resolution
+                        providedIf no resolution is provided, downloads the
+                        best resolutionRuns the command line program ffmpeg to
+                        combine the audio and video
+"""
