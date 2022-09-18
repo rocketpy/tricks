@@ -1,1 +1,14 @@
+#  Bash Shell (Bourne Again SHell) and command-line interface (CLI)
+
+# start every Bash script with:  #!/bin/bash
+
+# in [ ] means that it’s optional. Some commands can be used without options or specifying files !!!
+
+# Top Bash Commands:
+
+ls — List directory contents
+
+- Syntax: ls [option(s)] [file(s)]
+- Common options: -a, -l
+
 
