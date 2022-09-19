@@ -7,8 +7,14 @@
 # Top Bash Commands:
 
 ls — List directory contents
-
 - Syntax: ls [option(s)] [file(s)]
 - Common options: -a, -l
 
+# touch — Creates a file
+- Syntax: touch [option(s)] file_name(s)
+- Common options: -a, -m, -r, -d
+
+# mkdir — Create a directory
+- Syntax: mkdir [option(s)] directory_name(s)
+- Common options: -m, -p, -v
 
