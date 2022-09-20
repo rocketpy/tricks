@@ -6,7 +6,7 @@
 
 # Top Bash Commands:
 
-ls — List directory contents
+# ls — List directory contents
 - Syntax: ls [option(s)] [file(s)]
 - Common options: -a, -l
 
@@ -17,4 +17,13 @@ ls — List directory contents
 # mkdir — Create a directory
 - Syntax: mkdir [option(s)] directory_name(s)
 - Common options: -m, -p, -v
+
+# echo — Prints text to the terminal window
+- Syntax: echo [option(s)] [string(s)]
+- Common options: -e, -n
+
+# pwd — Print working (current directory) directory
+- Syntax: pwd [option(s)]
+- Common options: options aren’t typically used with pwd
+
 
