@@ -26,4 +26,6 @@
 - Syntax: pwd [option(s)]
 - Common options: options aren’t typically used with pwd
 
-
+# rmdir — Remove directory
+- Syntax: rmdir [option(s)] directory_names
+- Common options: -p
