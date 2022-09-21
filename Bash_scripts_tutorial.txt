@@ -29,3 +29,15 @@
 # rmdir — Remove directory
 - Syntax: rmdir [option(s)] directory_names
 - Common options: -p
+
+# grep — Search (search text for patterns specified by the user)
+- Syntax: grep [option(s)] pattern [file(s)]
+- Common options: -i, -c, -n
+
+# cd — Change directory
+- Syntax: cd [option(s)] directory
+- Common options: options aren’t typically used with cd
+
+# mv — Move or rename directory
+- Syntax: mv [option(s)] argument(s)
+- Common options: -i, -b
