@@ -41,3 +41,12 @@
 # mv — Move or rename directory
 - Syntax: mv [option(s)] argument(s)
 - Common options: -i, -b
+
+# locate — Locate a specific file or directory
+- Syntax: locate [option(s)] file_name(s)
+- Common options: -q, -n, -i
+
+# Common options: -q, -n, -i
+- Syntax: less file_name
+- Common options: -e, -f, -n
+
