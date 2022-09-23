@@ -46,7 +46,11 @@
 - Syntax: locate [option(s)] file_name(s)
 - Common options: -q, -n, -i
 
-# Common options: -q, -n, -i
+# less — view the contents of a text file
 - Syntax: less file_name
 - Common options: -e, -f, -n
+
+# cat — Read a file, create a file, and concatenate files
+- Syntax: cat [option(s)] [file_name(s)] [-] [file_name(s)]
+- Common options: -n
 
