@@ -62,3 +62,11 @@
 # compgen — Shows all available commands, aliases, and functions
 - Syntax: compgen [option(s)]
 - Common options: -a, -c, -d
+
+
+# create a custom Bash commands !!!
+- Syntax: alias alias_name = “command_to_run”
+
+# simple example:
+# alias c = “clear”
+
