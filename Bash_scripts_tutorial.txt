@@ -55,6 +55,10 @@
 - Syntax: cat [option(s)] [file_name(s)] [-] [file_name(s)]
 - Common options: -n
 
-# man — Print manual or get help for a command
+# man — Print manual or get help for a command(what a command does)
 - Syntax: man [option(s)] keyword(s)
 - Common options: -w, -f, -b
+
+# compgen — Shows all available commands, aliases, and functions
+- Syntax: compgen [option(s)]
+- Common options: -a, -c, -d
