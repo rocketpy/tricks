@@ -2,9 +2,10 @@
 
 # start every Bash script with:  #!/bin/bash
 
-# in [ ] means that it’s optional. Some commands can be used without options or specifying files !!!
 
 # Top Bash Commands:
+
+# in [ ] means that it’s optional. Some commands can be used without options or specifying files !!!
 
 # ls — List directory contents
 - Syntax: ls [option(s)] [file(s)]
@@ -54,3 +55,6 @@
 - Syntax: cat [option(s)] [file_name(s)] [-] [file_name(s)]
 - Common options: -n
 
+# man — Print manual or get help for a command
+- Syntax: man [option(s)] keyword(s)
+- Common options: -w, -f, -b
