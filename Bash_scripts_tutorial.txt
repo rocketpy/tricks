@@ -63,6 +63,13 @@
 - Syntax: compgen [option(s)]
 - Common options: -a, -c, -d
 
+# clear — Clear a terminal window
+- Syntax: clear
+
+# history — list most recent commands
+- Syntax: history
+- Common options: -c, -d
+
 
 # create a custom Bash commands !!!
 - Syntax: alias alias_name = “command_to_run”
