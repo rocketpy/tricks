@@ -70,6 +70,14 @@
 - Syntax: history
 - Common options: -c, -d
 
+# chmod — Sets the file permissions flag on a file or folder
+- Syntax: chmod [option(s)] permissions file_name
+- Common options: -f, -v
+
+# exit — Exit out of a directory
+- Syntax: exit
+- Common options: n/a
+
 
 # create a custom Bash commands !!!
 - Syntax: alias alias_name = “command_to_run”
