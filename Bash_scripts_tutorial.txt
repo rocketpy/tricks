@@ -78,6 +78,15 @@
 - Syntax: exit
 - Common options: n/a
 
+# kill — terminate stalled processes
+- Syntax: kill [signal or option(s)] PID(s) 
+  # To find the PID, use the ps command accompanied by options -aux.
+- Common options: -p
+
+# sleep — delay a process for a specified amount of time
+- Syntax: sleep number [suffix]
+- Common options: n/a
+
 
 # create a custom Bash commands !!!
 - Syntax: alias alias_name = “command_to_run”
