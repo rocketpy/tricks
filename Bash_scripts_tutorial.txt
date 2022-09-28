@@ -87,6 +87,14 @@
 - Syntax: sleep number [suffix]
 - Common options: n/a
 
+# head — Read the start of a file(displays the first 10 lines of a file)
+- Syntax: head [option(s)] file(s)
+- Common options: -n
+
+# tail — Read the end of a file(displays the last 10 lines of a file)
+- Syntax: tail [option(s)] file_names
+- Common options: -n
+
 
 # create a custom Bash commands !!!
 - Syntax: alias alias_name = “command_to_run”
