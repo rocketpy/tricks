@@ -10,6 +10,18 @@
 # ls — List directory contents
 - Syntax: ls [option(s)] [file(s)]
 - Common options: -a, -l
+"""
+ls Options:
+-a  Show all (including hidden)
+-R  Recursive list
+-r  Reverse order
+-t  Sort by last modified
+-S  Sort by file size
+-l  Long listing format
+-1  One file per line
+-m  Comma-­sep­arated output
+-Q  Quoted output
+"""
 
 # touch — Creates a file
 - Syntax: touch [option(s)] file_name(s)
