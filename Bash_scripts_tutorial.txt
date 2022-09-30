@@ -26,6 +26,16 @@ ls Options:
 # touch — Creates a file
 - Syntax: touch [option(s)] file_name(s)
 - Common options: -a, -m, -r, -d
+"""
+Option	Description
+-a	Updates only the file’s access time of an existing file.
+-c	Avoids creating a new file even if the file does not exist.
+-d	Updates a timestamp using the specified time and date string.
+-h	Updates timestamp of a symbolic link.
+-m	Updates the file modification date and time of an existing file.
+-r	Updates a timestamp to the timestamp of the referenced file.
+-t	Updates a timestamp if the stamp is in the data and time format.
+"""
 
 # mkdir — Create a directory
 - Syntax: mkdir [option(s)] directory_name(s)
