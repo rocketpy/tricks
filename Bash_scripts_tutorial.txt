@@ -113,4 +113,7 @@ ls Options:
 
 # simple example:
 # alias c = “clear”
+# alias www = ‘python -m SimpleHTTPServer 8000’
+# alias chrome = ‘/opt/google/chrome/chrome’
+
 
