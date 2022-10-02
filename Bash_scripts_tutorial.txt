@@ -128,6 +128,19 @@ Options	description:
 - Syntax: tail [option(s)] file_names
 - Common options: -n
 
+# Find
+"""
+Options	description:
+-P	Never follow the symbolic links.
+-L	Follow the symbolic links.
+-H	Follow the symbolic links only while processing the command-line arguments.
+-D	Supply debug options, such as tree, stat, opt, and rates.
+-Olevel	Enable query optimization, and specify a decimal number that represents the optimization level. Accepted values are 0, 1, 2, and 3.
+-name	Search files and directories that have the given name.
+-user	Search files and directories owned by the specified user name.
+-exec	Execute specified command on the files and folders searched using the find command.
+"""
+
 
 # create a custom Bash commands !!!
 - Syntax: alias alias_name = “command_to_run”
