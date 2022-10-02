@@ -128,7 +128,10 @@ Options	description:
 - Syntax: tail [option(s)] file_names
 - Common options: -n
 
-# Find
+# Find Command Syntax
+
+The basic syntax of find command:
+find [options] [path...] [expression]
 """
 Options	description:
 -P	Never follow the symbolic links.
