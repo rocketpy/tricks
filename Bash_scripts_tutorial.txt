@@ -44,6 +44,24 @@ Option	description:
 # echo — Prints text to the terminal window
 - Syntax: echo [option(s)] [string(s)]
 - Common options: -e, -n
+"""
+Option description:
+-n	Display the output without a newline after it. This option suppresses the trailing newline.
+-E	Disable the escape characters' interpretation. This is the default option.
+-e	Enable the following escape characters interpretation:
+\\	Display backslash-escaped characters.
+\a	Display the output with a sound alert.
+\b	Create a backspace character, which is equivalent to using the backspace key.
+\c	Ignore any output after the escape character.
+\e	Create an escape character, which is equivalent to using the Esc key.
+\f	Create a form feed character, which makes the printer automatically go to the beginning of the next page.
+\n	Add a new line in the output.
+\r	Perform a carriage return.
+\v	Create vertical tab spaces.
+\t	Create horizontal tab spaces.
+\NNN	Octal byte value of NNN.
+\xHH	Hexadecimal byte value of HH.
+"""
 
 # pwd — Print working (current directory) directory
 - Syntax: pwd [option(s)]
