@@ -101,6 +101,19 @@ Options	description:
 # less — view the contents of a text file
 - Syntax: less file_name
 - Common options: -e, -f, -n
+"""
+Options	Description
+-N	This option print line number
+-X	This option leaves the content as it is in the terminal
++F	This option Monitors file in real-time
+-V	This option displays the version of less
+-I	Ignore case when searching
+-p	Start search at the first occurrence of a certain pattern in the file
+-s	This option causes consecutive blank lines to be squeezed which means it removes blank lines and replaces them with one single blank line
+-G	This option disables all highlighting of strings discovered by search commands
+-O	This option replaces an existing file without asking you for confirmation
+
+"""
 
 # cat — Read a file, create a file, and concatenate files
 - Syntax: cat [option(s)] [file_name(s)] [-] [file_name(s)]
