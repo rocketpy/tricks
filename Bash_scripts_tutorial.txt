@@ -102,7 +102,7 @@ Options	description:
 - Syntax: less file_name
 - Common options: -e, -f, -n
 """
-Options	Description
+Options	description:
 -N	This option print line number
 -X	This option leaves the content as it is in the terminal
 +F	This option Monitors file in real-time
@@ -112,7 +112,6 @@ Options	Description
 -s	This option causes consecutive blank lines to be squeezed which means it removes blank lines and replaces them with one single blank line
 -G	This option disables all highlighting of strings discovered by search commands
 -O	This option replaces an existing file without asking you for confirmation
-
 """
 
 # cat — Read a file, create a file, and concatenate files
