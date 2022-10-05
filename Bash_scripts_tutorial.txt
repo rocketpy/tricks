@@ -117,6 +117,21 @@ Options	description:
 # cat — Read a file, create a file, and concatenate files
 - Syntax: cat [option(s)] [file_name(s)] [-] [file_name(s)]
 - Common options: -n
+"""
+Options	description:
+  -A, --show-all   	equivalent to -vET
+  -b, --number-nonblank 	number nonempty output lines, overrides -n
+  -e    	equivalent to -vE
+  -E, --show-ends 	display $ at end of each line
+  -n, --number   	numbers all output lines
+  -s, --squeeze-blank 	suppress repeated empty output lines
+  -t 	equivalent to -vT
+  -T, --show-tabs	display TAB characters as ^I
+  -u   	(ignored)
+  -v, --show-nonprinting  	use ^ and M- notation, except for LFD and TAB
+  --help	display other command options
+  --version	Prints version information and exit
+"""
 
 # man — Print manual or get help for a command(what a command does)
 - Syntax: man [option(s)] keyword(s)
