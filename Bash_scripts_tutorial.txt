@@ -40,6 +40,12 @@ Option	description:
 # mkdir — Create a directory
 - Syntax: mkdir [option(s)] directory_name(s)
 - Common options: -m, -p, -v
+# mkdir [-m=mode] [-p] [-v] [-Z=context] directory [directory ...]
+#  -m option is used to set the mode of the directory i.e. permissions such as read, write and execute for the created directory.
+# -p option: enables the user to create parent directories as per the requirement. If the directories exist already, no error will be displayed.
+# -v, –verbose: This option displays a verbose information of each directory that is created.
+# mkdir –version
+# mkdir --help
 
 # echo — Prints text to the terminal window
 - Syntax: echo [option(s)] [string(s)]
