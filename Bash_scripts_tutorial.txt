@@ -142,6 +142,18 @@ Options	description:
 # man — Print manual or get help for a command(what a command does)
 - Syntax: man [option(s)] keyword(s)
 - Common options: -w, -f, -b
+"""
+ $ man -f ls
+ -f option: One may not be able to remember the sections in which a command is present. 
+            So this option gives the section in which the given command is present.
+ $ man -a intro
+ -a option: This option helps us to display all the available intro manual pages in succession.
+ $ man -k cd
+ -k option: This option searches the given command as a regular expression in all the manuals
+            and it returns the manual pages with the section number in which it is found.
+ $ man -w ls
+ -w option: This option returns the location in which the manual page of a given command is present.
+"""
 
 # compgen — Shows all available commands, aliases, and functions
 - Syntax: compgen [option(s)]
