@@ -103,6 +103,28 @@ Options	description:
 # locate — Locate a specific file or directory
 - Syntax: locate [option(s)] file_name(s)
 - Common options: -q, -n, -i
+"""
+    / (slash) — search the whole system.
+    . (dot) — search from the folder you’re currently working on (current directory).
+    ~ (tilde) — to search from your home folder.
+    
+-A, --all	Displays only the entries matching all the specified pattern(s).
+-b, --basename	Matches only the base name against the specified patterns.
+-c, --count	Outputs the number of matching entries instead of the file names.
+-d, --database [DBPATH]	Replaces the default database with [DBPATH] - a colon-separated list of database file names.
+-e, --existing	Only displays entries for existing files.
+-L, --follow	Use to check whether files exist if the --existing option is specified. The --follow option omits broken symbolic links.
+-i, --ignore-case	Ignores pattern case sensitivity.
+-p, --ignore-spaces	Ignores punctuation and spaces when matching patterns.
+-t, --transliterate	Uses iconv transliteration to ignore accents and diacritics when matching patterns.
+-l, --limit, -n [LIMIT]	Use to exit successfully after finding a [LIMIT] number of entries.
+-0, --null	Separates output entries using the ASCII NUL character instead of printing each entry in a new line.
+-S, --statistics	Prints the statistics about each read database to standard output instead of searching for files.
+-q, --quiet	Hides any errors encountered while reading and processing databases.
+-r, --regexp [REGEXP]	Used for searching a basic regular expression [REGEXP]. Specifying this option doesn't allow [pattern] arguments.
+-w, --wholename	Matches only the whole path name against the specified patterns.
+-h, --help	Displays the help file with a list of all available options.
+"""
 
 # less — view the contents of a text file
 - Syntax: less file_name
