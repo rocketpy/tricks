@@ -180,6 +180,12 @@ Options	description:
 # compgen — Shows all available commands, aliases, and functions
 - Syntax: compgen [option(s)]
 - Common options: -a, -c, -d
+"""
+compgen -a:  To list all the bash aliases
+compgen -c:  To list all commands that are available to be directly executed.
+compgen -b:  To list all the bash built-ins
+compgen -k:  To list all the bash keywords
+"""
 
 # clear — Clear a terminal window
 - Syntax: clear
