@@ -99,6 +99,18 @@ Options	description:
 # mv — Move or rename directory
 - Syntax: mv [option(s)] argument(s)
 - Common options: -i, -b
+"""
+ -i (Interactive): Like in cp, the -i option makes the command ask the user for confirmation before moving a file that would overwrite an existing file,
+     you have to press y for confirm moving, any other key leaves the file as it is. This option doesn’t work if the file doesn’t exist,
+     it simply rename it or move it to new location. 
+ -b(backup): With this option, it is easier to take a backup of an existing file that will be overwritten as a result of the mv command.
+     This will create a backup file with the tilde character(~) appended to it. 
+ -n (no-clobber): With -n option, mv prevent an existing file from being overwritten. 
+    In the following example the effect is for nothing to happen as a file would be overwritten. 
+ -f (Force): mv prompts for confirmation overwriting the destination file if a file is write-protected.
+     The -f option overrides this minor protection and overwrites the destination file forcefully and deletes the source file. 
+ –version: This option is used to display the version of mv which is currently running on your system. 
+"""
 
 # locate — Locate a specific file or directory
 - Syntax: locate [option(s)] file_name(s)
