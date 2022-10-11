@@ -216,7 +216,9 @@ compgen -k:  To list all the bash keywords
 --no-preserve-root 	Do not treat '/' (the root directory) in any special way, which is the default setting.
 --preserve-root 	Do not operate recursively on '/'.
 --reference=RFILE 	Set permissions to match those of file RFILE, ignoring any specified MODE.
-
+-R, --recursive 	Change files and directories recursively.
+--help 	Display a help message and exit.
+--version 	Output version information and exit.
 """
 
 # exit — Exit out of a directory
