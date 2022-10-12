@@ -205,6 +205,17 @@ compgen -k:  To list all the bash keywords
 # history — list most recent commands
 - Syntax: history
 - Common options: -c, -d
+"""
+Options:
+-c 	Clear the history list by deleting all of the entries.
+-d offset 	Delete the history entry at offset OFFSET.
+-a 	Append history lines from this session to the history file.
+-n 	Read all history lines not already read from the history file.
+-r 	Read the history file and append the contents to the history list.
+-w 	Write the current history to the history file and append them to the history list
+-p 	Perform history expansion on each ARG and display the result without storing it in the history list.
+-s 	Append the ARGs to the history list as a single entry.
+"""
 
 # chmod — Sets the file permissions flag on a file or folder
 - Syntax: chmod [option(s)] permissions file_name
