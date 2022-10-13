@@ -232,6 +232,19 @@ Options:
 --version 	Output version information and exit.
 """
 
+# chown - Command changes ownership of files and directories in a filesystem.
+"""
+chown [-c|--changes] [-v|--verbose] [-f|--silent|--quiet] [--dereference]
+      [-h|--no-dereference] [--preserve-root]
+      [--from=currentowner:currentgroup] [--no-preserve-root]
+      [-R|--recursive] [--preserve-root] [-H] [-L] [-P]
+      {new-owner|--reference=ref-file} file ...
+
+chown --help
+
+chown --version
+"""
+
 # exit — Exit out of a directory
 - Syntax: exit
 - Common options: n/a
