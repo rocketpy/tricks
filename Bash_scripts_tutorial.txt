@@ -239,10 +239,39 @@ chown [-c|--changes] [-v|--verbose] [-f|--silent|--quiet] [--dereference]
       [--from=currentowner:currentgroup] [--no-preserve-root]
       [-R|--recursive] [--preserve-root] [-H] [-L] [-P]
       {new-owner|--reference=ref-file} file ...
-
 chown --help
-
 chown --version
+
+Options
+Option 	Description
+-c,
+--changes 	Similar to --verbose mode, but only displays information about files that are actually changed. For example:
+
+changed ownership of 'dir/dir1/file1' from hope:neil to hope:hope
+
+-v,
+--verbose 	Display verbose information for every file processed. For example:
+
+changed ownership of 'dir/dir1/file1' from hope:neil to hope:hopeownership of 'dir/dir1' retained as hope:hope
+
+-f,
+--silent,
+--quiet 	Quiet mode. Do not display output.
+--dereference 	Dereference all symbolic links. If file is a symlink,
+change the owner of the referenced file, not the symlink itself. This is the default behavior.
+-h,
+--no-dereference 	Never dereference symbolic links. If file is a symlink,
+change the owner of the symlink rather than the referenced file.
+--from=currentowner:currentgroup 	Change the owner or group of each file only if its current owner or
+group match currentowner and/or currentgroup. Either may be omitted, 
+in which case a match is not required for the other attribute.
+--no-preserve-root 	Do not treat / (the root directory) in any special way.
+This is the default behavior. 
+If the --preserve-root option is previously specified in the command, this option will cancel it.
+--reference=ref-file 	Use the owner and group of file ref-file, rather than specifying ownership with new-owner.
+-R,
+--recursive 	Operate on files and directories recursively.
+Enter each matching directory, and operate on all its contents.
 """
 
 # exit — Exit out of a directory
