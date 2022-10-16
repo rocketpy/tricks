@@ -38,6 +38,15 @@ ls Options:
 -1  One file per line
 -m  Comma-­sep­arated output
 -Q  Quoted output
+-a, --all 	Do not ignore entries starting with ".", providing visibility to hidden files (those starting with a ".")
+-A, --almost-all 	Do not list implied "." and "..".
+--author 	With -l, print the author of each file.
+-b, --escape 	Print C-style escapes for nongraphic characters.
+--block-size=size 	Scale sizes by size before printing them. For example, '--block-size=M' prints sizes in units of 1,048,576 bytes. See size format below.
+-B, --ignore-backups 	Do not list implied entries ending with "~".
+-c 	With -lt:, sort by and show the ctime (time of last modification of file status information); with -l:, show ctime and sort by name; otherwise: sort by ctime, newest first.
+-C 	List entries by columns.
+--color[=when] 	Colorize the output. when defaults to 'always' or can be 'never' or 'auto'.
 """
 
 # touch — Creates a file
