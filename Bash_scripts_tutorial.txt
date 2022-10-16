@@ -47,6 +47,14 @@ ls Options:
 -c 	With -lt:, sort by and show the ctime (time of last modification of file status information); with -l:, show ctime and sort by name; otherwise: sort by ctime, newest first.
 -C 	List entries by columns.
 --color[=when] 	Colorize the output. when defaults to 'always' or can be 'never' or 'auto'.
+-d, --directory 	List directory entries instead of contents, and do not dereference symbolic links.
+-D, --dired 	Generate output designed for Emacs' dired mode.
+-f 	Do not sort, enable -aU, and disable -ls --color.
+-F, --classify 	Append indicator (one of */=>@|) to entries.
+--file-type 	Similar to --classify, except do not append '*'
+--format=word 	Formats according to the following: across -x, commas -m, horizontal -x, long -l, single-column -1, verbose -l, vertical -C.
+--full-time 	Like -l --time-style=full-iso.
+-g 	Like -l, but do not list owner.
 """
 
 # touch — Creates a file
