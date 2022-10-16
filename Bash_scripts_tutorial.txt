@@ -55,6 +55,14 @@ ls Options:
 --format=word 	Formats according to the following: across -x, commas -m, horizontal -x, long -l, single-column -1, verbose -l, vertical -C.
 --full-time 	Like -l --time-style=full-iso.
 -g 	Like -l, but do not list owner.
+--group-directories-first 	Group directories before files. Can be augmented with a --sort option, but any use of --sort=none (-U) disables grouping.
+-G, --no-group 	In a long listing, don't print group names.
+-h, --human-readable 	With -l, print sizes in human-readable format (e.g., 1K, 234M, 2G).
+--si 	Like --human-readable, but use powers of 1000, not 1024.
+-H, --dereference-command-line 	Follow symbolic links listed on the command line.
+--dereference-command-line-symlink-to-dir 	Follow each command line symbolic link that points to a directory.
+--hide=pattern 	Do not list implied entries matching shell pattern (overridden by -a or -A).
+--indicator-style=word 	Append indicator with style word to entry names: none (default), slash (-p), file-type (--file-type), classify (-F).
 """
 
 # touch — Creates a file
