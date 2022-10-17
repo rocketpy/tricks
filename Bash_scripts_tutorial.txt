@@ -63,6 +63,43 @@ ls Options:
 --dereference-command-line-symlink-to-dir 	Follow each command line symbolic link that points to a directory.
 --hide=pattern 	Do not list implied entries matching shell pattern (overridden by -a or -A).
 --indicator-style=word 	Append indicator with style word to entry names: none (default), slash (-p), file-type (--file-type), classify (-F).
+-i, --inode 	Print the index number of each file.
+-I, --ignore=pattern 	Do not list implied entries matching shell pattern.
+-k, --kibibytes 	Use 1024-byte blocks.
+-l 	Use a long listing format.
+-L, --dereference 	When showing file information for a symbolic link, show information for the file the link references rather than for the link itself.
+-m 	Fill width with a comma separated list of entries.
+-n, --numeric-uid-gid 	Like -l, but list numeric user and group IDs.
+-N, --literal 	Print raw entry names (don't treat e.g., control characters specially).
+-o 	Like -l, but do not list group information.
+-p, --indicator-style=slash 	Append "/" indicator to directories
+-q, --hide-control-chars 	Print ? instead of non graphic characters.
+--show-control-chars 	Show non graphic characters as-is (default unless program is 'ls' and output is a terminal).
+-Q, --quote-name 	Enclose entry names in double quotes.
+--quoting-style=word 	Use quoting style word for entry names: literal, locale, shell, shell-always, c, escape.
+-r, --reverse 	Reverse order while sorting.
+-R, --recursive 	List subdirectories recursively.
+-s, --size 	Print the allocated size of each file, in blocks.
+-S 	Sort by file size.
+--sort=word 	Sort by word instead of name: none (-U), extension (-X), size (-S), time (-t), version (-v).
+--time=word 	With -l, show time as word instead of modification time: "atime" (-u), "access" (-u), "use" (-u), "ctime" (-c), or "status" (-c); use specified time as sort key if --sort=time.
+--time-style=style 	With -l, show times using style style.
+
+style may be one of: "full-iso", "long-iso", "iso", "locale", "+format".
+
+format is interpreted like 'date'; if format is "format1<newline>format2", format1 applies to non-recent files and format2 to recent files; if style is prefixed with 'posix-', style takes effect only outside the POSIX locale.
+-t 	Sort by modification time, newest first.
+-T, --tabsize=cols 	Assume tab stops at each cols instead of 8.
+-u 	With -lt:, sort by and show access time; with -l: show access time and sort by name; otherwise: sort by access time.
+-U 	Do not sort; lists entries in the directory order.
+-v 	Natural sort of (version) numbers within text.
+-w, --width=cols 	Assume screen width cols instead of current value.
+-x 	List entries by lines instead of by columns.
+-X 	Sort alphabetically by entry extension.
+-Z, --context 	Print any SELinux security context of each file.
+-1 	List one file per line.
+--help 	Display a help message and exit.
+--version 	Display version information and exit.
 """
 
 # touch — Creates a file
