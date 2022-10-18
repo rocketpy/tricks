@@ -154,7 +154,20 @@ Option description:
 
 # rmdir — Remove directory
 - Syntax: rmdir [option(s)] directory_names
+          rmdir [-p] [-v | --verbose] [--ignore-fail-on-non-empty] directory ...
+          rm --help
+          rm --version
 - Common options: -p
+"""
+Options:
+-p 	Each directory argument is treated as a pathname of which all components will be removed,
+if they are empty, starting with the last component. (See rm for fully non-discriminant recursive removal.)
+-v, --verbose 	Display verbose information for every directory processed.
+--ignore-fail-on-non-empty 	Do not report a failure which occurs solely because a directory is non-empty.
+Normally, when rmdir is instructed to remove a non-empty directory, it reports an error. This option suppresses those error messages.
+--help 	Display a help message, and exit.
+--version 	Output version information, and exit.
+"""
 
 # grep — Search (search text for patterns specified by the user)
 - Syntax: grep [option(s)] pattern [file(s)]
