@@ -21,6 +21,21 @@ The following options are also available:
 -D 	A list of all double-quoted strings preceded by $ is printed on the standard output. These are the strings that are subject to language translation when the current locale is not C or POSIX. This implies the -n option; no commands are executed.
 [-+]O [shopt_option] 	shopt_option is one of the shell options accepted by the shopt builtin (see the section "Shell Builtin Commands" for details). If shopt_option is present, -O sets the value of that option; +O unsets it. If shopt_option is not supplied, the names and values of the shell options accepted by shopt are printed on the standard output. If the invocation option is +O, the output is displayed in a format reused as input.
 -- 	A -- signals the end of options and disables further option processing. Any arguments after the -- are treated as file names and arguments. An argument of - is equivalent to --
+
+# multi-character options:
+--debugger 	Arrange for the debugger profile to be executed before the shell starts. Turns on extended debugging mode (see the description of the extdebug     option to the shopt builtin below).
+--dump-po-strings 	Equivalent to -D, but the output is in the GNU gettext po (portable object) file format.
+--dump-strings 	Equivalent to -D.
+--help 	Display a usage message and exit.
+--initfile file, --rcfile file 	Execute commands from file instead of the system-wide initialization file /etc/bash.bashrc and the standard personal           initialization file ~/.bashrc if the shell is interactive (see the "Invocation" section below for details).
+--login 	Equivalent to -l
+--noediting 	Do not use the GNU readline library to read command lines when the shell is interactive.
+--noprofile 	Do not read either the system-wide startup file /etc/profile or any of the personal initialization files ~/.bash_profile, ~/.bash_login, or ~/.profile. By default, bash reads these files when it is invoked as a login shell (see the "Invocation" section below for details).
+--norc 	Do not read and execute the system-wide initialization file /etc/bash.bashrc and the personal initialization file ~/.bashrc if the shell is        interactive. This option is on by default if the shell is invoked as sh.
+--posix 	Change the behavior of bash where the default operation differs from the POSIX standard to match the standard.
+--restricted 	The shell becomes restricted (see the "Restricted Shell" section below for details).
+--verbose 	Equivalent to -v.
+--version 	Show version information for this instance of bash and exit.
 """
 
 # ls — List directory contents
