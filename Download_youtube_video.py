@@ -110,3 +110,31 @@ optional arguments:
                         best resolutionRuns the command line program ffmpeg to
                         combine the audio and video
 """
+
+# Using PyTube
+
+# pip install pytube
+
+# 
+
+from pytube import YouTube 
+  
+# save to 
+SAVE_PATH = "E:/"
+  
+# link of the video to be downloaded 
+link="https://www.youtube.com/watch?v="
+
+try:
+    yt = YouTube(link) 
+except: 
+    print("Connection Error")
+  
+mp4files = yt.filter('mp4') 
+yt.set_filename('New_Video')  
+d_video = yt.get(mp4files[-1].extension,mp4files[-1].resolution) 
+try: 
+    d_video.download(SAVE_PATH) 
+except: 
+    print("Error!") 
+print('Completed!') 
