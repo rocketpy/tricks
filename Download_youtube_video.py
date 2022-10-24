@@ -137,4 +137,16 @@ try:
     d_video.download(SAVE_PATH) 
 except: 
     print("Error!") 
-print('Completed!') 
+print('Completed!')
+
+
+#  
+
+from pytube import YouTube 
+  
+# to save 
+SAVE_PATH = "E:/"
+
+link=["https://www.youtube.com/watch?v=", 
+    "https://www.youtube.com/watch?v="
+    ]
