@@ -140,13 +140,25 @@ except:
 print('Completed!')
 
 
-#  
-
+# downloading multiple videos
 from pytube import YouTube 
   
 # to save 
 SAVE_PATH = "E:/"
 
 link=["https://www.youtube.com/watch?v=", 
-    "https://www.youtube.com/watch?v="
-    ]
+      "https://www.youtube.com/watch?v="]
+for i in link: 
+    try:
+        yt = YouTube(i) 
+    except:
+        # exception 
+        print("Error") 
+    mp4_files = yt.filter('mp4') 
+    video = yt.get(mp4_files[-1].extension,mp4files[-1].resolution) 
+    try:
+        video.download(SAVE_PATH) 
+    except: 
+        print("Error!") 
+print('Completed!')
+
