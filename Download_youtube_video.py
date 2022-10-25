@@ -115,50 +115,68 @@ optional arguments:
 
 # pip install pytube
 
-# 
+from pytube import YouTube
 
-from pytube import YouTube 
-  
 # save to 
 SAVE_PATH = "E:/"
-  
-# link of the video to be downloaded 
+
+# link of the video to be downloaded
 link="https://www.youtube.com/watch?v="
 
 try:
-    yt = YouTube(link) 
-except: 
+    yt = YouTube(link)
+except:
     print("Connection Error")
-  
-mp4files = yt.filter('mp4') 
-yt.set_filename('New_Video')  
-d_video = yt.get(mp4files[-1].extension,mp4files[-1].resolution) 
-try: 
-    d_video.download(SAVE_PATH) 
-except: 
-    print("Error!") 
+
+mp4files = yt.filter('mp4')
+yt.set_filename('New_Video')
+d_video = yt.get(mp4files[-1].extension,mp4files[-1].resolution)
+try:
+    d_video.download(SAVE_PATH)
+except:
+    print("Error!")
 print('Completed!')
 
 
 # downloading multiple videos
-from pytube import YouTube 
-  
-# to save 
+from pytube import YouTube
+
+# to save
 SAVE_PATH = "E:/"
 
-link=["https://www.youtube.com/watch?v=", 
+link=["https://www.youtube.com/watch?v=",
       "https://www.youtube.com/watch?v="]
-for i in link: 
+for i in link:
     try:
-        yt = YouTube(i) 
+        yt = YouTube(i)
     except:
-        # exception 
-        print("Error") 
-    mp4_files = yt.filter('mp4') 
-    video = yt.get(mp4_files[-1].extension,mp4files[-1].resolution) 
+        # exception
+        print("Error")
+    mp4_files = yt.filter('mp4')
+    video = yt.get(mp4_files[-1].extension,mp4files[-1].resolution)
     try:
-        video.download(SAVE_PATH) 
-    except: 
-        print("Error!") 
+        video.download(SAVE_PATH)
+    except:
+        print("Error!")
+print('Completed!')
+
+
+# downloading multiple videos with handle files
+from pytube import YouTube
+
+# path to save
+SAVE_PATH = "E:/"
+link=open('links_file.txt','r')
+for i in link:
+    try:
+        yt = YouTube(i)
+    except:
+        print("Error")
+    mp4files = yt.filter('mp4')
+    d_video = yt.get(mp4files[-1].extension,mp4files[-1].resolution)
+    try:
+        d_video.download(SAVE_PATH)
+    except:
+        print("Error!")
 print('Completed!')
 
