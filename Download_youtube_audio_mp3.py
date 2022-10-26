@@ -1,3 +1,13 @@
+# pip install pytube
+# pip install os_sys
+
+import os
+from pytube import YouTube
+
+
+yt = YouTube(str(input("Enter the URL:  ")))
+
+
 import YouTube from pytube
 
 URL = ""
