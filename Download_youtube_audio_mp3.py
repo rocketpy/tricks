@@ -174,3 +174,11 @@ yt = YouTube("https://www.youtube.com/watch...",
              allow_oauth_cache=True)
 yt.streams.filter(file_extension='mp4', res="720p").first().download()
 
+print("Enter the destination (leave blank for current directory)")
+destination = str(input(": ")) or '.'
+out_file = video.download(output_path=destination)
+base, ext = os.path.splitext(out_file)
+new_file = base + '.mp3'
+os.rename(out_file, new_file)
+print(yt.title + " the file is successfully downloaded.")
+
