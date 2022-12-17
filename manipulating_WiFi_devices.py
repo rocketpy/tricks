@@ -24,3 +24,12 @@ profile.key = '12345678'
 
 iface.remove_all_network_profiles()
 tmp_profile = iface.add_network_profile(profile)
+
+iface.connect(tmp_profile)
+time.sleep(30)
+assert iface.status() == const.IFACE_CONNECTED
+
+iface.disconnect()
+time.sleep(1)
+assert iface.status() in\
+[const.IFACE_DISCONNECTED, const.IFACE_INACTIVE]
