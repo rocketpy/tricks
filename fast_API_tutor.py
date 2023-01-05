@@ -1,5 +1,8 @@
 # FastAPI - framework, high performance, easy to learn, fast to code, ready for production
 
+# Documentation: https://fastapi.tiangolo.com
+# Source Code: https://github.com/tiangolo/fastapi
+
 # pip install fastapi
 
 # example taked here: https://habr.com/ru/post/708678/
