@@ -3,7 +3,20 @@
 # Documentation: https://fastapi.tiangolo.com
 # Source Code: https://github.com/tiangolo/fastapi
 
+# Requirements
+"""
+Python 3.7+
+FastAPI stands on the shoulders of giants:
+    Starlette for the web parts.
+    Pydantic for the data parts.
+"""
+
 # pip install fastapi
+# pip install "uvicorn[standard]"
+
+# Run it
+# Run the server with:
+# $ uvicorn main:app --reload
 
 
 # Simple Example:
