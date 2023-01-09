@@ -9,6 +9,27 @@ Python 3.7+
 FastAPI stands on the shoulders of giants:
     Starlette for the web parts.
     Pydantic for the data parts.
+
+Optional Dependencies:
+
+Used by Pydantic:
+    ujson - for faster JSON "parsing".
+    email_validator - for email validation.
+
+Used by Starlette:
+    httpx - Required if you want to use the TestClient.
+    jinja2 - Required if you want to use the default template configuration.
+    python-multipart - Required if you want to support form "parsing", with request.form().
+    itsdangerous - Required for SessionMiddleware support.
+    pyyaml - Required for Starlette's SchemaGenerator support (you probably don't need it with FastAPI).
+    ujson - Required if you want to use UJSONResponse.
+
+Used by FastAPI / Starlette:
+    uvicorn - for the server that loads and serves your application.
+    orjson - Required if you want to use ORJSONResponse.
+
+- Install all of these with pip install "fastapi[all]".
+
 """
 
 # pip install fastapi
