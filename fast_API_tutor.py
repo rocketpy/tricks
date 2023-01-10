@@ -100,6 +100,18 @@ async def read_items():
     return [{"item_id": "Foo"}]
 
 
+# Using the path operation function name as the operationId
+from fastapi import FastAPI
+from fastapi.routing import APIRoute
+
+app = FastAPI()
+
+
+@app.get("/items/")
+async def read_items():
+    return [{"item_id": "Foo"}]
+
+
 
 # example taked here: https://habr.com/ru/post/708678/
 from typing import Union
