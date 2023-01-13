@@ -125,6 +125,17 @@ def use_route_names_as_operation_ids(app: FastAPI) -> None:
 use_route_names_as_operation_ids(app)
 
 
+# Exclude from OpenAPI
+from fastapi import FastAPI
+
+app = FastAPI()
+
+
+@app.get("/items/", include_in_schema=False)
+async def read_items():
+    return [{"item_id": "Foo"}]
+
+
 
 # example taked here: https://habr.com/ru/post/708678/
 from typing import Union
