@@ -136,6 +136,23 @@ async def read_items():
     return [{"item_id": "Foo"}]
 
 
+# Advanced description from docstring
+from typing import Set, Union
+
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+app = FastAPI()
+
+
+class Item(BaseModel):
+    name: str
+    description: Union[str, None] = None
+    price: float
+    tax: Union[float, None] = None
+    tags: Set[str] = set()
+
+
 
 # example taked here: https://habr.com/ru/post/708678/
 from typing import Union
