@@ -179,6 +179,23 @@ async def read_items():
     return [{"item_id": "portal-gun"}]
 
 
+# Custom OpenAPI path operation schema
+from fastapi import FastAPI, Request
+
+app = FastAPI()
+
+
+def magic_data_reader(raw_body: bytes):
+    return {
+        "size": len(raw_body),
+        "content": {
+            "name": "Maaaagic",
+            "price": 42,
+            "description": "Just kiddin', no magic here. ✨",
+        },
+    }
+
+
 # example taked here: https://habr.com/ru/post/708678/
 from typing import Union
 from fastapi import FastAPI
