@@ -222,6 +222,31 @@ async def create_item(request: Request):
     return data
 
 
+# Custom OpenAPI content type
+from typing import List
+import yaml
+from fastapi import FastAPI, HTTPException, Request
+from pydantic import BaseModel, ValidationError
+
+app = FastAPI()
+
+
+class Item(BaseModel):
+    name: str
+    tags: List[str]
+
+
+@app.post(
+    "/items/",
+    openapi_extra={
+        "requestBody": {
+            "content": {"application/x-yaml": {"schema": Item.schema()}},
+            "required": True,
+        },
+    },
+)
+
+
 # example taked here: https://habr.com/ru/post/708678/
 from typing import Union
 from fastapi import FastAPI
