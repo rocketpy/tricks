@@ -296,6 +296,23 @@ async def create_item(request: Request):
     return item
 
 
+# Additional status codes
+from typing import Union
+from fastapi import Body, FastAPI, status
+from fastapi.responses import JSONResponse
+
+app = FastAPI()
+
+items = {"foo": {"name": "Fighters", "size": 6}, "bar": {"name": "Tenders", "size": 3}}
+
+
+@app.put("/items/{item_id}")
+async def upsert_item(
+    item_id: str,
+    name: Union[str, None] = Body(default=None),
+    size: Union[int, None] = Body(default=None),
+
+
 # example taked here: https://habr.com/ru/post/708678/
 from typing import Union
 from fastapi import FastAPI
