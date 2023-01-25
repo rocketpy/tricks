@@ -368,6 +368,18 @@ def get_legacy_data():
     return Response(content=data, media_type="application/xml")
 
 
+# Use ORJSONResponse
+from fastapi import FastAPI
+from fastapi.responses import ORJSONResponse
+
+app = FastAPI()
+
+
+@app.get("/items/", response_class=ORJSONResponse)
+async def read_items():
+    return ORJSONResponse([{"item_id": "Foo"}])
+
+
 # example taked here: https://habr.com/ru/post/708678/
 from typing import Union
 from fastapi import FastAPI
