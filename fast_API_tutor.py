@@ -347,6 +347,27 @@ def update_item(id: str, item: Item):
     return JSONResponse(content=json_compatible_item_data)
 
 
+# Returning a custom Response
+from fastapi import FastAPI, Response
+
+app = FastAPI()
+
+
+@app.get("/legacy/")
+def get_legacy_data():
+    data = """<?xml version="1.0"?>
+    <shampoo>
+    <Header>
+        Apply shampoo here.
+    </Header>
+    <Body>
+        You'll have to use soap here.
+    </Body>
+    </shampoo>
+    """
+    return Response(content=data, media_type="application/xml")
+
+
 # example taked here: https://habr.com/ru/post/708678/
 from typing import Union
 from fastapi import FastAPI
