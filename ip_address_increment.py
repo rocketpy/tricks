@@ -1,6 +1,12 @@
 import ipaddress
 # IPv4/IPv6 manipulation library
 # https://pypi.org/project/ipaddress/
+
+#  IP address representations:
+from __future__ import unicode_literals
+
+ipaddress.ip_address('1.2.3.4')
+IPv4Address(u'1.2.3.4')
  
 
 # Arithmetic Operation on IPv4 address
