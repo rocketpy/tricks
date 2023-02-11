@@ -7,12 +7,17 @@ from __future__ import unicode_literals
 
 ipaddress.ip_address('1.2.3.4')
 IPv4Address(u'1.2.3.4')
+
+# or
+
+ipaddress.ip_address(u'1.2.3.4')
+IPv4Address(u'1.2.3.4')
  
 
 # Arithmetic Operation on IPv4 address
+print (ipaddress.IPv4Address(u'0.0.0.0')-1)
 print(ipaddress.IPv4Address(u'129.117.0.0')-6)
 print (ipaddress.IPv4Address(u'175.199.42.211')+55)
-print (ipaddress.IPv4Address(u'0.0.0.0')-1)
 print (ipaddress.IPv4Address(u'255.255.255.255')+1)
  
   
