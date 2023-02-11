@@ -12,6 +12,9 @@ IPv4Address(u'1.2.3.4')
 
 ipaddress.ip_address(u'1.2.3.4')
 IPv4Address(u'1.2.3.4')
+
+# but not !!!
+ipaddress.ip_address(b'1.2.3.4')
  
 
 # Arithmetic Operation on IPv4 address
