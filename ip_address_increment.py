@@ -2,6 +2,8 @@ import ipaddress
 # IPv4/IPv6 manipulation library
 # https://pypi.org/project/ipaddress/
 
+# pip install ipaddress
+
 #  IP address representations:
 from __future__ import unicode_literals
 
@@ -15,6 +17,11 @@ IPv4Address(u'1.2.3.4')
 
 # but not !!!
 ipaddress.ip_address(b'1.2.3.4')
+
+
+# ipaddress.ip_network
+# The ipaddress.ip_network function allows you to create an object that describes a network(IPv4 или IPv6):
+subnet_1 = ipaddress.ip_network('80.0.1.0/28')
  
 
 # Arithmetic Operation on IPv4 address
