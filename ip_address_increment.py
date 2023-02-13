@@ -22,6 +22,19 @@ ipaddress.ip_address(b'1.2.3.4')
 # ipaddress.ip_network
 # The ipaddress.ip_network function allows you to create an object that describes a network(IPv4 или IPv6):
 subnet_1 = ipaddress.ip_network('80.0.1.0/28')
+
+# ipaddress.ip_address
+import ipaddress
+
+ipv4 = ipaddress.ip_address('10.0.1.1')
+# ipv4
+IPv4Address('10.0.1.1')
+
+# Methods ipv4.
+ipv4.compressed       ipv4.is_loopback      ipv4.is_unspecified   ipv4.version
+ipv4.exploded         ipv4.is_multicast     ipv4.max_prefixlen
+ipv4.is_global        ipv4.is_private       ipv4.packed
+ipv4.is_link_local    ipv4.is_reserved      ipv4.reverse_pointer
  
 
 # Arithmetic Operation on IPv4 address
