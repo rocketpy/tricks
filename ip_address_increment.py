@@ -50,3 +50,12 @@ print (ipaddress.IPv6Address(u'ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff')+1)
 print (ipaddress.IPv6Address(u'2001:0db8:85a3:2bfe:070d:8a2e:0370:7334')-330)
 print (ipaddress.IPv6Address(u'2001:0db8:85a3:2bfe:070d:8a2e:0370:7334')+1000)
 
+# Conversion to Strings and Integers
+str(ipaddress.IPv4Address('192.168.0.1'))
+# '192.168.0.1'
+int(ipaddress.IPv4Address('192.168.0.1'))
+# 3232235521
+str(ipaddress.IPv6Address('::1'))
+# '::1'
+int(ipaddress.IPv6Address('::1'))
+
