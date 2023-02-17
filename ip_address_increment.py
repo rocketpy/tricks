@@ -1,11 +1,14 @@
-import ipaddress
+# ipaddress
 # IPv4/IPv6 manipulation library
+
 # https://pypi.org/project/ipaddress/
+# https://docs.python.org/dev/library/ipaddress.html
 
 # pip install ipaddress
 
 #  IP address representations:
 from __future__ import unicode_literals
+import ipaddress
 
 ipaddress.ip_address('1.2.3.4')
 IPv4Address(u'1.2.3.4')
