@@ -39,6 +39,15 @@ ipv4.exploded         ipv4.is_multicast     ipv4.max_prefixlen
 ipv4.is_global        ipv4.is_private       ipv4.packed
 ipv4.is_link_local    ipv4.is_reserved      ipv4.reverse_pointer
  
+# check which range an address belongs to
+ipv4.is_loopback
+# False
+ipv4.is_multicast
+# False
+ipv4.is_reserved
+# False
+ipv4.is_private
+# True
 
 # Arithmetic Operation on IPv4 address
 print (ipaddress.IPv4Address(u'0.0.0.0')-1)
