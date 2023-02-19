@@ -82,3 +82,10 @@ str(ipaddress.IPv6Address('::1'))
 # '::1'
 int(ipaddress.IPv6Address('::1'))
 
+
+# ipaddress.ip_interface
+int1 = ipaddress.ip_interface('10.0.1.1/24')
+
+int1.ip
+IPv4Address('10.0.1.1')
+
