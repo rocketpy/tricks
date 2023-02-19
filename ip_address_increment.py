@@ -82,7 +82,7 @@ str(ipaddress.IPv6Address('::1'))
 # '::1'
 int(ipaddress.IPv6Address('::1'))
 
-
+# ipaddress.ip_interface - allows you to create an object
 # ipaddress.ip_interface
 int1 = ipaddress.ip_interface('10.0.1.1/24')
 
@@ -90,8 +90,15 @@ int1.ip
 IPv4Address('10.0.1.1')
 
 int1.network
-Out[38]: IPv4Network('10.0.1.0/24')
+IPv4Network('10.0.1.0/24')
  
- int1.netmask
-Out[39]: IPv4Address('255.255.255.0')
+int1.netmask
+IPv4Address('255.255.255.0')
+
+
+# Module usage example
+IP1 = '10.0.1.1/24'
+IP2 = '10.0.1.0/24'
+
+
 
