@@ -101,4 +101,12 @@ IP1 = '10.0.1.1/24'
 IP2 = '10.0.1.0/24'
 
 
-
+# Hosts
+list(ip_network('192.0.2.0/29').hosts())  
+[IPv4Address('192.0.2.1'), IPv4Address('192.0.2.2'),
+ IPv4Address('192.0.2.3'), IPv4Address('192.0.2.4'),
+ IPv4Address('192.0.2.5'), IPv4Address('192.0.2.6')]
+list(ip_network('192.0.2.0/31').hosts())
+[IPv4Address('192.0.2.0'), IPv4Address('192.0.2.1')]
+list(ip_network('192.0.2.1/32').hosts())
+[IPv4Address('192.0.2.1')]
