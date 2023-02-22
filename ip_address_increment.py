@@ -123,4 +123,7 @@ def check_if_ip_is_network(ip_address):
     except ValueError:
         return False
 
-   
+check_if_ip_is_network(IP1)
+# False
+check_if_ip_is_network(IP2)
+# True
