@@ -110,3 +110,17 @@ list(ip_network('192.0.2.0/31').hosts())
 [IPv4Address('192.0.2.0'), IPv4Address('192.0.2.1')]
 list(ip_network('192.0.2.1/32').hosts())
 [IPv4Address('192.0.2.1')]
+
+
+# Example
+IP1 = '10.0.1.1/24'
+IP2 = '10.0.1.0/24'
+
+def check_if_ip_is_network(ip_address):
+    try:
+        ipaddress.ip_network(ip_address)
+        return True
+    except ValueError:
+        return False
+
+   
