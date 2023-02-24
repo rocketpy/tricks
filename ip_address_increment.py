@@ -127,3 +127,11 @@ check_if_ip_is_network(IP1)
 # False
 check_if_ip_is_network(IP2)
 # True
+
+# IP address of connected mobile device
+import socket
+
+hostname = socket.gethostname()    
+IPAddr = socket.gethostbyname(hostname)    
+print("Your Computer Name is:" + hostname)    
+print("Your Computer IP Address is:" + IPAddr) 
