@@ -21,6 +21,12 @@ IPv4Address(u'1.2.3.4')
 # but not !!!
 ipaddress.ip_address(b'1.2.3.4')
 
+# IPv4Address(3691907365)  # From an int
+# IPv4Address('220.14.9.37')
+
+IPv4Address(b"\xdc\x0e\t%")  # From bytes (packed form)
+# IPv4Address('220.14.9.37')
+
 
 # ipaddress.ip_network
 # The ipaddress.ip_network function allows you to create an object that describes a network(IPv4 или IPv6):
