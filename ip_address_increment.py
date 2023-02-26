@@ -140,4 +140,11 @@ import socket
 hostname = socket.gethostname()    
 IPAddr = socket.gethostbyname(hostname)    
 print("Your Computer Name is:" + hostname)    
-print("Your Computer IP Address is:" + IPAddr) 
+print("Your Computer IP Address is:" + IPAddr)
+
+
+#  Classless Inter-Domain Routing (CIDR)
+from ipaddress import IPv4Network
+
+net = IPv4Network("192.4.2.0/24")
+print(net.num_addresses)
