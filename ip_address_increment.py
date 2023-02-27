@@ -148,3 +148,10 @@ from ipaddress import IPv4Network
 
 net = IPv4Network("192.4.2.0/24")
 print(net.num_addresses)
+
+
+# reverse_pointer
+ipaddress.ip_address("127.0.0.1").reverse_pointer
+# '1.0.0.127.in-addr.arpa'
+ipaddress.ip_address("2001:db8::1").reverse_pointer
+# '1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.8.b.d.0.1.0.0.2.ip6.arpa'
