@@ -155,3 +155,13 @@ ipaddress.ip_address("127.0.0.1").reverse_pointer
 # '1.0.0.127.in-addr.arpa'
 ipaddress.ip_address("2001:db8::1").reverse_pointer
 # '1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.8.b.d.0.1.0.0.2.ip6.arpa'
+
+
+# ipaddress.collapse_addresses(addresses)
+[ipaddr for ipaddr in
+ipaddress.collapse_addresses([ipaddress.IPv4Network('192.0.2.0/25'),
+ipaddress.IPv4Network('192.0.2.128/25')])]
+[IPv4Network('192.0.2.0/24')]
+
+# ipaddress.get_mixed_type_key(obj)
+IPv4Address('192.0.2.0') <= IPv4Network('192.0.2.0/24')
