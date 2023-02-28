@@ -150,6 +150,17 @@ net = IPv4Network("192.4.2.0/24")
 print(net.num_addresses)
 
 
+# IPv4Address are also hashable
+hash(IPv4Address("220.14.9.37"))
+# 4035855712965130587
+
+num_connections = {
+    IPv4Address("220.14.9.37"): 2,
+    IPv4Address("100.201.0.4"): 16,
+    IPv4Address("8.240.12.2"): 4,
+}
+
+
 # reverse_pointer
 ipaddress.ip_address("127.0.0.1").reverse_pointer
 # '1.0.0.127.in-addr.arpa'
