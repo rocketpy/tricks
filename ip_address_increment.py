@@ -177,9 +177,21 @@ ipaddress.IPv4Network('192.0.2.128/25')])]
 # ipaddress.get_mixed_type_key(obj)
 IPv4Address('192.0.2.0') <= IPv4Network('192.0.2.0/24')
 
-net = IPv4Network("192.4.2.0/24")
 
->>> IPv4Address("192.4.2.12") in net
-True
->>> IPv4Address("192.4.20.2") in net
-False
+from ipaddress import IPv4Network
+net = IPv4Network("192.4.2.0/24")
+net.num_addresses
+# 256
+
+net.prefixlen
+# 24
+
+# netmask
+net.netmask
+IPv4Address('255.255.255.0')
+
+net = IPv4Network("192.4.2.0/24")
+IPv4Address("192.4.2.12") in net
+# True
+IPv4Address("192.4.20.2") in net
+# False
