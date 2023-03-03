@@ -195,3 +195,11 @@ IPv4Address("192.4.2.12") in net
 # True
 IPv4Address("192.4.20.2") in net
 # False
+
+net.network_address
+# IPv4Address('192.4.2.0')
+
+net.prefixlen
+# 24
+net.netmask
+# IPv4Address('255.255.255.0')  # 11111111 11111111 11111111 00000000
