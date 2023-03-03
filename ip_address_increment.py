@@ -203,3 +203,15 @@ net.prefixlen
 # 24
 net.netmask
 # IPv4Address('255.255.255.0')  # 11111111 11111111 11111111 00000000
+
+IPv4Network("192.4.2.0/255.255.255.0")
+# IPv4Network('192.4.2.0/24')
+
+net.broadcast_address
+# IPv4Address('192.4.2.255')
+
+net = IPv4Network("100.64.0.0/10")
+net.num_addresses
+# 4194304
+net.netmask
+# IPv4Address('255.192.0.0')
