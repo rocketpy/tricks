@@ -17,3 +17,20 @@ captured_video = cv2.VideoWriter(file_name, four_c, 20.0, (width, height))
 
 webcam = cv2.VideoCapture(1)
 
+
+
+# Example 2
+# pip3 install numpy opencv-python pyautogui
+
+import cv2
+import pyautogui
+import numpy as np
+
+
+SCREEN_SIZE = tuple(pyautogui.size())
+fourcc = cv2.VideoWriter_fourcc(*"XVID")
+fps = 12.0
+out = cv2.VideoWriter("output.avi", fourcc, fps, (SCREEN_SIZE))
+record_seconds = 10
+
+
