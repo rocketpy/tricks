@@ -56,4 +56,16 @@ for i in range(int(record_seconds * fps)):
     cv2.imshow("screenshot", frame)
     if cv2.waitKey(1) == ord("q"):
         break
+        
 
+# Example 3
+import cv2
+import pyautogui
+import numpy as np
+
+
+resolution = (1920, 1080)
+codec = cv2.VideoWriter_fourcc(*"XVID")
+filename = "Recording.avi"
+fps = 60.0
+out = cv2.VideoWriter(filename, codec, fps, resolution)
