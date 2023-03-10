@@ -56,6 +56,15 @@ for i in range(int(record_seconds * fps)):
     cv2.imshow("screenshot", frame)
     if cv2.waitKey(1) == ord("q"):
         break
+
+cv2.destroyAllWindows()
+out.release()
+
+
+# record only regions of your screen, by passing the region keyword argument which is a four-integer tuple representing the top, left, width,
+# and height of the region to capture, here is how it's done
+
+img = pyautogui.screenshot(region=(0, 0, 300, 400))
         
 
 # Example 3
