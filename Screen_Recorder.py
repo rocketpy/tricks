@@ -82,3 +82,13 @@ out = cv2.VideoWriter(filename, codec, fps, resolution)
 cv2.namedWindow("Live", cv2.WINDOW_NORMAL)
 # Resize window
 cv2.resizeWindow("Live", 480, 270)
+
+while True:
+    img = pyautogui.screenshot()
+    frame = np.array(img)
+    cv2.COLOR_BGR2RGB)
+    out.write(frame)
+    cv2.imshow('Live', frame)
+    # press 'q' for stop recording
+    if cv2.waitKey(1) == ord('q'):
+        break
