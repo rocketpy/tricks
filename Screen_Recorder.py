@@ -57,8 +57,9 @@ for i in range(int(record_seconds * fps)):
     if cv2.waitKey(1) == ord("q"):
         break
 
-cv2.destroyAllWindows()
 out.release()
+cv2.destroyAllWindows()
+
 
 
 # record only regions of your screen, by passing the region keyword argument which is a four-integer tuple representing the top, left, width,
@@ -92,3 +93,6 @@ while True:
     # press 'q' for stop recording
     if cv2.waitKey(1) == ord('q'):
         break
+        
+out.release()
+cv2.destroyAllWindows()
