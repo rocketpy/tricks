@@ -27,3 +27,22 @@ def get_saving_frames_durations(cap, saving_fps):
         s.append(i)
     return s
 
+
+def main(video_file):
+    filename, _ = os.path.splitext(video_file)
+    filename += "-opencv"
+
+    if not os.path.isdir(filename):
+        os.mkdir(filename)
+
+    cap = cv2.VideoCapture(video_file)
+    fps = cap.get(cv2.CAP_PROP_FPS)
+    saving_frames_per_second = min(fps, SAVING_FRAMES_PER_SECOND)
+    saving_frames_durations = get_saving_frames_durations(cap, saving_frames_per_second)
+    count = 0
+
+    while True:
+        is_read, frame = cap.read()
+        if not is_read:
+            break
+
