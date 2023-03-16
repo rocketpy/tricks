@@ -45,4 +45,17 @@ def main(video_file):
         is_read, frame = cap.read()
         if not is_read:
             break
+        frame_duration = count / fps
+        try:
+            closest_duration = saving_frames_durations[0]
+        except IndexError:
+            break
 
+        if frame_duration >= closest_duration:
+            frame_duration_formatted = format_timedelta(timedelta(seconds=frame_duration))
+            cv2.imwrite(os.path.join(filename, f"frame{frame_duration_formatted}.jpg"), frame) 
+            try:
+                saving_frames_durations.pop(0)
+            except IndexError:
+                pass
+        count += 1
