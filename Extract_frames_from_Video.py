@@ -59,3 +59,8 @@ def main(video_file):
             except IndexError:
                 pass
         count += 1
+
+if __name__ == "__main__":
+    import sys
+    video_file = sys.argv[1]
+    main(video_file)
