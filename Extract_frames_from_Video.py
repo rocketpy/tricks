@@ -64,3 +64,11 @@ if __name__ == "__main__":
     import sys
     video_file = sys.argv[1]
     main(video_file)
+    
+    
+# using MoviePy
+import os
+import numpy as np
+from datetime import timedelta
+from moviepy.editor import VideoFileClip
+
