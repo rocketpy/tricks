@@ -98,3 +98,11 @@ def main(video_file):
     filename += "-moviepy"
     if not os.path.isdir(filename):
         os.mkdir(filename)
+
+    saving_frames_per_second = min(video_clip.fps, SAVING_FRAMES_PER_SECOND)
+    step = 1 / video_clip.fps if saving_frames_per_second == 0 else 1 / saving_frames_per_second
+
+    for current_duration in np.arange(0, video_clip.duration, step):
+        frame_duration_formatted = format_timedelta(timedelta(seconds=current_duration))
+        frame_filename = os.path.join(filename, f"frame{frame_duration_formatted}.jpg")
+        video_clip.save_frame(frame_filename, current_duration)
