@@ -1,5 +1,8 @@
 # pip install python-opencv moviepy
 
+# to run script
+# $ python extract_frames_opencv.py file_name.mp4
+
 import os
 import cv2
 import numpy as np
@@ -86,3 +89,12 @@ def format_timedelta(td):
     ms = int(ms)
     ms = round(ms / 1e4)
     return f"{result}.{ms:02}".replace(":", "-")
+
+def main(video_file):
+    # load the video clip
+    video_clip = VideoFileClip(video_file)
+    # make a folder by the name of the video file
+    filename, _ = os.path.splitext(video_file)
+    filename += "-moviepy"
+    if not os.path.isdir(filename):
+        os.mkdir(filename)
