@@ -70,6 +70,7 @@ if __name__ == "__main__":
     
     
 # using MoviePy
+# $ python extract_frames_moviepy.py file_name.mp4
 import os
 import numpy as np
 from datetime import timedelta
@@ -106,3 +107,8 @@ def main(video_file):
         frame_duration_formatted = format_timedelta(timedelta(seconds=current_duration))
         frame_filename = os.path.join(filename, f"frame{frame_duration_formatted}.jpg")
         video_clip.save_frame(frame_filename, current_duration)
+        
+if __name__ == "__main__":
+    import sys
+    video_file = sys.argv[1]
+    main(video_file)
