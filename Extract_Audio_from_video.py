@@ -2,6 +2,28 @@
 # $ sudo apt update
 # $ sudo apt install ffmpeg
 
+"""
+video formats:
+    WMV (wmv, wma, asf*)
+    OGG (ogg, oga, ogv, ogx)
+    3GP (3gp, 3gp2, 3g2, 3gpp, 3gpp2)
+    MP4 (mp4, m4a, m4v, f4v, f4a, m4b, m4r, f4b, mov)
+    
+audio formats:
+    MP3
+    AAC
+    WMA
+    AC3 (Dolby Digital)
+"""
+
+
+# pip install ffmpeg moviepy
+
+
+import moviepy.editor as mp
+
+my_clip = mp.VideoFileClip(r"file_name.mov")
+
 
 # Using FFmpeg
 import os
