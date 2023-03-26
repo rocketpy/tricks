@@ -1,6 +1,7 @@
 # pip install moviepy
 # $ sudo apt update
 # $ sudo apt install ffmpeg
+# pip install ffmpeg moviepy
 
 """
 video formats:
@@ -17,12 +18,11 @@ audio formats:
 """
 
 
-# pip install ffmpeg moviepy
-
-
 import moviepy.editor as mp
 
 my_clip = mp.VideoFileClip(r"file_name.mov")
+
+my_clip.audio.write_audiofile(r"result.mp3")
 
 
 # Using FFmpeg
