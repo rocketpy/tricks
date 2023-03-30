@@ -4,3 +4,8 @@
 
 # pip install pydub
 
+# Open a WAV file
+from pydub import AudioSegment
+
+song = AudioSegment.from_wav("song_name.wav")
+
