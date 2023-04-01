@@ -26,3 +26,10 @@ aac_version = AudioSegment.from_file("never_gonna_give_you_up.aiff", "aac")
 ten_seconds = 10 * 1000
 first_10_seconds = song[:10000]
 last_5_seconds = song[-5000:]
+
+
+# Make the beginning louder and the end quieter
+# boost volume by 6dB
+beginning = first_10_seconds + 6
+# reduce volume by 3dB
+end = last_5_seconds - 3
