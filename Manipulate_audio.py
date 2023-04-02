@@ -33,3 +33,15 @@ last_5_seconds = song[-5000:]
 beginning = first_10_seconds + 6
 # reduce volume by 3dB
 end = last_5_seconds - 3
+
+
+# Concatenate audio (add one file to the end of another)
+without_the_middle = beginning + end
+
+# AudioSegments are immutable
+# song is not modified
+backwards = song.reverse()
+
+# Crossfade (again, beginning and end are not modified)
+# 1.5 second crossfade
+with_style = beginning.append(end, crossfade=1500)
