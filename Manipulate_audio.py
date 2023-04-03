@@ -45,3 +45,14 @@ backwards = song.reverse()
 # Crossfade (again, beginning and end are not modified)
 # 1.5 second crossfade
 with_style = beginning.append(end, crossfade=1500)
+
+# Repeat
+# repeat the clip twice
+do_it_over = with_style * 2
+
+# Fade (note that you can chain operations because everything returns an AudioSegment)
+# 2 sec fade in, 3 sec fade out
+awesome = do_it_over.fade_in(2000).fade_out(3000)
+
+# Save the results (again whatever ffmpeg supports)
+awesome.export("mashup.mp3", format="mp3")
