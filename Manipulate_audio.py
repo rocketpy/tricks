@@ -1,6 +1,8 @@
 # pydub - Manipulate audio with an simple and easy high level interface
 
 # http://pydub.com/
+# https://github.com/jiaaro/pydub/
+
 # pip install pydub
 
 
@@ -56,3 +58,13 @@ awesome = do_it_over.fade_in(2000).fade_out(3000)
 
 # Save the results (again whatever ffmpeg supports)
 awesome.export("mashup.mp3", format="mp3")
+
+
+# Example
+import os
+import glob
+from pydub import AudioSegment
+
+
+video_dir = '/home/johndoe/downloaded_videos/'  # Path where the videos are located
+extension_list = ('*.mp4', '*.flv')
