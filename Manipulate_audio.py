@@ -74,3 +74,22 @@ for extension in extension_list:
     for video in glob.glob(extension):
         mp3_filename = os.path.splitext(os.path.basename(video))[0] + '.mp3'
         AudioSegment.from_file(video).export(mp3_filename, format='mp3')
+        
+
+# Example 2
+from glob import glob
+from pydub import AudioSegment
+
+
+playlist_songs = [AudioSegment.from_mp3(mp3_file) for mp3_file in glob("*.mp3")]
+first_song = playlist_songs.pop(0)
+
+# let's just include the first 30 seconds of the first song (slicing
+# is done by milliseconds)
+beginning_of_song = first_song[:30*1000]
+
+playlist = beginning_of_song
+for song in playlist_songs:
+
+    # We don't want an abrupt stop at the end, so let's do a 10 second crossfades
+    playlist = playlist.append(song, crossfade=(10 * 1000))
