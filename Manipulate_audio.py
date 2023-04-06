@@ -90,6 +90,15 @@ beginning_of_song = first_song[:30*1000]
 
 playlist = beginning_of_song
 for song in playlist_songs:
-
     # We don't want an abrupt stop at the end, so let's do a 10 second crossfades
     playlist = playlist.append(song, crossfade=(10 * 1000))
+    
+# let's fade out the end of the last song
+playlist = playlist.fade_out(30)
+
+# hmm I wonder how long it is... ( len(audio_segment) returns milliseconds )
+playlist_length = len(playlist) / (1000*60)
+
+# lets save it!
+with open("%s_minute_playlist.mp3" % playlist_length, 'wb') as out_f:
+    playlist.export(out_f, format='mp3')
