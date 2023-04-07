@@ -102,3 +102,18 @@ playlist_length = len(playlist) / (1000*60)
 # lets save it!
 with open("%s_minute_playlist.mp3" % playlist_length, 'wb') as out_f:
     playlist.export(out_f, format='mp3')
+    
+    
+# Kapre
+# Keras Audio Preprocessors - compute STFT, InverseSTFT, Melspectrogram, and others on GPU real-time.
+
+# https://kapre.readthedocs.io/en/latest/
+# https://github.com/keunwoochoi/kapre
+
+# pip install kapre
+# https://github.com/keunwoochoi/kapre/tree/master/examples
+
+from tensorflow.keras.models import Sequential
+from kapre import STFT, Magnitude, MagnitudeToDecibel
+from kapre.composed import get_melspectrogram_layer, get_log_frequency_spectrogram_layer
+from tensorflow.keras.layers import Conv2D, BatchNormalization, ReLU, GlobalAveragePooling2D, Dense, Softmax
