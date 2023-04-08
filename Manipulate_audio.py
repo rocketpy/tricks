@@ -117,3 +117,14 @@ from tensorflow.keras.models import Sequential
 from kapre import STFT, Magnitude, MagnitudeToDecibel
 from kapre.composed import get_melspectrogram_layer, get_log_frequency_spectrogram_layer
 from tensorflow.keras.layers import Conv2D, BatchNormalization, ReLU, GlobalAveragePooling2D, Dense, Softmax
+
+
+# 6 channels (!), maybe 1-sec audio signal, for an example.
+input_shape = (44100, 6)
+sr = 44100
+model = Sequential()
+# A STFT layer
+model.add(STFT(n_fft=2048, win_length=2018, hop_length=1024,
+               window_name=None, pad_end=False,
+               input_data_format='channels_last', output_data_format='channels_last',
+               input_shape=input_shape))
