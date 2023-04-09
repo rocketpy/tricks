@@ -134,4 +134,15 @@ model.add(MagnitudeToDecibel())  # these three layers can be replaced with get_s
 # Alternatively, you may want to use a melspectrogram layer
 # melgram_layer = get_melspectrogram_layer()
 # or log-frequency layer
-# log_stft_layer = get_log_frequency_spectrogram_layer() 
+# log_stft_layer = get_log_frequency_spectrogram_layer()
+
+
+# pyAudioAnalysis
+
+"""
+Installation
+
+    Clone the source of this library: git clone https://github.com/tyiannak/pyAudioAnalysis.git
+    Install dependencies: pip install -r ./requirements.txt 
+    Install using pip: pip install -e .
+"""
