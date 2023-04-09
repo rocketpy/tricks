@@ -138,7 +138,7 @@ model.add(MagnitudeToDecibel())  # these three layers can be replaced with get_s
 
 
 # pyAudioAnalysis
-
+# https://github.com/tyiannak/pyAudioAnalysis/
 """
 Installation
 
@@ -146,3 +146,7 @@ Installation
     Install dependencies: pip install -r ./requirements.txt 
     Install using pip: pip install -e .
 """
+
+from pyAudioAnalysis import audioTrainTest as aT
+aT.extract_features_and_train(["classifierData/music","classifierData/speech"], 1.0, 1.0, aT.shortTermWindow, aT.shortTermStep, "svm", "svmSMtemp", False)
+aT.file_classification("data/doremi.wav", "svmSMtemp","svm")
