@@ -145,8 +145,35 @@ Installation
     Clone the source of this library: git clone https://github.com/tyiannak/pyAudioAnalysis.git
     Install dependencies: pip install -r ./requirements.txt 
     Install using pip: pip install -e .
+    
+Dependencies:
+
+NUMPY
+pip install numpy
+MATPLOTLIB
+pip install matplotlib
+SCIPY
+pip install scipy  
+SKLEARN
+pip install sklearn 
+hmmlearn
+pip install hmmlearn
+Simplejson
+pip install simplejson
+eyeD3
+pip install eyed3
+pydub
+pip install pydub
 """
 
 from pyAudioAnalysis import audioTrainTest as aT
 aT.extract_features_and_train(["classifierData/music","classifierData/speech"], 1.0, 1.0, aT.shortTermWindow, aT.shortTermStep, "svm", "svmSMtemp", False)
 aT.file_classification("data/doremi.wav", "svmSMtemp","svm")
+
+# Beat extraction
+# The beat rate estimation is implemented in function beat_extraction() of MidTermFeatures.py file. It accepts 2 arguments:
+# (a) the short-term feature matrix and (b) the window step (in seconds). Obviously, the feature_extraction() function of the ShortTermFeatures.py
+# file is needed to extract the sequence of feature vectors before extracting the beat.
+
+# Command-line example:
+# python audioAnalysis.py beatExtraction -i data/beat/small.wav --plot
