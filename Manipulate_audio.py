@@ -138,6 +138,11 @@ model.add(MagnitudeToDecibel())  # these three layers can be replaced with get_s
 
 
 # pyAudioAnalysis
+
+# Example of convert Video to MP3
+# To convert video (mkv) to audio (mp3)
+# ffmpeg -i video.mkv audio.mp3
+
 # https://github.com/tyiannak/pyAudioAnalysis/
 """
 Installation
