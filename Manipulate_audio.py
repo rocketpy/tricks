@@ -182,3 +182,24 @@ aT.file_classification("data/doremi.wav", "svmSMtemp","svm")
 
 # Command-line example:
 # python audioAnalysis.py beatExtraction -i data/beat/small.wav --plot
+
+# example, the same signal stored in WAV and MP3 files is loaded to numpy arrays.
+# Original here: https://hackernoon.com/audio-handling-basics-how-to-process-audio-files-using-python-cli-jo283u3y
+
+# Read WAV and MP3 files to array
+import plotly
+import numpy as np
+from scipy.io import wavfile
+import plotly.graph_objs as go
+from pydub import AudioSegment
+from plotly.offline import init_notebook_mode
+
+
+# read WAV file using scipy.io.wavfile
+fs_wav, data_wav = wavfile.read("data/music_8k.wav")
+
+# read MP3 file using pudub
+audiofile = AudioSegment.from_file("data/music_8k.mp3")
+data_mp3 = np.array(audiofile.get_array_of_samples())
+fs_mp3 = audiofile.frame_rate
+
