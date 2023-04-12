@@ -203,3 +203,7 @@ audiofile = AudioSegment.from_file("data/music_8k.mp3")
 data_mp3 = np.array(audiofile.get_array_of_samples())
 fs_mp3 = audiofile.frame_rate
 
+print('Sq Error Between mp3 and wav data = {}'.
+      format(((data_mp3 - data_wav)**2).sum()))
+print('Signal Duration = {} seconds'.
+      format(data_wav.shape[0] / fs_wav))
