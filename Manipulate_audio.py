@@ -207,3 +207,14 @@ print('Sq Error Between mp3 and wav data = {}'.
       format(((data_mp3 - data_wav)**2).sum()))
 print('Signal Duration = {} seconds'.
       format(data_wav.shape[0] / fs_wav))
+
+
+# Handling stereo signals
+fs_wav, data_wav = wavfile.read("data/stereo_example_small_8k.wav")
+time_wav = np.arange(0, len(data_wav)) / fs_wav
+plotly.offline.iplot({ "data": [go.Scatter(x=time_wav, 
+                                           y=data_wav[:, 0], 
+                                           name='left channel'), 
+                                go.Scatter(x=time_wav, 
+                                           y=data_wav[:, 1], 
+                                           name='right channel')]})
