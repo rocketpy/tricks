@@ -19,3 +19,9 @@ def main():
       
 if __name__ == '__main__':
     main()
+    
+    
+# Example 2
+logging.basicConfig(filename = 'app.log', 
+                    level = logging.WARNING, 
+                    format = '%(levelname)s:%(asctime)s:%(message)s')
