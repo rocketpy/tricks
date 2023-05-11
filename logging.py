@@ -25,3 +25,11 @@ if __name__ == '__main__':
 logging.basicConfig(filename = 'app.log', 
                     level = logging.WARNING, 
                     format = '%(levelname)s:%(asctime)s:%(message)s')
+
+# Example 3
+import logging
+import logging.config
+  
+def main():
+    # Configure the logging
+    logging.config.fileConfig('logconfig.ini')
