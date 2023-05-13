@@ -3,6 +3,16 @@
 # https://pypi.org/project/pyChatGPT/
 # https://github.com/terry3041/pyChatGPT
 
+# https://github.com/acheong08/ChatGPT - official API
+# Get API key from https://platform.openai.com/account/api-keys
+# python -m pip install --upgrade revChatGPT
+
+# Basic example
+from revChatGPT.V3 import Chatbot
+
+chatbot = Chatbot(api_key="<api_key>")
+chatbot.ask("Hello world")
+
 # pip install pyChatGPT
 
 """
