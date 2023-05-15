@@ -23,3 +23,16 @@ Features:
  Headless machines support
  Proxy support (only without basic auth)
 """
+
+# Interactive mode
+# python3 -m pyChatGPT
+
+from pyChatGPT import ChatGPT
+
+session_token = 'abc123'  # `__Secure-next-auth.session-token` cookie from https://chat.openai.com/chat
+api = ChatGPT(session_token)  # auth with session token
+api = ChatGPT(session_token, conversation_id='some-random-uuid')  # specify conversation id
+api = ChatGPT(session_token, proxy='https://proxy.example.com:8080')  # specify proxy
+api = ChatGPT(session_token, chrome_args=['--window-size=1920,768'])  # specify chrome args
+api = ChatGPT(session_token, moderation=False)  # disable moderation
+api = ChatGPT(session_token, verbose=True)  # verbose mode (print debug messages)
