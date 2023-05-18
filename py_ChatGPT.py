@@ -74,3 +74,15 @@ sudo apt install chromium-browser xvfb
 
 # start your script
 python3 your_script.py
+
+
+# How do get it to work on Google Colab?
+It is normal for the seession to be crashed when installing dependencies. Just ignore the error and run your script.
+
+# install dependencies
+!apt install chromium-browser xvfb
+!pip install -U selenium_profiles pyChatGPT
+
+# install chromedriver
+from selenium_profiles.utils.installer import install_chromedriver
+install_chromedriver()
