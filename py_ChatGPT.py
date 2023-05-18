@@ -66,3 +66,11 @@ print(resp['message'])
 api.reset_conversation()  # reset the conversation
 api.clear_conversations()  # clear all conversations
 api.refresh_chat_page()  # refresh the chat page
+
+
+# How do get it to work on headless linux server?
+# install chromium & X virtual framebuffer
+sudo apt install chromium-browser xvfb
+
+# start your script
+python3 your_script.py
