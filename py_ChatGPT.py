@@ -86,3 +86,6 @@ It is normal for the seession to be crashed when installing dependencies. Just i
 # install chromedriver
 from selenium_profiles.utils.installer import install_chromedriver
 install_chromedriver()
+
+# start your script as normal
+!python3 -m pyChatGPT
