@@ -17,3 +17,11 @@ import os
 
 os.environ['_BARD_API_KEY']="xxxxxxxx"
 Bard().get_answer(".....")['content']
+
+
+# To get reponse dictionary
+import bardapi
+import os
+
+# set your __Secure-1PSID value to key
+token = 'xxxxxxxxxx'
