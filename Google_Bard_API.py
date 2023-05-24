@@ -25,3 +25,18 @@ import os
 
 # set your __Secure-1PSID value to key
 token = 'xxxxxxxxxx'
+
+
+# Behind a proxy
+from bardapi import Bard
+import os
+
+# Change 'http://proxy.example.com:8080' to your http proxy
+# timeout in seconds
+proxies = {
+    'http': 'http://proxy.example.com:8080',
+    'https': 'https://proxy.example.com:8080'
+}
+
+bard = Bard(token='xxxxxxxxxx', proxies=proxies, timeout=30)
+bard.get_answer("....")['content']
