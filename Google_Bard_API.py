@@ -40,3 +40,14 @@ proxies = {
 
 bard = Bard(token='xxxxxxxxxx', proxies=proxies, timeout=30)
 bard.get_answer("....")['content']
+
+
+# Reusable session object
+import os
+import requests
+from bardapi import Bard
+
+os.environ['_BARD_API_KEY'] = 'xxxxxxxxxxx'
+# token='xxxxxxxxxxx'
+
+session = requests.Session()
