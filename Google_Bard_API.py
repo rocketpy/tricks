@@ -67,3 +67,17 @@ bard.get_answer(".....")['content']
 
 # Continued conversation without set new session
 bard.get_answer("What is my last prompt??")['content']
+
+
+# installation required
+# pip install git+https://github.com/dsdanielpark/Bard-API.git
+
+# Multi-language Bard API
+# GitHub Dev version only.
+
+from bardapi import Bard
+
+bard = Bard(token='xxxxxxxx', language='chinese (simplified)')
+res = bard.get_answer("你好。")
+print(res['content'])
+
