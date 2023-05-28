@@ -81,3 +81,14 @@ bard = Bard(token='xxxxxxxx', language='chinese (simplified)')
 res = bard.get_answer("你好。")
 print(res['content'])
 
+# or
+
+from bardapi import Bard
+import os
+
+os.environ["_BARD_API_LANG"] = 'chinese (simplified)'
+os.environ["_BARD_API_KEY"] = 'xxxxxxxx'
+
+res = Bard().get_answer("你好。")
+print(res['content'])
+
