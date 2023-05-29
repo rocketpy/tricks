@@ -92,3 +92,12 @@ os.environ["_BARD_API_KEY"] = 'xxxxxxxx'
 res = Bard().get_answer("你好。")
 print(res['content'])
 
+
+# Get image links
+# GitHub Dev version only.
+from bardapi import Bard
+
+bard = Bard(token='xxxxxxxxxxx')
+res = bard.get_answer("Find me an image of the main entrance of Stanford University.")
+res['links'] # Get image links (list)
+res['images'] # Get images (set)
