@@ -101,3 +101,10 @@ bard = Bard(token='xxxxxxxxxxx')
 res = bard.get_answer("Find me an image of the main entrance of Stanford University.")
 res['links'] # Get image links (list)
 res['images'] # Get images (set)
+
+
+# ChatBard
+from bardapi import ChatBard
+    
+chat = ChatBard()
+chat.start()
