@@ -108,3 +108,15 @@ from bardapi import ChatBard
     
 chat = ChatBard()
 chat.start()
+
+# or
+
+from bardapi import ChatBard
+import os
+
+os.environ["_BARD_API_KEY"] = 'xxxxxx'   # Requird
+os.environ["_BARD_API_LANG"] = Arabic    # Optional, Default to English
+os.environ["_BARD_API_TIMEOUT"] = 30     # Optional, Session Timeout
+ 
+chat = ChatBard()
+chat.start()
