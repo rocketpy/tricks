@@ -135,3 +135,11 @@ proxies = {
 }
     
 ChatBard(token=token, session=session, proxies=proxies, timeout=40, language="chinese (simplified)").start()
+
+
+# Executing Python code received as a response from Bard
+# GitHub Dev version only!!!
+from bardapi import Bard
+    
+bard = Bard(token="xxxxxxxxx", run_code=True)
+bard.get_answer("code a pie chart in python for this data={'blue':25, 'red':30, 'green':30, 'purple':15}")
