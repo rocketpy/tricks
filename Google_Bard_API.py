@@ -1,7 +1,11 @@
 # Google Bard API
 
 # https://github.com/dsdanielpark/Bard-API
+# https://pypi.org/project/bardapi/
 # pip install bardapi
+
+# development version from Github:
+# pip install git+https://github.com/dsdanielpark/Bard-API.git
 
 # Simple Usage
 from bardapi import Bard
@@ -143,3 +147,11 @@ from bardapi import Bard
     
 bard = Bard(token="xxxxxxxxx", run_code=True)
 bard.get_answer("code a pie chart in python for this data={'blue':25, 'red':30, 'green':30, 'purple':15}")
+
+
+# Using Bard asynchronously
+# GitHub Dev version only!!!
+from bardapi import BardAsync 
+    
+bard = BardAsync(token="xxxxxxxxx")
+await bard.get_answer("What is ...?")
