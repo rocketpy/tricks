@@ -155,3 +155,18 @@ from bardapi import BardAsync
     
 bard = BardAsync(token="xxxxxxxxx")
 await bard.get_answer("What is ...?")
+
+
+# Bard which can get Cookies
+# GitHub Dev version only.
+from bardapi import BardCookies
+
+cookie_dict = {
+    "__Secure-1PSID": "xxxxxxxxx",
+    "__Secure-1PSIDTS": "xxxxxxxxx",
+    # Any cookie values you want to pass session object.
+}
+
+bard = BardCookies(cookie_dict=cookie_dict)
+
+print(bard.get_answer("....."))
