@@ -8,7 +8,7 @@
 # pip install git+https://github.com/dsdanielpark/Bard-API.git
 
 # Simple Usage
-from bardapi import Bard
+
 
 token = 'xxxxxxxxxx'
 bard = Bard(token=token)
