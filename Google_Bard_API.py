@@ -7,18 +7,15 @@
 # development version from Github:
 # pip install git+https://github.com/dsdanielpark/Bard-API.git
 
-# Simple Usage
 
+# Simple Usage
+from bardapi import Bard
+import os
 
 token = 'xxxxxxxxxx'
 bard = Bard(token=token)
 bard.get_answer(".....")['content']
-
-
-# Or use this
-from bardapi import Bard
-import os
-
+# Or
 os.environ['_BARD_API_KEY']="xxxxxxxx"
 Bard().get_answer(".....")['content']
 
