@@ -4,6 +4,15 @@
 # https://pypi.org/project/bardapi/
 # pip install bardapi
 
+# telegram-ai-bot - https://github.com/nishantchauhan949/telegram-ai-bot
+# requiremennts - https://github.com/nishantchauhan949/telegram-ai-bot/blob/main/requirements.txt
+# Getting Bot token - https://medium.com/geekculture/generate-telegram-token-for-bot-api-d26faf9bf064
+# Getting Google Bard API KEY
+# Create .env file with:
+BOT_TOKEN = xxxxxxxxxx
+BARD_API_KEY = xxxxxxxxxx
+
+
 # development version from Github:
 # pip install git+https://github.com/dsdanielpark/Bard-API.git
 
