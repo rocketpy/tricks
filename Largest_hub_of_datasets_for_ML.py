@@ -25,3 +25,17 @@ print(squad_dataset['train'][0])
 
 # Process the dataset - add a column with the length of the context texts
 dataset_with_length = squad_dataset.map(lambda x: {"length": len(x["context"])})
+
+# Process the dataset - tokenize the context texts (using a tokenizer from the Transformers library)
+from transformers import AutoTokenizer
+tokenizer = AutoTokenizer.from_pretrained('bert-base-cased')
+
+tokenized_dataset = squad_dataset.map(lambda x: tokenizer(x['context']), batched=True)
+
+
+# If the dataset is bigger than disk or if don't want to wait to download the data, you can use streaming!!!
+
+# If you want to use the dataset immediately and efficiently stream the data as you iterate over the dataset
+image_dataset = load_dataset('cifar100', streaming=True)
+for example in image_dataset["train"]:
+    break
