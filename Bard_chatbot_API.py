@@ -20,3 +20,13 @@ options:
 # $ export BARD_QUICK="true"
 # $ export BARD_SESSION="<__Secure-1PSID>"
 # $ python3 -m Bard
+
+# Example bash shortcut:
+
+# USAGE1: bard QUESTION
+# USAGE2: echo "QUESTION" | bard
+bard () {
+	export BARD_QUICK=true
+	export BARD_SESSION=<REDACTED>.
+	python3 -m Bard "${@:-$(</dev/stdin)}" | tail -n+7
+}
