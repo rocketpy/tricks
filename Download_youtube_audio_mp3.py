@@ -4,9 +4,25 @@
 import os
 from pytube import YouTube
 
-
 yt = YouTube(str(input("Enter the URL:  ")))
 
+# or
+from pytube import YouTube
+
+def DownloadAudio(link):
+    youtubeObject = YouTube(link)
+    youtubeObject = youtubeObject.streams.get_highest_resolution()
+
+    try:
+        youtubeObject.download()
+    except:
+        print("Error, try again")
+    print("Download is completed")
+link = input("Enter the YouTube link: ")
+
+DownloadAudio(link)
+
+# or
 
 import YouTube from pytube
 
