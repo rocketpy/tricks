@@ -22,3 +22,12 @@ python3 -m venv .pt1
 source .pt1/bin/activate
 pip3 install wheel
 pip3 install -r requirements_pt13.txt
+
+
+PyTorch 2.0
+
+# install required packages from pypi
+python3 -m venv .pt2
+source .pt2/bin/activate
+pip3 install wheel
+pip3 install -r requirements_pt2.txt
