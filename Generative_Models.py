@@ -33,3 +33,15 @@ pip3 install -r requirements_pt2.txt
 # Dataset Handling
 example = {"jpg": x,  # this is a tensor -1...1 chw
            "txt": "a beautiful image"}
+
+# Training:
+"""
+We are providing example training configs in configs/example_training. To launch a training, run
+
+python main.py --base configs/<config1.yaml> configs/<config2.yaml>
+where configs are merged from left to right (later configs overwrite the same values).
+This can be used to combine model, training and data configs. However, all of them can also be defined in a single config.
+For example, to run a class-conditional pixel-based diffusion model training on MNIST, run
+
+python main.py --base configs/example_training/toy/mnist_cond.yaml
+"""
