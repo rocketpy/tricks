@@ -4,3 +4,9 @@
 # https://github.com/daviddrysdale/python-phonenumbers
 
 # pip install phonenumbers
+
+
+import phonenumbers
+from phonenumbers import geocoder, carrier
+
+ph = phonenumbers.parse('+.......')
