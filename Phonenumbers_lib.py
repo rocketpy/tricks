@@ -29,3 +29,5 @@ z = phonenumbers.parse("+120012301", None)
 z = phonenumbers.parse("+12001230101", None)
 # phonenumbers.is_possible_number(z)
 # phonenumbers.is_valid_number(z)  # NPA 200 not used
+
+z = phonenumbers.parse("02081234567", None)  # no region, no + => unparseable
