@@ -24,8 +24,8 @@ y = phonenumbers.parse("020 8366 1177", "GB")
 
 z = phonenumbers.parse("00 1 650 253 2222", "GB")  # as dialled from GB, not a GB number
 z = phonenumbers.parse("+120012301", None)
-# phonenumbers.is_possible_number(z)  # too few digits for USA
-# phonenumbers.is_valid_number(z)
+phonenumbers.is_possible_number(z)  # too few digits for USA
+phonenumbers.is_valid_number(z)
 z = phonenumbers.parse("+12001230101", None)
 # phonenumbers.is_possible_number(z)
 # phonenumbers.is_valid_number(z)  # NPA 200 not used
