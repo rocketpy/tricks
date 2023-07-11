@@ -31,3 +31,7 @@ z = phonenumbers.parse("+12001230101", None)
 # phonenumbers.is_valid_number(z)  # NPA 200 not used
 
 z = phonenumbers.parse("02081234567", None)  # no region, no + => unparseable
+
+phonenumbers.format_number(x, phonenumbers.PhoneNumberFormat.NATIONAL)
+phonenumbers.format_number(x, phonenumbers.PhoneNumberFormat.INTERNATIONAL)
+phonenumbers.format_number(x, phonenumbers.PhoneNumberFormat.E164)
