@@ -40,3 +40,11 @@ phonenumbers.format_number(x, phonenumbers.PhoneNumberFormat.E164)
 formatter = phonenumbers.AsYouTypeFormatter("US")
 formatter.input_digit("6")
 formatter.input_digit("5")
+
+# Each of these match objects holds a PhoneNumber object together with information about where the match occurred in the original string.
+text = "Call me at 510-748-8230 if it's before 9:30, or on 703-4800500 after 10am."
+for match in phonenumbers.PhoneNumberMatcher(text, "US"):
+    print(match)
+
+# PhoneNumberMatch [11,23) 510-748-8230
+# PhoneNumberMatch [51,62) 703-4800500
