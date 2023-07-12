@@ -35,3 +35,8 @@ z = phonenumbers.parse("02081234567", None)  # no region, no + => unparseable
 phonenumbers.format_number(x, phonenumbers.PhoneNumberFormat.NATIONAL)
 phonenumbers.format_number(x, phonenumbers.PhoneNumberFormat.INTERNATIONAL)
 phonenumbers.format_number(x, phonenumbers.PhoneNumberFormat.E164)
+
+# The AsYouTypeFormatter object allows this.
+formatter = phonenumbers.AsYouTypeFormatter("US")
+formatter.input_digit("6")
+formatter.input_digit("5")
