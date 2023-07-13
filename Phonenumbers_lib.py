@@ -48,3 +48,9 @@ for match in phonenumbers.PhoneNumberMatcher(text, "US"):
 
 # PhoneNumberMatch [11,23) 510-748-8230
 # PhoneNumberMatch [51,62) 703-4800500
+
+
+from phonenumbers import geocoder
+
+ch_number = phonenumbers.parse("0431234567", "CH")
+geocoder.description_for_number(ch_number, "de")
