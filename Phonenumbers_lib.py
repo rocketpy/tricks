@@ -54,3 +54,8 @@ from phonenumbers import geocoder
 
 ch_number = phonenumbers.parse("0431234567", "CH")
 geocoder.description_for_number(ch_number, "de")
+
+
+from phonenumbers import carrier
+ro_number = phonenumbers.parse("+40721234567", "RO")
+carrier.name_for_number(ro_number, "en")
