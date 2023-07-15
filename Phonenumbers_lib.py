@@ -57,5 +57,12 @@ geocoder.description_for_number(ch_number, "de")
 
 
 from phonenumbers import carrier
+
 ro_number = phonenumbers.parse("+40721234567", "RO")
 carrier.name_for_number(ro_number, "en")
+
+
+from phonenumbers import timezone
+
+gb_number = phonenumbers.parse("+447986123456", "GB")
+timezone.time_zones_for_number(gb_number)
