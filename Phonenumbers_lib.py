@@ -71,3 +71,7 @@ from phonenumbers import timezone
 
 gb_number = phonenumbers.parse("+447986123456", "GB")
 timezone.time_zones_for_number(gb_number)
+
+
+# Force-load the normal metadata by calling phonenumbers.PhoneMetadata.load_all().
+# Force-load the extended metadata by importing the appropriate packages (phonenumbers.geocoder, phonenumbers.carrier, phonenumbers.timezone).
