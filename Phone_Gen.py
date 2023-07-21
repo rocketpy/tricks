@@ -32,3 +32,19 @@ number = phone_number.get_mobile()
 # Get a national phone number
 number = phone_number.get_national()
 # +442408055065
+
+
+# PYTEST FIXTURE
+import pytest
+from phone_gen import PhoneNumber
+
+
+@pytest.fixture
+def phone_number():
+    def wrap(code):
+        return PhoneNumber(code).get_number()
+
+    yield wrap
+
+def test_one(phone_number):
+    number = phone_number("DE")
