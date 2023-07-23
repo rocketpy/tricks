@@ -65,3 +65,33 @@ optional arguments:
   -m, --mobile    Get mobile phone number
   -n, --national  Get national phone number
 """
+
+# Examples
+"""
+# Get a phone number
+
+$ phone-gen DE
++49791774007056
+
+$ phone-gen DEU
++499968635
+
+$ phone-gen Germany
++49960335800
+
+
+# Get a phone number without a country code
+$ phone-gen -f DE
+66999511
+
+$ phone-gen -f Germany
+877595
+
+# Get mobile phone number
+$ phone-gen -m DE
++491601376066
+
+# Get national phone number
+$ phone-gen -n DE
++4940381
+"""
