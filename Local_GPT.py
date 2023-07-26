@@ -11,3 +11,11 @@ cd AutoGPTQ
 git checkout v0.2.2
 pip install .
 """
+
+# Ask questions to your documents, locally!
+
+# In order to ask a question, run a command like:
+python run_localGPT.py
+
+# And wait for the script to require your input.
+> Enter a query:
