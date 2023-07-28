@@ -1,8 +1,15 @@
 # localGPT - This project was inspired by the original privateGPT. 
 
 # https://github.com/PromtEngineer/localGPT
+# Video - https://www.youtube.com/watch?v=MlyoObdIHyo
 
 """
+Install conda
+conda create -n localGPT
+
+Activate
+conda activate localGPT
+
 pip install -r requirements.txt
 Then install AutoGPTQ - if you want to run quantized models for GPU
 
