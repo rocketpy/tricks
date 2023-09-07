@@ -5,4 +5,12 @@
 
 
 # pip install open-interpreter
+
+# Terminal:
 # interpreter
+
+# Python
+import interpreter
+
+interpreter.chat("Plot APPL and META's normalized stock prices") # Executes a single command
+interpreter.chat() # Starts an interactive chat
