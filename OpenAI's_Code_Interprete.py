@@ -14,3 +14,9 @@ import interpreter
 
 interpreter.chat("Plot APPL and META's normalized stock prices") # Executes a single command
 interpreter.chat() # Starts an interactive chat
+
+
+# Start a New Chat
+# In Python, Open Interpreter remembers conversation history. If you want to start fresh, you can reset it:
+
+interpreter.reset()
