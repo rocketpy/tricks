@@ -20,3 +20,14 @@ interpreter.chat() # Starts an interactive chat
 # In Python, Open Interpreter remembers conversation history. If you want to start fresh, you can reset it:
 
 interpreter.reset()
+
+
+# Save and Restore Chats:
+
+# interpreter.chat() returns a List of messages when return_messages=True,
+# which can be used to resume a conversation with interpreter.load(messages):
+# messages = interpreter.chat("My name is Killian.", return_messages=True) # Save messages to 'messages'
+
+interpreter.reset() # Reset interpreter ("Killian" will be forgotten)
+
+interpreter.load(messages) # Resume chat from 'messages' ("Killian" will be remembered)
