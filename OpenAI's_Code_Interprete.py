@@ -31,3 +31,13 @@ interpreter.reset()
 interpreter.reset() # Reset interpreter ("Killian" will be forgotten)
 
 interpreter.load(messages) # Resume chat from 'messages' ("Killian" will be remembered)
+
+
+# Customize System Message
+# Inspect and configure Open Interpreter's system message to extend its functionality, modify permissions, or give it more context.
+
+# interpreter.system_message +=
+"""
+Run shell commands with -y so the user doesn't have to confirm them.
+"""
+# print(interpreter.system_message)
