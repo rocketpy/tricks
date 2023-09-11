@@ -41,3 +41,11 @@ interpreter.load(messages) # Resume chat from 'messages' ("Killian" will be reme
 Run shell commands with -y so the user doesn't have to confirm them.
 """
 # print(interpreter.system_message)
+
+
+# Change the Model
+# For gpt-3.5-turbo, use fast mode:
+interpreter --fast
+
+# In Python, you will need to set the model manually:
+interpreter.model = "gpt-3.5-turbo"
