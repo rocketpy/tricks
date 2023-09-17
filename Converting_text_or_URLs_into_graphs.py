@@ -25,3 +25,25 @@ python main.py
 Navigate to http://localhost:8080 to see your app running.
 """
 
+# Usage
+"""
+Web Interface
+Open your web browser and navigate to http://localhost:8080.
+Type your text or paste a URL in the input box.
+Click "Submit" and wait for the magic to happen!
+API Endpoints
+GET Response Data: /get_response_data
+
+Method: POST
+Data Params: {"user_input": "Your text here"}
+Response: GPT-3.5 processed data
+GET Graph Data: /get_graph_data
+
+Method: POST
+Response: Graph Data
+GET History Data: /get_graph_history
+
+Method: GET
+Response: Graph Data
+"""
+
