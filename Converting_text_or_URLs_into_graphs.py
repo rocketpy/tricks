@@ -23,6 +23,21 @@ OPENAI_API_KEY=your-api-key-here
 5. Run the Flask app
 python main.py
 Navigate to http://localhost:8080 to see your app running.
+
+Run as Container
+1. Clone the repository
+git clone https://github.com/yoheinakajima/instagraph.git
+
+2. Navigate to the project docker directory
+cd instagraph/docker
+
+3.1 Run in Dev mode
+docker-compose -f docker-compose-dev.yml up # Add -d flag at the end to run in background/daemon mode.
+
+3.2 Run in Prod - Create the docker image
+Using the gunicorn==21.2.0 to run the application in production mode
+
+docker-compose -f docker-compose.yml up --build -d
 """
 
 # Usage
