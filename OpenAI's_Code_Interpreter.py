@@ -49,3 +49,17 @@ interpreter --fast
 
 # In Python, you will need to set the model manually:
 interpreter.model = "gpt-3.5-turbo"
+interpreter --model claude-2
+interpreter --model command-nightly
+
+# In Python, set the model on the object:
+interpreter.model = "gpt-3.5-turbo"
+
+
+# Running Open Interpreter locally
+# Issues running locally? Read our new GPU setup guide and Windows setup guide.
+# You can run interpreter in local mode from the command line to use Code Llama:
+interpreter --local
+
+# Or run any Hugging Face model locally by running --local in conjunction with a repo ID (e.g. "tiiuae/falcon-180B"):
+interpreter --local --model tiiuae/falcon-180B
