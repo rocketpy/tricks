@@ -63,3 +63,20 @@ interpreter --local
 
 # Or run any Hugging Face model locally by running --local in conjunction with a repo ID (e.g. "tiiuae/falcon-180B"):
 interpreter --local --model tiiuae/falcon-180B
+
+
+# Local model params
+
+# You can easily modify the max_tokens and context_window (in tokens) of locally running models.
+# Smaller context windows will use less RAM, so we recommend trying a shorter window if GPU is failing.
+interpreter --max_tokens 2000 --context_window 16000
+
+
+# Debug mode
+
+# To help contributors inspect Open Interpreter, --debug mode is highly verbose.
+# You can activate debug mode by using it's flag (interpreter --debug), or mid-chat:
+
+$ interpreter
+> %debug true <- Turns on debug mode
+> %debug false <- Turns off debug mode
