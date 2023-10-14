@@ -2,6 +2,8 @@
 
 # https://github.com/widgetti/solara
 # https://solara.dev/docs/installing
+# https://solara.dev/docs/quickstart
+
 # pip install solara
 
 # First script
