@@ -33,3 +33,17 @@ def Page():
 
 # The following line is required only when running the code in a Jupyter notebook:
 Page()
+
+
+# Run from the command line in the same directory where you put your file (sol.py):
+# $ solara run sol.py
+# Solara server is starting at http://localhost:8765
+
+# To start a notebook server:
+# $ jupyter notebook
+
+# Jupyter lab:
+# $ jupyter lab
+
+from sol import Page
+display(Page())
