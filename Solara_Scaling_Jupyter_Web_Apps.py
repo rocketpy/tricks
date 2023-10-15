@@ -49,3 +49,30 @@ Page()
 
 from sol import Page
 display(Page())
+
+
+# Tutorial: Web app createing
+"""
+Generate a script file
+# run the command
+$ solara create button
+Wrote:  /Users/maartenbreddels/github/widgetti/solara/sol.py
+Run as:
+$ solara run /Users/maartenbreddels/github/widgetti/solara/sol.py
+"""
+# This will create the sol.py file with the following content. 
+import solara
+
+clicks = solara.reactive(0)
+
+@solara.component
+def Page():
+    color = "green"
+    if clicks.value >= 5:
+        color = "red"
+
+    def increment():
+        clicks.value += 1
+        print("clicks", clicks)
+
+    solara.Button(label=f"Clicked: {clicks}", on_click=increment, color=color)
