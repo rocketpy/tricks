@@ -19,3 +19,22 @@ print("Redshift =", ds.current_redshift)
 
 p = yt.ProjectionPlot(ds, "y", ("gas", "density"))
 p.show()
+
+
+p.zoom(2.0)
+
+p.pan_rel((0.1, 0.0))
+
+p.zoom(10.0)
+
+p.pan_rel((-0.25, -0.5))
+
+p.zoom(0.1)
+
+p = yt.ProjectionPlot(
+    ds,
+    "z",
+    [("gas", "density"), ("gas", "temperature")],
+    weight_field=("gas", "density"),
+)
+p.show()
