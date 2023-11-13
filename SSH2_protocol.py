@@ -15,6 +15,5 @@ client.connect(host, port, username)
 session = client.get_transport().open_session()
 # Forward local agent
 AgentRequestHandler(session)
-# Commands executed after this point will see the forwarded agent on
-# the remote end.
+
 session.exec_command("git clone https://my.git.repository/")
