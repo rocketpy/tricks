@@ -52,3 +52,14 @@ async def main():
         # that you are using, i.e., "country", "city", or "insights". Please
         # note that Insights is not supported by the GeoLite2 web service.
         response = await client.city('203.0.113.0')
+        response.country.iso_code
+        response.country.name
+        response.country.names['zh-CN']
+        response.subdivisions.most_specific.name
+        response.subdivisions.most_specific.iso_code
+        response.city.name
+        response.postal.code
+        response.location.latitude
+        response.location.longitude
+        response.traits.network
+asyncio.run(main())
