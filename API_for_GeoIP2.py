@@ -75,3 +75,16 @@ with geoip2.database.Reader('/path/to/GeoLite2-City.mmdb') as reader:
     # that you are using, e.g., "country".
     response = reader.city('203.0.113.0')
     response.country.iso_code
+    response.country.name
+    response.country.names['zh-CN']
+    response.subdivisions.most_specific.name
+    response.subdivisions.most_specific.iso_code
+    response.city.name
+    response.postal.code
+    response.location.latitude
+    response.location.longitude
+    response.traits.network
+
+
+# Anonymous IP Database
+import geoip2.database
