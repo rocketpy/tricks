@@ -11,6 +11,23 @@ fake = Faker()
 fake.name()
 # 'Lucy Cechtelar'
 
+print(fake.email())
+print(fake.country())
+print(fake.name())
+print(fake.text())
+print(fake.latitude(), fake.longitude())
+print(fake.url())
+
+# or
+
+fake = Faker("es_ES")
+print(fake.email())
+print(fake.country())
+print(fake.name())
+print(fake.text())
+print(fake.latitude(), fake.longitude())
+print(fake.url())
+
 fake.address()
 # '426 Jordy Lodge
 #  Cartwrightshire, SC 88120-6700'
