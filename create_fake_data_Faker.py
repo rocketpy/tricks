@@ -61,3 +61,21 @@ for _ in range(10):
 # 中津川 春香
 # Ashley Castillo
 # 山田 桃子
+
+
+# Unique Values
+
+import faker
+
+fake = faker.Faker()
+numbers = set(fake.unique.random_int() for i in range(1000))
+assert len(numbers) == 1000
+
+
+import faker
+
+fake = faker.Faker()
+numbers = set(fake.unique.random_int(min=1, max=10) for i in range(10))
+other_numbers = set(fake.unique.random_int(min=1, max=5) for i in range(5))
+
+assert other_numbers.issubset(numbers)
