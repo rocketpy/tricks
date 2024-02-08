@@ -21,3 +21,15 @@ python main.py
 cd ../Frontend
 python -m http.server 3000
 """
+
+# Usage
+"""
+Copy the .env.example file to .env and fill in the required values
+Open http://localhost:3000 in your browser
+Enter a topic to talk about
+Click on the "Generate" button
+Wait for the video to be generated
+The video's location is temp/output.mp4
+Fonts
+Add your fonts to the fonts/ folder, and load them by specifying the font name on line 124 in Backend/video.py.
+"""
