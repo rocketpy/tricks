@@ -4,3 +4,11 @@
 
 # pip install deadcode
 
+
+# Usage
+
+# deadcode .
+
+# Or with command line options:
+
+# deadcode . --exclude=venv,tests --ignore-names=BaseTestCase,*Mixin --ignore-names-in-files=migrations
