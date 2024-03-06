@@ -43,3 +43,10 @@ Option                  	Type	Meaning
 --count	                	Provides the count of the detected unused names instead of printing them all out.
 --quiet	                	Does not output anything. Makefile still fails with exit code 1 if unused names are found.
 """
+
+
+# Ignoring checks with noqa comments
+# Inline # noqa comments can be used to ignore deadcode checks. E.g. unused Foo class wont be detected/fixed because # noqa: DC003 comment is used:
+
+class Foo:  # noqa: DC003
+    pass
