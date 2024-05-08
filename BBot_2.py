@@ -77,4 +77,16 @@ def talk():
         time.sleep(0.01)  # Simulate some work
 
 # camera - face detect - position 
-#  listen - txt - check -  ask - speak
+# listen - txt - check -  ask - speak
+
+# Create threads for each while loop
+thread1 = threading.Thread(target=vision)
+thread2 = threading.Thread(target=talk)
+
+# Start both threads
+thread1.start()
+thread2.start()
+
+# Join both threads (wait for them to finish)
+thread1.join()
+thread2.join()
