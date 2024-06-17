@@ -26,3 +26,10 @@ To run the example scripts, ensure that you have installed the translation-agent
 
 python example_script.py
 """
+
+
+# Usage
+import translation_agent as ta
+
+source_lang, target_lang, country = "English", "Spanish", "Mexico"
+translation = ta.translate(source_lang, target_lang, source_text, country)
