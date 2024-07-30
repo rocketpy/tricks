@@ -17,3 +17,15 @@ export WORKSPACE=/path/to/your/workspace
 export ZMQ_PORT=5555
 streamlit run examples/chat/app.py
 """
+
+
+# Basic Programmatic Usage
+rom vision_agent.agent import VisionAgent
+
+agent = VisionAgent()
+resp = agent("Hello")
+# print(resp)
+# [{"role": "user", "content": "Hello"}, {"role": "assistant", "content": "{'thoughts': 'The user has greeted me.
+# I will respond with a greeting and ask how I can assist them.', 'response': 'Hello! How can I assist you today?', 'let_user_respond': True}"}]
+resp.append({"role": "user", "content": "Can you count the number of people in this image?", "media": ["people.jpg"]})
+resp = agent(resp)
