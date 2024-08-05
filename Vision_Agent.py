@@ -48,3 +48,16 @@ def calculate_filled_percentage(image_path: str) -> float:
     jar_area = 0
     for segment in jar_segments:
         jar_area += segment['mask'].sum()
+
+    # Step 5: Calculate the area of the segmented coffee beans
+    coffee_beans_area = 0
+    for segment in coffee_beans_segments:
+        coffee_beans_area += segment['mask'].sum()
+
+    # Step 6: Compute the percentage of the jar area that is filled with coffee beans
+    if jar_area == 0:
+        return 0.0  # To avoid division by zero
+    filled_percentage = (coffee_beans_area / jar_area) * 100
+
+    # Step 7: Return the computed percentage
+    return filled_percentage
