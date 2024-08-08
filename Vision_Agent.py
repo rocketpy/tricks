@@ -61,3 +61,23 @@ def calculate_filled_percentage(image_path: str) -> float:
 
     # Step 7: Return the computed percentage
     return filled_percentage
+
+
+""""
+agent = VisionAgentCoder(verbose=2)
+
+Detailed Usage:
+You can also have it return more information by calling chat_with_workflow.
+The format of the input is a list of dictionaries with the keys role, content, and media:
+
+results = agent.chat_with_workflow([{"role": "user", "content": "What percentage of the area of the jar is filled with coffee beans?", "media": ["jar.jpg"]}])
+print(results)
+
+{
+    "code": "from vision_agent.tools import ..."
+    "test": "calculate_filled_percentage('jar.jpg')",
+    "test_result": "...",
+    "plan": [{"code": "...", "test": "...", "plan": "..."}, ...],
+    "working_memory": ...,
+}
+"""
