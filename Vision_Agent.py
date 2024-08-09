@@ -81,3 +81,26 @@ print(results)
     "working_memory": ...,
 }
 """
+
+# Multi-turn conversations
+# You can have multi-turn conversations with vision-agent as well, giving it feedback on the code and having it update.
+# You just need to add the code as a response from the assistant:
+
+agent = va.agent.VisionAgent(verbosity=2)
+conv = [
+    {
+        "role": "user",
+        "content": "Are these workers wearing safety gear? Output only a True or False value.",
+        "media": ["workers.png"],
+    }
+]
+result = agent.chat_with_workflow(conv)
+code = result["code"]
+conv.append({"role": "assistant", "content": code})
+conv.append(
+    {
+        "role": "user",
+        "content": "Can you also return the number of workers wearing safety gear?",
+    }
+)
+result = agent.chat_with_workflow(conv)
