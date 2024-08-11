@@ -104,3 +104,21 @@ conv.append(
     }
 )
 result = agent.chat_with_workflow(conv)
+
+
+# Tools
+# There are a variety of tools for the model or the user to use.
+# Some are executed locally while others are hosted for you.
+# You can also ask an LMM directly to build a tool for you. For example:
+
+import vision_agent as va
+
+lmm = va.lmm.OpenAILMM()
+detector = lmm.generate_detector("Can you build a jar detector for me?")
+detector(va.tools.load_image("jar.jpg"))
+[{"labels": ["jar",],
+  "scores": [0.99],
+  "bboxes": [
+    [0.58, 0.2, 0.72, 0.45],
+  ]
+}]
