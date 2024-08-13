@@ -122,3 +122,26 @@ detector(va.tools.load_image("jar.jpg"))
     [0.58, 0.2, 0.72, 0.45],
   ]
 }]
+
+
+# add custom tools to the agent:
+
+import vision_agent as va
+import numpy as np
+
+@va.tools.register_tool(imports=["import numpy as np"])
+def custom_tool(image_path: str) -> str:
+    """My custom tool documentation.
+
+    Parameters:
+        image_path (str): The path to the image.
+
+    Returns:
+        str: The result of the tool.
+
+    Example
+    -------
+    >>> custom_tool("image.jpg")
+    """
+
+    return np.zeros((10, 10))
