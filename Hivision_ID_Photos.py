@@ -30,4 +30,17 @@ It is recommended to create a Python 3.10 virtual environment with conda and the
 
 pip install -r requirements.txt
 pip install -r requirements-app.txt
+
+# Download Weight Files
+Option 1: Script Download
+
+python scripts/download_model.py
+Option 2: Direct Download
+
+Save in the project's hivision/creator/weights directory:
+
+modnet_photographic_portrait_matting.onnx (24.7MB): Official weights from MODNet, Download
+hivision_modnet.onnx (24.7MB): A matting model better suited for solid background swapping, Download
+mnn_hivision_modnet.mnn (24.7MB): MNN converted matting model by zjkhahah, Download
+rmbg-1.4.onnx (176.2MB): Open source matting model from BRIA AI, download it and rename it to rmbg-1.4.onnx.
 """
