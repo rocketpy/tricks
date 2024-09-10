@@ -31,6 +31,9 @@ It is recommended to create a Python 3.10 virtual environment with conda and the
 pip install -r requirements.txt
 pip install -r requirements-app.txt
 
+# CUDA 12.x, cuDNN 8
+pip install onnxruntime-gpu==1.18.0
+
 # Download Weight Files
 Option 1: Script Download
 
@@ -44,3 +47,9 @@ hivision_modnet.onnx (24.7MB): A matting model better suited for solid backgroun
 mnn_hivision_modnet.mnn (24.7MB): MNN converted matting model by zjkhahah, Download
 rmbg-1.4.onnx (176.2MB): Open source matting model from BRIA AI, download it and rename it to rmbg-1.4.onnx.
 """
+
+
+# ID Photo Production
+# Input 1 photo to obtain 1 standard ID photo and 1 high-definition ID photo in 4-channel transparent png
+
+# python inference.py -i demo/images/test.jpg -o ./idphoto.png --height 413 --width 295
