@@ -53,3 +53,19 @@ rmbg-1.4.onnx (176.2MB): Open source matting model from BRIA AI, download it and
 # Input 1 photo to obtain 1 standard ID photo and 1 high-definition ID photo in 4-channel transparent png
 
 # python inference.py -i demo/images/test.jpg -o ./idphoto.png --height 413 --width 295
+
+
+# Run Gradio Demo
+# python app.py
+
+"""
+Python Inference
+Core parameters:
+
+-i: Input image path
+-o: Output image path
+-t: Inference type, options are idphoto, human_matting, add_background, generate_layout_photos
+--matting_model: Portrait matting model weight selection
+--face_detect_model: Face detection model selection
+More parameters can be viewed by running python inference.py --help
+"""
