@@ -69,3 +69,14 @@ Core parameters:
 --face_detect_model: Face detection model selection
 More parameters can be viewed by running python inference.py --help
 """
+
+# ID Photo Creation
+# Input 1 photo to obtain 1 standard ID photo and 1 high-definition ID photo in 4-channel transparent PNG.
+
+# python inference.py -i demo/images/test0.jpg -o ./idphoto.png --height 413 --width 295
+
+
+# Portrait Matting
+# Input 1 photo to obtain 1 4-channel transparent PNG.
+
+# python inference.py -t human_matting -i demo/images/test0.jpg -o ./idphoto_matting.png --matting_model hivision_modnet
