@@ -80,3 +80,9 @@ More parameters can be viewed by running python inference.py --help
 # Input 1 photo to obtain 1 4-channel transparent PNG.
 
 # python inference.py -t human_matting -i demo/images/test0.jpg -o ./idphoto_matting.png --matting_model hivision_modnet
+
+
+# Add Background Color to Transparent Image
+# Input 1 4-channel transparent PNG to obtain 1 3-channel image with added background color.
+
+# python inference.py -t add_background -i ./idphoto.png -o ./idphoto_ab.jpg -c 4f83ce -k 30 -r 1
