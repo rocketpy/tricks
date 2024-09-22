@@ -86,3 +86,15 @@ More parameters can be viewed by running python inference.py --help
 # Input 1 4-channel transparent PNG to obtain 1 3-channel image with added background color.
 
 # python inference.py -t add_background -i ./idphoto.png -o ./idphoto_ab.jpg -c 4f83ce -k 30 -r 1
+
+
+# Generate Six-Inch Layout Photo
+# Input 1 3-channel photo to obtain 1 six-inch layout photo.
+
+# python inference.py -t generate_layout_photos -i ./idphoto_ab.jpg -o ./idphoto_layout.jpg --height 413 --width 295 -k 200
+
+  
+# ID Photo Cropping
+# Input 1 4-channel photo (the image after matting) to obtain 1 standard ID photo and 1 high-definition ID photo in 4-channel transparent PNG.
+
+# python inference.py -t idphoto_crop -i ./idphoto_matting.png -o ./idphoto_crop.png --height 413 --width 295
