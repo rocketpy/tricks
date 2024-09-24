@@ -3,6 +3,7 @@
 
 # https://github.com/Zeyi-Lin/HivisionIDPhotos
 # https://github.com/Zeyi-Lin/HivisionIDPhotos/blob/master/README_EN.md
+# API Docs: https://github.com/Zeyi-Lin/HivisionIDPhotos/blob/master/docs/api_EN.md
 
 # Features:
 """
@@ -98,3 +99,10 @@ More parameters can be viewed by running python inference.py --help
 # Input 1 4-channel photo (the image after matting) to obtain 1 standard ID photo and 1 high-definition ID photo in 4-channel transparent PNG.
 
 # python inference.py -t idphoto_crop -i ./idphoto_matting.png -o ./idphoto_crop.png --height 413 --width 295
+
+
+# Deploy API Service
+
+# Start Backend
+
+# python deploy_api.py
