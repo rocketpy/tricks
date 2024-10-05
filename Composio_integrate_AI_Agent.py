@@ -43,3 +43,19 @@ message = openai_client.beta.threads.messages.create(
     role="user",
     content=my_task
 )
+
+# Execute Agent with integrations
+run = openai_client.beta.threads.runs.create(
+    thread_id=thread.id,
+    assistant_id=assistant.id
+)
+
+
+# Execute Function calls
+response_after_tool_calls = composio_tool_set.wait_and_handle_assistant_tool_calls(
+    client=openai_client,
+    run=run,
+    thread=thread,
+)
+
+print(response_after_tool_calls)
