@@ -58,4 +58,32 @@ response_after_tool_calls = composio_tool_set.wait_and_handle_assistant_tool_cal
     thread=thread,
 )
 
-print(response_after_tool_calls)
+# print(response_after_tool_calls)
+
+
+# Install the Composio SDK:
+# npm install composio-core
+
+# Setup the OpenAI and Composio Tool Set:
+
+import { OpenAI } from "openai";
+import { OpenAIToolSet } from "composio-core";
+
+
+const toolset = new OpenAIToolSet({
+    apiKey: process.env.COMPOSIO_API_KEY,
+});
+
+async function setupUserConnectionIfNotExists(entityId) {
+    const entity = await toolset.client.getEntity(entityId);
+    const connection = await entity.getConnection('github');
+
+    if (!connection) {
+        // If this entity/user hasn't already connected the account
+        const connection = await entity.initiateConnection(appName);
+        console.log("Log in via: ", connection.redirectUrl);
+        return connection.waitUntilActive(60);
+    }
+
+    return connection;
+}
