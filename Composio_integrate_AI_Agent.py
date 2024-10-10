@@ -65,6 +65,7 @@ response_after_tool_calls = composio_tool_set.wait_and_handle_assistant_tool_cal
 
 # Examples
 
+# Imports and Environment Setup
 import os
 import dotenv
 from textwrap import dedent
@@ -75,6 +76,17 @@ from composio.local_tools import ragtool
 
 # Load environment variables
 dotenv.load_dotenv()
+
+# Initialize Language Model and Define Tools
+
+# Initialize the LLM with the OpenAI GPT-4o model and API key
+llm = ChatOpenAI(model="gpt-4o")
+
+# Initialize the Composio ToolSet
+toolset = ComposioToolSet()
+
+# Get the RAG tool from the Composio ToolSet
+tools = toolset.get_tools(apps=[App.RAGTOOL])
 
 
 # JS
