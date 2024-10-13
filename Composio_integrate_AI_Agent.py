@@ -89,6 +89,28 @@ toolset = ComposioToolSet()
 tools = toolset.get_tools(apps=[App.RAGTOOL])
 
 
+# Define the RAG Agent
+rag_agent = Agent(
+    role="RAG Agent",
+    goal=dedent(
+        """\
+        Add relevant content to the RAG tool to enrich its knowledge base.
+        Formulate a query to retrieve information from the RAG tool based on user input.
+        After retrieval and addition of content, evaluate whether the goal given by the user input is achieved. If yes, stop execution."""
+    ),
+    verbose=True,
+    memory=True,
+    backstory=dedent(
+        """\
+        You are an expert in understanding user requirements, forming accurate queries,
+        and enriching the knowledge base with relevant content."""
+    ),
+    llm=llm,
+    allow_delegation=False,
+    tools=tools,
+)
+
+
 # JS
 # Install the Composio SDK:
 # npm install composio-core
