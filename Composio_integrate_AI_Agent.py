@@ -110,6 +110,33 @@ rag_agent = Agent(
     tools=tools,
 )
 
+# Define Tasks for Adding Content
+from composio_langchain import Task  # Ensure Task is imported
+
+# User-provided description of the data to be added
+additional_content_list = [
+    "Paris is the capital of France. It is known for its art, fashion, and culture.",
+    "Berlin is the capital of Germany. It is famous for its history and vibrant culture.",
+    "Tokyo is the capital of Japan. It is known for its technology and cuisine.",
+    "Canberra is the capital of Australia. It is known for its modern architecture and museums.",
+    # Add more data as needed
+]
+
+# Define the task for adding content to the RAG tool
+add_content_tasks = [
+    Task(
+        description=dedent(
+            f"""\
+            Add the following content to the RAG tool to enrich its knowledge base: {content}"""
+        ),
+        expected_output="Content was added to the RAG tool",
+        tools=tools,
+        agent=rag_agent,
+        allow_delegation=False,
+    )
+    for content in additional_content_list
+]
+
 
 # JS
 # Install the Composio SDK:
