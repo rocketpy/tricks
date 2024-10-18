@@ -138,6 +138,24 @@ add_content_tasks = [
 ]
 
 
+# Define and Execute Query Task
+# User-provided query
+user_query = "What is the capital of France?"
+
+# Define the task for executing the RAG tool query
+query_task = Task(
+    description=dedent(
+        f"""\
+        Formulate a query based on this input: {user_query}.
+        Retrieve relevant information using the RAG tool and return the results."""
+    ),
+    expected_output="Results of the RAG tool query were returned. Stop once the goal is achieved.",
+    tools=tools,
+    agent=rag_agent,
+    allow_delegation=False,
+)
+
+
 # JS
 # Install the Composio SDK:
 # npm install composio-core
