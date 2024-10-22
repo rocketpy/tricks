@@ -156,6 +156,20 @@ query_task = Task(
 )
 
 
+# Create Crew and Execute Process
+
+# Define the crew with the agent and tasks
+crew = Crew(
+    agents=[rag_agent],
+    tasks=[add_content_tasks ,query_task],
+    process=Process.sequential,
+)
+
+# Kickoff the process and print the result
+result = crew.kickoff()
+print(result)
+
+
 # JS
 # Install the Composio SDK:
 # npm install composio-core
