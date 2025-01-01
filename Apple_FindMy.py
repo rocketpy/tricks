@@ -2,6 +2,11 @@
 
 # https://github.com/malmeloo/FindMy.py
 
+# https://pypi.org/project/FindMy/
+
+# Installation:
+# pip install FindMy
+
 
 # Important !!!
 
