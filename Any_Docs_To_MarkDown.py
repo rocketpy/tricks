@@ -11,4 +11,16 @@ To install MarkItDown, use pip: pip install 'markitdown[all]'. Alternatively, yo
 git clone git@github.com:microsoft/markitdown.git
 cd markitdown
 pip install -e packages/markitdown[all]
+
+
+# Usage
+
+Command-Line
+markitdown path-to-file.pdf > document.md
+Or use -o to specify the output file:
+
+markitdown path-to-file.pdf -o document.md
+You can also pipe content:
+
+cat path-to-file.pdf | markitdown
 """
