@@ -45,4 +45,19 @@ At the moment, the following optional dependencies are available:
 [az-doc-intel] Installs dependencies for Azure Document Intelligence
 [audio-transcription] Installs dependencies for audio transcription of wav and mp3 files
 [youtube-transcription] Installs dependencies for fetching YouTube video transcription
+
+
+# Plugins
+MarkItDown also supports 3rd-party plugins. Plugins are disabled by default. To list installed plugins:
+
+markitdown --list-plugins
+To enable plugins use:
+
+markitdown --use-plugins path-to-file.pdf
+To find available plugins, search GitHub for the hashtag #markitdown-plugin. To develop a plugin, see packages/markitdown-sample-plugin.
+
+Azure Document Intelligence
+To use Microsoft Document Intelligence for conversion:
+
+markitdown path-to-file.pdf -o document.md -d -e "<document_intelligence_endpoint>"
 """
