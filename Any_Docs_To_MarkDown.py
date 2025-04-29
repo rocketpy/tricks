@@ -60,4 +60,14 @@ Azure Document Intelligence
 To use Microsoft Document Intelligence for conversion:
 
 markitdown path-to-file.pdf -o document.md -d -e "<document_intelligence_endpoint>"
+
+
+# Python API
+Basic usage in Python:
+
+from markitdown import MarkItDown
+
+md = MarkItDown(enable_plugins=False) # Set to True to enable plugins
+result = md.convert("test.xlsx")
+print(result.text_content)
 """
