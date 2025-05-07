@@ -70,4 +70,12 @@ from markitdown import MarkItDown
 md = MarkItDown(enable_plugins=False) # Set to True to enable plugins
 result = md.convert("test.xlsx")
 print(result.text_content)
+
+# Document Intelligence conversion in Python:
+
+from markitdown import MarkItDown
+
+md = MarkItDown(docintel_endpoint="<document_intelligence_endpoint>")
+result = md.convert("test.pdf")
+print(result.text_content)
 """
