@@ -78,4 +78,14 @@ from markitdown import MarkItDown
 md = MarkItDown(docintel_endpoint="<document_intelligence_endpoint>")
 result = md.convert("test.pdf")
 print(result.text_content)
+
+# To use Large Language Models for image descriptions, provide llm_client and llm_model:
+
+from markitdown import MarkItDown
+from openai import OpenAI
+
+client = OpenAI()
+md = MarkItDown(llm_client=client, llm_model="gpt-4o")
+result = md.convert("example.jpg")
+print(result.text_content)
 """
