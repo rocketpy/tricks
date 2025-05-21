@@ -88,4 +88,9 @@ client = OpenAI()
 md = MarkItDown(llm_client=client, llm_model="gpt-4o")
 result = md.convert("example.jpg")
 print(result.text_content)
+
+
+# Docker
+docker build -t markitdown:latest .
+docker run --rm -i markitdown:latest < ~/your-file.pdf > output.md
 """
